@@ -6,7 +6,7 @@ include ('koneksi.php');
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
-		<title>ARAYA MALANG</title>
+		<title>ISP ARAYA MEDIA IT MALANG</title>
 
 		<meta name="description" content="overview &amp; stats" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -63,7 +63,7 @@ include ('koneksi.php');
 					<a href="home" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-							ARAYA Admin
+							ISP ARAYA Admin
 						</small>
 					</a>
 				</div>
@@ -159,9 +159,9 @@ include ('koneksi.php');
 
 							<li class="">
 								<a href="#" class="dropdown-toggle">
-									<i class="menu-icon fa fa-caret-right"></i>
+									<i class="fa fa-folder"></i>
 
-									Alat &amp; Layanan
+									Data
 									<b class="arrow fa fa-angle-down"></b>
 								</a>
 
@@ -169,9 +169,9 @@ include ('koneksi.php');
 									
 									<li class="">
 										<a href="#" class="dropdown-toggle">
-											<i class="menu-icon fa fa-leaf green"></i>
+											<i class="fa fa-user"></i>
 
-											Item
+											Karyawan
 											<b class="arrow fa fa-angle-down"></b>
 										</a>
 
@@ -180,8 +180,8 @@ include ('koneksi.php');
 										<ul class="submenu">
 											<li class="">
 												<a href="#">
-													<i class="menu-icon fa fa-plus purple"></i>
-													Product
+													<i class="fa fa-phone"></i>
+													Sales
 												</a>
 
 												<b class="arrow"></b>
@@ -189,14 +189,48 @@ include ('koneksi.php');
 
 											<li class="">
 												<a href="#">
-													<i class="menu-icon fa fa-eye pink"></i>
-													View layanan
+													<i class="fa fa-balance-scale"></i>
+													Finance
+												</a>
+
+												<b class="arrow"></b>
+											</li>
+
+											<li class="">
+												<a href="#">
+													<i class="menu-icon fa fa-plus purple"></i>
+													Inventory
+												</a>
+
+												<b class="arrow"></b>
+											</li>
+
+											<li class="">
+												<a href="#">
+													<i class="menu-icon fa fa-plus purple"></i>
+													Customer Service
+												</a>
+
+												<b class="arrow"></b>
+											</li>
+
+											<li class="">
+												<a href="#">
+													<i class="menu-icon fa fa-plus purple"></i>
+													Tim Survei
 												</a>
 
 												<b class="arrow"></b>
 											</li>
 										</ul>
 									</li>
+
+									<li class="">
+										<a href="customer.html">
+											<i class="fa fa-users"></i>
+
+											Customer
+										</a>
 								</ul>
 							</li>
 						</ul>
