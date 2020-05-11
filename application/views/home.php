@@ -60,52 +60,26 @@ include ('koneksi.php');
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="home" class="navbar-brand">
+					<a href="index.html" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
-							ISP ARAYA Admin
+							ARAYA MEDIA
 						</small>
 					</a>
 				</div>
 
+				<!-- menampilkan siapa yang login -->
 				<div class="navbar-buttons navbar-header pull-right" role="navigation">
-					<ul class="nav ace-nav">
+					<ul class="nav ace-nav">		
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
 									Jason
 								</span>
 
-								<i class="ace-icon fa fa-caret-down"></i>
 							</a>
-
-							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-cog"></i>
-										Settings
-									</a>
-								</li>
-
-								<li>
-									<a href="profile.html">
-										<i class="ace-icon fa fa-user"></i>
-										Profile
-									</a>
-								</li>
-
-								<li class="divider"></li>
-
-								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-power-off"></i>
-										Logout
-									</a>
-								</li>
-							</ul>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 			</div><!-- /.navbar-container -->
@@ -123,299 +97,93 @@ include ('koneksi.php');
 
 				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+						<!--<button class="btn btn-success">
+							<i class="ace-icon fa fa-signal"></i>
+						</button>
+
+						<button class="btn btn-info">
+							<i class="ace-icon fa fa-pencil"></i>
+						</button>
+
+						<button class="btn btn-warning">
+							<i class="ace-icon fa fa-users"></i>
+						</button>
+
+						<button class="btn btn-danger">
+							<i class="ace-icon fa fa-cogs"></i>
+						</button>-->
 					</div>
 
 					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-						<span class="btn btn-success"></span>
+						<!--<span class="btn btn-success"></span>
 
 						<span class="btn btn-info"></span>
 
 						<span class="btn btn-warning"></span>
 
-						<span class="btn btn-danger"></span>
+						<span class="btn btn-danger"></span>-->
 					</div>
 				</div><!-- /.sidebar-shortcuts -->
 
+				
 				<ul class="nav nav-list">
+					<li class="active">
+						<a href="index_admin.html">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> Beranda </span>
+						</a>
+
+
+
+						<b class="arrow"></b>
+					</li>
 
 					<li class="">
-						<a href="#" class="dropdown-toggle">
+						<a href="index.html">
+							<i class="menu-icon fa fa-user"></i>
+							<span class="menu-text">
+								Profil
+							</span>
+						</a>
+
+					</li>
+					<li class="">
+						<a href="index.html">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text">
+								Pelanggan
+							</span>
+						</a>
+
+					</li>
+					<li class="">
+						<a href="index.html">
 							<i class="menu-icon fa fa-desktop"></i>
 							<span class="menu-text">
-								Menu
+								Verifikasi
 							</span>
-
-							<b class="arrow fa fa-angle-down"></b>
 						</a>
 
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<b class="arrow"></b>
-								<ul class="submenu">									
-						</ul>
-							</li>
-
-							<li class="">
-								<a href="#" class="dropdown-toggle">
-									<i class="fa fa-folder"></i>
-
-									Data
-									<b class="arrow fa fa-angle-down"></b>
-								</a>
-
-								<ul class="submenu">
-									
-									<li class="">
-										<a href="#" class="dropdown-toggle">
-											<i class="fa fa-user"></i>
-
-											Karyawan
-											<b class="arrow fa fa-angle-down"></b>
-										</a>
-
-										<b class="arrow"></b>
-
-										<ul class="submenu">
-											<li class="">
-												<a href="#">
-													<i class="fa fa-phone"></i>
-													Sales
-												</a>
-
-												<b class="arrow"></b>
-											</li>
-
-											<li class="">
-												<a href="#">
-													<i class="fa fa-balance-scale"></i>
-													Finance
-												</a>
-
-												<b class="arrow"></b>
-											</li>
-
-											<li class="">
-												<a href="#">
-													<i class="menu-icon fa fa-plus purple"></i>
-													Inventory
-												</a>
-
-												<b class="arrow"></b>
-											</li>
-
-											<li class="">
-												<a href="#">
-													<i class="menu-icon fa fa-plus purple"></i>
-													Customer Service
-												</a>
-
-												<b class="arrow"></b>
-											</li>
-
-											<li class="">
-												<a href="#">
-													<i class="menu-icon fa fa-plus purple"></i>
-													Tim Survei
-												</a>
-
-												<b class="arrow"></b>
-											</li>
-										</ul>
-									</li>
-
-									<li class="">
-										<a href="customer.html">
-											<i class="fa fa-users"></i>
-
-											Customer
-										</a>
-								</ul>
-							</li>
-						</ul>
 					</li>
-
 					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-list"></i>
-							<span class="menu-text"> Tables </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="tables.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Simple &amp; Dynamic
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="jqgrid.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									jqGrid plugin
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-
-					<li class="">
-						<a href="#" class="dropdown-toggle">
+						<a href="layanan.html">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
-							<span class="menu-text"> Forms </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-
-
-							<li class="">
-								<a href="dropzone.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									File Upload
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-
-					
-
-					<li class="">
-						<a href="calendar.html">
-							<i class="menu-icon fa fa-calendar"></i>
-
 							<span class="menu-text">
-								Jadwal Pemasangan
-								</span>
+								Layanan
 							</span>
 						</a>
 
-						<b class="arrow"></b>
 					</li>
-
 					<li class="">
-						<a href="gallery.html">
-							<i class="menu-icon fa fa-picture-o"></i>
-							<span class="menu-text"> Gallery </span>
-						</a>
-
-						<b class="arrow"></b>
-					</li>
-
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-tag"></i>
-							<span class="menu-text"> More Pages </span>
-
-							<b class="arrow fa fa-angle-down"></b>
-						</a>
-
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="profile.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									User Profile
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									BTS
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="invoice.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Invoice
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="search.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Search Results
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="login.html">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Login &amp; Register
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-						</ul>
-					</li>
-
-					<li class="">
-						<a href="#" class="dropdown-toggle">
-							<i class="menu-icon fa fa-file-o"></i>
-
+						<a href="index.html">
+							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
-								Other Pages
+								Keluar
 							</span>
-
-							<b class="arrow fa fa-angle-down"></b>
 						</a>
 
-						<b class="arrow"></b>
-
-						<ul class="submenu">
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Alamat
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									About Araya Media
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-							<li class="">
-								<a href="#">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Visi dan Misi
-								</a>
-
-								<b class="arrow"></b>
-							</li>
-
-						</ul>
 					</li>
+
 				</ul><!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
@@ -429,9 +197,9 @@ include ('koneksi.php');
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="home">Home</a>
+								<a href="#">Home</a>
 							</li>
-							<li class="active">Statistik Perkembangan</li>
+							<li class="active">Dashboard</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -445,16 +213,101 @@ include ('koneksi.php');
 					</div>
 
 					<div class="page-content">
+						<div class="ace-settings-container" id="ace-settings-container">
+							<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+								<i class="ace-icon fa fa-cog bigger-130"></i>
+							</div>
 
-						<div class="page-header">
+							<div class="ace-settings-box clearfix" id="ace-settings-box">
+								<div class="pull-left width-50">
+									<div class="ace-settings-item">
+										<div class="pull-left">
+											<select id="skin-colorpicker" class="hide">
+												<option data-skin="no-skin" value="#438EB9">#438EB9</option>
+												<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+												<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+												<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+											</select>
+										</div>
+										<span>&nbsp; Choose Skin</span>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" autocomplete="off" />
+										<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" autocomplete="off" />
+										<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" autocomplete="off" />
+										<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" autocomplete="off" />
+										<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" autocomplete="off" />
+										<label class="lbl" for="ace-settings-add-container">
+											Inside
+											<b>.container</b>
+										</label>
+									</div>
+								</div><!-- /.pull-left -->
+
+								<div class="pull-left width-50">
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
+										<label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" autocomplete="off" />
+										<label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" autocomplete="off" />
+										<label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
+									</div>
+								</div><!-- /.pull-left -->
+							</div><!-- /.ace-settings-box -->
+						</div><!-- /.ace-settings-container -->
+
+						<!--<div class="page-header">
 							<h1>
-								Dashboard Perkembangan
+								Dashboard
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
 									overview &amp; stats
 								</small>
 							</h1>
-						</div><!-- /.page-header -->					
+						</div>--><!-- /.page-header -->
+
+						<!--<div class="row">
+							<div class="col-xs-12">-->
+								<!-- PAGE CONTENT BEGINS -->
+								<!--<div class="alert alert-block alert-success">
+									<button type="button" class="close" data-dismiss="alert">
+										<i class="ace-icon fa fa-times"></i>
+									</button>
+
+									<i class="ace-icon fa fa-check green"></i>
+
+									Welcome to
+									<strong class="green">
+										Ace
+										<small>(v1.4)</small>
+									</strong>,
+	лёгкий, многофункциональный и простой в использовании шаблон для админки на bootstrap 3.3.6. Загрузить исходники с <a href="https://github.com/bopoda/ace">github</a> (with minified ace js/css files).
+								</div>
+
 								<div class="row">
 									<div class="space-6"></div>
 
@@ -569,6 +422,17 @@ include ('koneksi.php');
 												<div class="infobox-content">$32,000</div>
 											</div>
 										</div>
+
+										<div class="infobox infobox-grey infobox-small infobox-dark">
+											<div class="infobox-icon">
+												<i class="ace-icon fa fa-download"></i>
+											</div>
+
+											<div class="infobox-data">
+												<div class="infobox-content">Downloads</div>
+												<div class="infobox-content">1,205</div>
+											</div>
+										</div>
 									</div>
 
 									<div class="vspace-12-sm"></div>
@@ -578,7 +442,7 @@ include ('koneksi.php');
 											<div class="widget-header widget-header-flat widget-header-small">
 												<h5 class="widget-title">
 													<i class="ace-icon fa fa-signal"></i>
-													Traffic Earnings
+													Traffic Sources
 												</h5>
 
 												<div class="widget-toolbar no-border">
@@ -625,15 +489,40 @@ include ('koneksi.php');
 												<div class="widget-main">
 													<div id="piechart-placeholder"></div>
 
-													
+													<div class="hr hr8 hr-double"></div>
+
+													<div class="clearfix">
+														<div class="grid3">
+															<span class="grey">
+																<i class="ace-icon fa fa-facebook-square fa-2x blue"></i>
+																&nbsp; likes
+															</span>
+															<h4 class="bigger pull-right">1,255</h4>
+														</div>
+
+														<div class="grid3">
+															<span class="grey">
+																<i class="ace-icon fa fa-twitter-square fa-2x purple"></i>
+																&nbsp; tweets
+															</span>
+															<h4 class="bigger pull-right">941</h4>
+														</div>
+
+														<div class="grid3">
+															<span class="grey">
+																<i class="ace-icon fa fa-pinterest-square fa-2x red"></i>
+																&nbsp; pins
+															</span>
+															<h4 class="bigger pull-right">1,050</h4>
+														</div>
 													</div>
-												</div><!-- /.widget-main -->
+												</div>--><!-- /.widget-main -->
 											</div><!-- /.widget-body -->
 										</div><!-- /.widget-box -->
 									</div><!-- /.col -->
 								</div><!-- /.row -->
 
-								<div class="hr hr32 hr-dotted"></div>
+								<!--<div class="hr hr32 hr-dotted"></div>
 
 								<div class="row">
 									<div class="col-sm-5">
@@ -740,12 +629,12 @@ include ('koneksi.php');
 															</tr>
 														</tbody>
 													</table>
-												</div><!-- /.widget-main -->
+												</div>--><!-- /.widget-main -->
 											</div><!-- /.widget-body -->
 										</div><!-- /.widget-box -->
 									</div><!-- /.col -->
 
-									<div class="col-sm-7">
+									<!--<div class="col-sm-7">
 										<div class="widget-box transparent">
 											<div class="widget-header widget-header-flat">
 												<h4 class="widget-title lighter">
@@ -763,13 +652,13 @@ include ('koneksi.php');
 											<div class="widget-body">
 												<div class="widget-main padding-4">
 													<div id="sales-charts"></div>
-												</div><!-- /.widget-main -->
+												</div>--><!-- /.widget-main -->
 											</div><!-- /.widget-body -->
 										</div><!-- /.widget-box -->
 									</div><!-- /.col -->
 								</div><!-- /.row -->
 
-								<div class="hr hr32 hr-dotted"></div>
+								<!--<div class="hr hr32 hr-dotted"></div>
 
 								<div class="row">
 									<div class="col-sm-6">
@@ -787,6 +676,10 @@ include ('koneksi.php');
 
 														<li>
 															<a data-toggle="tab" href="#member-tab">Members</a>
+														</li>
+
+														<li>
+															<a data-toggle="tab" href="#comment-tab">Comments</a>
 														</li>
 													</ul>
 												</div>
@@ -1179,14 +1072,190 @@ include ('koneksi.php');
 															</div>
 
 															<div class="hr hr-double hr8"></div>
-														</div><!-- /.#member-tab -->
+														</div>--><!-- /.#member-tab -->
+
+														<!--<div id="comment-tab" class="tab-pane">
+															<div class="comments">
+																<div class="itemdiv commentdiv">
+																	<div class="user">
+																		<img alt="Bob Doe's Avatar" src="assets/images/avatars/avatar.png" />
+																	</div>
+
+																	<div class="body">
+																		<div class="name">
+																			<a href="#">Bob Doe</a>
+																		</div>
+
+																		<div class="time">
+																			<i class="ace-icon fa fa-clock-o"></i>
+																			<span class="green">6 min</span>
+																		</div>
+
+																		<div class="text">
+																			<i class="ace-icon fa fa-quote-left"></i>
+																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+																		</div>
+																	</div>
+
+																	<div class="tools">
+																		<div class="inline position-relative">
+																			<button class="btn btn-minier bigger btn-yellow dropdown-toggle" data-toggle="dropdown">
+																				<i class="ace-icon fa fa-angle-down icon-only bigger-120"></i>
+																			</button>
+
+																			<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+																				<li>
+																					<a href="#" class="tooltip-success" data-rel="tooltip" title="Approve">
+																						<span class="green">
+																							<i class="ace-icon fa fa-check bigger-110"></i>
+																						</span>
+																					</a>
+																				</li>
+
+																				<li>
+																					<a href="#" class="tooltip-warning" data-rel="tooltip" title="Reject">
+																						<span class="orange">
+																							<i class="ace-icon fa fa-times bigger-110"></i>
+																						</span>
+																					</a>
+																				</li>
+
+																				<li>
+																					<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																						<span class="red">
+																							<i class="ace-icon fa fa-trash-o bigger-110"></i>
+																						</span>
+																					</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="itemdiv commentdiv">
+																	<div class="user">
+																		<img alt="Jennifer's Avatar" src="assets/images/avatars/avatar1.png" />
+																	</div>
+
+																	<div class="body">
+																		<div class="name">
+																			<a href="#">Jennifer</a>
+																		</div>
+
+																		<div class="time">
+																			<i class="ace-icon fa fa-clock-o"></i>
+																			<span class="blue">15 min</span>
+																		</div>
+
+																		<div class="text">
+																			<i class="ace-icon fa fa-quote-left"></i>
+																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+																		</div>
+																	</div>
+
+																	<div class="tools">
+																		<div class="action-buttons bigger-125">
+																			<a href="#">
+																				<i class="ace-icon fa fa-pencil blue"></i>
+																			</a>
+
+																			<a href="#">
+																				<i class="ace-icon fa fa-trash-o red"></i>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="itemdiv commentdiv">
+																	<div class="user">
+																		<img alt="Joe's Avatar" src="assets/images/avatars/avatar2.png" />
+																	</div>
+
+																	<div class="body">
+																		<div class="name">
+																			<a href="#">Joe</a>
+																		</div>
+
+																		<div class="time">
+																			<i class="ace-icon fa fa-clock-o"></i>
+																			<span class="orange">22 min</span>
+																		</div>
+
+																		<div class="text">
+																			<i class="ace-icon fa fa-quote-left"></i>
+																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+																		</div>
+																	</div>
+
+																	<div class="tools">
+																		<div class="action-buttons bigger-125">
+																			<a href="#">
+																				<i class="ace-icon fa fa-pencil blue"></i>
+																			</a>
+
+																			<a href="#">
+																				<i class="ace-icon fa fa-trash-o red"></i>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+
+																<div class="itemdiv commentdiv">
+																	<div class="user">
+																		<img alt="Rita's Avatar" src="assets/images/avatars/avatar3.png" />
+																	</div>
+
+																	<div class="body">
+																		<div class="name">
+																			<a href="#">Rita</a>
+																		</div>
+
+																		<div class="time">
+																			<i class="ace-icon fa fa-clock-o"></i>
+																			<span class="red">50 min</span>
+																		</div>
+
+																		<div class="text">
+																			<i class="ace-icon fa fa-quote-left"></i>
+																			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis &hellip;
+																		</div>
+																	</div>
+
+																	<div class="tools">
+																		<div class="action-buttons bigger-125">
+																			<a href="#">
+																				<i class="ace-icon fa fa-pencil blue"></i>
+																			</a>
+
+																			<a href="#">
+																				<i class="ace-icon fa fa-trash-o red"></i>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+
+															<div class="hr hr8"></div>
+
+															<div class="center">
+																<i class="ace-icon fa fa-comments-o fa-2x green middle"></i>
+
+																&nbsp;
+																<a href="#" class="btn btn-sm btn-white btn-info">
+																	See all comments &nbsp;
+																	<i class="ace-icon fa fa-arrow-right"></i>
+																</a>
+															</div>
+
+															<div class="hr hr-double hr8"></div>
+														</div>
 													</div>
-												</div><!-- /.widget-main -->
+												</div>--><!-- /.widget-main -->
 											</div><!-- /.widget-body -->
 										</div><!-- /.widget-box -->
 									</div><!-- /.col -->
 
-									<div class="col-sm-6">
+									<!--<div class="col-sm-6">
 										<div class="widget-box">
 											<div class="widget-header">
 												<h4 class="widget-title lighter smaller">
@@ -1333,7 +1402,7 @@ include ('koneksi.php');
 															</div>
 														</div>
 													</form>
-												</div><!-- /.widget-main -->
+												</div>--><!-- /.widget-main -->
 											</div><!-- /.widget-body -->
 										</div><!-- /.widget-box -->
 									</div><!-- /.col -->
@@ -1350,8 +1419,8 @@ include ('koneksi.php');
 				<div class="footer-inner">
 					<div class="footer-content">
 						<span class="bigger-120">
-							<span class="blue bolder">ARAYA</span>
-							Application &copy; 2020-SETERUSNYA
+							<span class="blue bolder">ARAYA MEDIA </span>
+							
 						</span>
 
 						&nbsp; &nbsp;
