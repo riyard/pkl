@@ -129,7 +129,7 @@ include ('koneksi.php');
 				
 				<ul class="nav nav-list">
 					<li class="active">
-						<a href="index_admin.html">
+						<a href="home">
 							<i class="menu-icon fa fa-tachometer"></i>
 							<span class="menu-text"> Beranda </span>
 						</a>
