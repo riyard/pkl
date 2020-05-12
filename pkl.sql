@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2020 at 07:23 PM
+-- Generation Time: May 12, 2020 at 04:58 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -46,11 +46,12 @@ CREATE TABLE `bts` (
 CREATE TABLE `customer` (
   `id_Customer` int(11) NOT NULL,
   `id_Karyawan` int(11) DEFAULT NULL,
+  `Email` varchar(45) DEFAULT NULL,
+  `Password` varchar(45) DEFAULT NULL,
   `NIK` int(20) DEFAULT NULL,
   `Nama_JenisFile` text DEFAULT NULL,
   `Alamat` varchar(45) DEFAULT NULL,
   `Jenis_Pelanggan` varchar(45) DEFAULT NULL,
-  `NPWP` varchar(45) DEFAULT NULL,
   `Status` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -65,6 +66,7 @@ CREATE TABLE `customer_alat` (
   `id_BTS` int(11) DEFAULT NULL,
   `id_Customer` int(11) DEFAULT NULL,
   `id_Layanan` int(11) DEFAULT NULL,
+  `id_Karyawan` int(11) DEFAULT NULL,
   `Jarak` varchar(45) DEFAULT NULL,
   `Ketinggian_Pipa` varchar(45) DEFAULT NULL,
   `Jenis_Transmisi` varchar(45) DEFAULT NULL,
@@ -129,6 +131,7 @@ CREATE TABLE `customer_layanan` (
 CREATE TABLE `invoice` (
   `No_Faktur` int(11) NOT NULL,
   `id_Customer` int(11) NOT NULL,
+  `id_Karyawan` int(11) DEFAULT NULL,
   `id_Detail_Invoice` int(11) NOT NULL,
   `Tanggal` date NOT NULL,
   `Tgl_JatuhTempo` datetime NOT NULL,
@@ -176,6 +179,7 @@ CREATE TABLE `karyawan_master` (
   `NIP` varchar(45) DEFAULT NULL,
   `Nama_JenisFile` varchar(45) DEFAULT NULL,
   `Jenis_Pelanggan` varchar(45) DEFAULT NULL,
+  `Email` varchar(45) DEFAULT NULL,
   `Password` varchar(45) DEFAULT NULL,
   `NoHp` varchar(45) DEFAULT NULL,
   `Level` varchar(45) DEFAULT NULL
