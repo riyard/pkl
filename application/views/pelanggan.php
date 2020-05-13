@@ -139,7 +139,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/Pelanggan")?>">
+						<a href="index.html">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
 								Pelanggan
