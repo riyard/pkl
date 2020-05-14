@@ -179,7 +179,7 @@ include ('koneksi.php');
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/layanan")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/layanan_sales")?>">
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Nama Layanan <span class="required"></span></label>
                       <div class="col-lg-10">
@@ -187,7 +187,7 @@ include ('koneksi.php');
                       </div>
                     </div>
                        <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Jenis Layanan <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Layanan Jenis <span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Username" type="text" required />
                       </div>
@@ -204,10 +204,28 @@ include ('koneksi.php');
                     </div>
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Save</button>
+                        <button class="btn btn-primary" name="save">Simpan</button>
                       </div>
                     </div>
                   </form>
+                  <?php
+					if (isset($_POST['save']))
+					{
+						// $gambar = $_FILES['foto']['name'];
+						// $tipe = $_FILES['foto']['type'];
+						// $lokasi = $_FILES['foto']['tmp_name'];
+						// $upload = "images/produk/$gambar";
+						// move_uploaded_file($lokasi,$upload);
+
+						$Nama_Layanan = $_POST[Nama_Layanan];
+						$Layanan_Jenis = $_POST[Layanan_Jenis];
+						$Kapasitas = $_POST[Kapasitas];
+						$Harga = $_POST[Harga];
+						mysqli_query($koneksi,"INSERT INTO Layanan VALUES('','$Nama_Layanan','$Layanan_Jenis','$','$Kapasitas','$Harga')");
+						echo "<div class='alert alert-info'>Data tersimpan</div>";
+						echo "<meta http-equiv='refresh' content='1;url=layanan_sales.php?halaman=produk'>";
+					}
+					?>
                 </div>
 </section>
 
