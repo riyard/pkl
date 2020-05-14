@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2020 at 03:51 PM
+-- Generation Time: May 12, 2020 at 04:58 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -46,9 +46,7 @@ CREATE TABLE `bts` (
 CREATE TABLE `customer` (
   `id_Customer` int(11) NOT NULL,
   `id_Karyawan` int(11) DEFAULT NULL,
-  `nama` varchar(45) DEFAULT NULL,
   `Email` varchar(45) DEFAULT NULL,
-  `NoHp` varchar(45) DEFAULT NULL,
   `Password` varchar(45) DEFAULT NULL,
   `NIK` int(20) DEFAULT NULL,
   `Nama_JenisFile` text DEFAULT NULL,
@@ -173,21 +171,6 @@ CREATE TABLE `jenis_file` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `karyawan`
---
-
-CREATE TABLE `karyawan` (
-  `id_Karyawan` int(11) NOT NULL,
-  `Nama` varchar(45) DEFAULT NULL,
-  `NIP` varchar(45) DEFAULT NULL,
-  `Email` varchar(45) DEFAULT NULL,
-  `NoHp` varchar(45) DEFAULT NULL,
-  `Alamat` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `karyawan_master`
 --
 
@@ -286,12 +269,6 @@ ALTER TABLE `jenis_file`
   ADD PRIMARY KEY (`id_Jenis_File`);
 
 --
--- Indexes for table `karyawan`
---
-ALTER TABLE `karyawan`
-  ADD PRIMARY KEY (`id_Karyawan`);
-
---
 -- Indexes for table `karyawan_master`
 --
 ALTER TABLE `karyawan_master`
@@ -366,12 +343,6 @@ ALTER TABLE `invoice_detail`
 --
 ALTER TABLE `jenis_file`
   MODIFY `id_Jenis_File` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `karyawan`
---
-ALTER TABLE `karyawan`
-  MODIFY `id_Karyawan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `karyawan_master`
