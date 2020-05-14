@@ -139,7 +139,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="index.html">
+						<a href="<?php echo base_url("index.php/pelanggan")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
 								Pelanggan
@@ -186,28 +186,47 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-							<li>
-								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="home">Home</a>
-							</li>
-							<li class="active">Dashboard</li>
+						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Pelanggan</li></a>
+              			<li><i class="icon_document_alt"></i>Table</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
-								<span class="input-icon">
-									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-									<i class="ace-icon fa fa-search nav-search-icon"></i>
 								</span>
 							</form>
 						</div><!-- /.nav-search -->
 					</div>
 
-					
-								</div><!-- /.pull-left -->
-							</div><!-- /.ace-settings-box -->
-						</div><!-- /.ace-settings-container -->
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tabel Pelanggan</h3>
 
+					 <a href="<?php echo base_url("index.php/tambahpelanggan")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Pelanggan</button> </a>
+
+<section class="wrapper">
+	<table class="table table-striped table-advance table-hover">
+                <tbody>
+                  <tr>
+                    <th><i class="icon_profile"></i> Nama</th>
+                    <th><i class="icon_mail_alt"></i> NIK</th>
+                    <th><i class="icon_calendar"></i> Alamat</th>
+                    <th><i class="icon_mail_alt"></i> No Telepon</th>
+                    <th><i class="icon_mail_alt"></i> NPWP</th>
+                    <th><i class="icon_mail_alt"></i> Email</th>
+                    <th><i class="icon_mail_alt"></i> Password</th>
+                  </tr>
+                  <td>
+                  	<div class="btn-group">
+                        <button class="btn btn-xs btn-info">
+						<a href="<?php echo base_url("index.php/editpelanggan")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+						</button>
+                        <button class="btn btn-xs btn-danger">
+						<i class="ace-icon fa fa-trash-o bigger-120"></i>
+						</button>
+                  </td>
+</section>
+
+
+
+						</section>
 						<!--<div class="page-header">
 							<h1>
 								Dashboard
@@ -1342,6 +1361,7 @@ include ('koneksi.php');
 					</div><!-- /.page-content -->
 				</div>
 			</div><!-- /.main-content -->
+
 
 			<div class="footer">
 				<div class="footer-inner">
