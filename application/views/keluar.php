@@ -60,13 +60,15 @@ include ('koneksi.php');
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="home" class="navbar-brand">
+					<a href="profil" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							ARAYA MEDIA
 						</small>
 					</a>
 				</div>
+
+				<!-- menampilkan siapa yang login -->
 			</div><!-- /.navbar-container -->
 		</div>
 
@@ -151,71 +153,22 @@ include ('koneksi.php');
 					</li>
 
 				</ul><!-- /.nav-list -->
-
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
 				</div>
 			</div>
-
 			<div class="main-content">
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Pelanggan</li></a>
-              			<li><i class="icon_document_alt"></i>Table</li>
+						<li><a href=""><i class="menu-icon fa fa-power-off"> Keluar</i>
+						<li><i class="icon_document_alt"></i></li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
 								</span>
 							</form>
-						</div><!-- /.nav-search -->
-					</div>
-
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah Pelanggan</h3>
-
-
-<section class="wrapper">
-
-	<table class="table table-striped table-advance table-hover">
-                 <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/pelanggan")?>">
-                    <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Nama <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                    </div>
-                       <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Alamat <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">No Telepon <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Password" type="Password" required />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Save</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-</section>
-
 
 
 						</section>

@@ -60,7 +60,7 @@ include ('koneksi.php');
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="home" class="navbar-brand">
+					<a href="profil" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							ARAYA MEDIA
@@ -69,20 +69,6 @@ include ('koneksi.php');
 				</div>
 
 				<!-- menampilkan siapa yang login -->
-				<div class="navbar-buttons navbar-header pull-right" role="navigation">
-					<ul class="nav ace-nav">		
-						<li class="light-blue dropdown-modal">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="<?php echo base_url()?>assets/images/avatars/user.jpg" alt="Jason's Photo" />
-								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
-								</span>
-
-							</a>
-						</li>
-					</ul>
-				</div>
 			</div><!-- /.navbar-container -->
 		</div>
 
@@ -148,16 +134,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="index.html">
-							<i class="menu-icon fa fa-desktop"></i>
-							<span class="menu-text">
-								Verifikasi
-							</span>
-						</a>
-
-					</li>
-					<li class="">
-						<a href="<?php echo base_url("index.php/layanan")?>">
+						<a href="<?php echo base_url("index.php/layanan_sales")?>">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text">
 								Layanan
@@ -166,7 +143,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="index.html">
+						<a href="<?php echo base_url("index.php/keluar")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
@@ -199,13 +176,47 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Layanan</h3>
 
-				
+					<a href="<?php echo base_url("index.php/tambahpelanggan")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a>
 
-<section class="wrapper">
-	LAYANAN
-</section>
-
-
+					<section class="wrapper">
+						<table class="table table-striped table-advance table-hover">
+					                <tbody>
+					                  <tr>
+					                    <th><i class="icon_profile"></i> Nama Layanan</th>
+					                  	<th><i class="icon_profile"></i> Jenis Layanan</th>
+					                    <th><i class="icon_mail_alt"></i> Kapasitas</th>
+					                    <th><i class="icon_calendar"></i> Harga</th>
+					                  </tr>
+					                  <td>
+					                  	<div class="btn-group">
+					                        <button class="btn btn-xs btn-info">
+											<a href="<?php echo base_url("index.php/editpelanggan")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											</button>
+					                        <button class="btn btn-xs btn-danger">
+											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+											</button>
+					                  </td>
+					                  <?php
+								include ('koneksi.php');
+								$sql='select * from layanan';
+								$ambil=mysqli_query($konek,$sql);
+								$nomor=1;
+								
+								while($data=mysqli_fetch_array($ambil)){ 
+								echo "<tr>";
+								// echo "<td>".$nomor++."</td>";
+								// echo "<td>".$nomor++."</td>";
+								echo "<td>".$data['Nama_Layanan']."</td>";
+								echo "<td>".$data['Jenis_Layanan']."</td>";
+								echo "<td>".$data['Kapasitas']."</td>";
+								echo "<td>".$data['Harga']."</td>";
+								// echo "<td><img src='images/produk/".$data['foto_produk']."' width='100' height='100'></td>";
+								// echo "<td>".$data['deskripsi_produk']."</td>";
+								// echo "<td><a href='hapus_layanan.php?halaman=hapusproduk&id=".$data['id_produk']."'>Hapus</a></td>";
+								echo "</tr>";
+								} 
+								?>
+					</section>
 
 						</section>
 						<!--<div class="page-header">

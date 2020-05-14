@@ -60,7 +60,7 @@ include ('koneksi.php');
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="home" class="navbar-brand">
+					<a href="profil" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							ARAYA MEDIA
@@ -69,20 +69,6 @@ include ('koneksi.php');
 				</div>
 
 				<!-- menampilkan siapa yang login -->
-				<div class="navbar-buttons navbar-header pull-right" role="navigation">
-					<ul class="nav ace-nav">		
-						<li class="light-blue dropdown-modal">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="<?php echo base_url()?>assets/images/avatars/user.jpg" alt="Jason's Photo" />
-								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
-								</span>
-
-							</a>
-						</li>
-					</ul>
-				</div>
 			</div><!-- /.navbar-container -->
 		</div>
 
@@ -148,16 +134,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="index.html">
-							<i class="menu-icon fa fa-desktop"></i>
-							<span class="menu-text">
-								Verifikasi
-							</span>
-						</a>
-
-					</li>
-					<li class="">
-						<a href="layanan.html">
+						<a href="<?php echo base_url("index.php/layanan_sales")?>">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text">
 								Layanan
@@ -166,7 +143,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="index.html">
+						<a href="<?php echo base_url("index.php/keluar")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
@@ -201,31 +178,28 @@ include ('koneksi.php');
 
 					 <a href="<?php echo base_url("index.php/tambahpelanggan")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Pelanggan</button> </a>
 
-<section class="wrapper">
-	<table class="table table-striped table-advance table-hover">
-                <tbody>
-                  <tr>
-                    <th><i class="icon_profile"></i> Nama</th>
-                    <th><i class="icon_mail_alt"></i> NIK</th>
-                    <th><i class="icon_calendar"></i> Alamat</th>
-                    <th><i class="icon_mail_alt"></i> No Telepon</th>
-                    <th><i class="icon_mail_alt"></i> NPWP</th>
-                    <th><i class="icon_mail_alt"></i> Email</th>
-                    <th><i class="icon_mail_alt"></i> Password</th>
-                  </tr>
-                  <td>
-                  	<div class="btn-group">
-                        <button class="btn btn-xs btn-info">
-						<a href="<?php echo base_url("index.php/editpelanggan")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-						</button>
-                        <button class="btn btn-xs btn-danger">
-						<i class="ace-icon fa fa-trash-o bigger-120"></i>
-						</button>
-                  </td>
-</section>
-
-
-
+					<section class="wrapper">
+						<table class="table table-striped table-advance table-hover">
+					                <tbody>
+					                  <tr>
+					                    <th><i class="icon_profile"></i> Nama</th>
+					                    <th><i class="icon_mail_alt"></i> NIK</th>
+					                    <th><i class="icon_calendar"></i> Alamat</th>
+					                    <th><i class="icon_mail_alt"></i> No Telepon</th>
+					                    <th><i class="icon_mail_alt"></i> NPWP</th>
+					                    <th><i class="icon_mail_alt"></i> Email</th>
+					                    <th><i class="icon_mail_alt"></i> Password</th>
+					                  </tr>
+					                  <td>
+					                  	<div class="btn-group">
+					                        <button class="btn btn-xs btn-info">
+											<a href="<?php echo base_url("index.php/editpelanggan")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											</button>
+					                        <button class="btn btn-xs btn-danger">
+											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+											</button>
+					                  </td>
+					</section>
 						</section>
 						<!--<div class="page-header">
 							<h1>

@@ -69,20 +69,6 @@ include ('koneksi.php');
 				</div>
 
 				<!-- menampilkan siapa yang login -->
-				<div class="navbar-buttons navbar-header pull-right" role="navigation">
-					<ul class="nav ace-nav">		
-						<li class="light-blue dropdown-modal">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="<?php echo base_url()?>assets/images/avatars/user.jpg" alt="Jason's Photo" />
-								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
-								</span>
-
-							</a>
-						</li>
-					</ul>
-				</div>
 			</div><!-- /.navbar-container -->
 		</div>
 
@@ -148,16 +134,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="index.html">
-							<i class="menu-icon fa fa-desktop"></i>
-							<span class="menu-text">
-								Verifikasi
-							</span>
-						</a>
-
-					</li>
-					<li class="">
-						<a href="<?php echo base_url("index.php/layanan")?>">
+						<a href="<?php echo base_url("index.php/layanan_sales")?>">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text">
 								Layanan
@@ -166,7 +143,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="index.html">
+						<a href="<?php echo base_url("index.php/keluar")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
@@ -204,9 +181,6 @@ include ('koneksi.php');
 
 						<div class="row">
 							<div class="col-xs-12">
-								
-								<div class="hr dotted"></div>
-
 								<div>
 									<div id="user-profile-1" class="user-profile row">
 										<div class="col-xs-12 col-sm-3 center">
@@ -229,11 +203,7 @@ include ('koneksi.php');
 													</div>
 												</div>
 											</div>
-
-											<div class="hr hr16 dotted"></div>
 										</div>
-
-											<div class="profile-user-info profile-user-info-striped">
 												<div class="profile-info-row">
 													<div class="profile-info-name"> Username </div>
 
@@ -284,10 +254,6 @@ include ('koneksi.php');
 													</div>
 												</div>
 											</div>
-
-											<div class="hr hr2 hr-double"></div>
-
-								
 						</section>
 
 						

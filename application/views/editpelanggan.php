@@ -60,7 +60,7 @@ include ('koneksi.php');
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="home" class="navbar-brand">
+					<a href="profil" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							ARAYA MEDIA
@@ -69,20 +69,6 @@ include ('koneksi.php');
 				</div>
 
 				<!-- menampilkan siapa yang login -->
-				<div class="navbar-buttons navbar-header pull-right" role="navigation">
-					<ul class="nav ace-nav">		
-						<li class="light-blue dropdown-modal">
-							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="<?php echo base_url()?>assets/images/avatars/user.jpg" alt="Jason's Photo" />
-								<span class="user-info">
-									<small>Welcome,</small>
-									Jason
-								</span>
-
-							</a>
-						</li>
-					</ul>
-				</div>
 			</div><!-- /.navbar-container -->
 		</div>
 
@@ -148,16 +134,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="index.html">
-							<i class="menu-icon fa fa-desktop"></i>
-							<span class="menu-text">
-								Verifikasi
-							</span>
-						</a>
-
-					</li>
-					<li class="">
-						<a href="layanan.html">
+						<a href="<?php echo base_url("index.php/layanan_sales")?>">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text">
 								Layanan
@@ -166,7 +143,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="index.html">
+						<a href="<?php echo base_url("index.php/keluar")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
