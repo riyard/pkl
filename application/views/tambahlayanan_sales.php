@@ -60,15 +60,13 @@ include ('koneksi.php');
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="profil" class="navbar-brand">
+					<a href="home" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							ARAYA MEDIA
 						</small>
 					</a>
 				</div>
-
-				<!-- menampilkan siapa yang login -->
 			</div><!-- /.navbar-container -->
 		</div>
 
@@ -163,7 +161,7 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Layanan</li></a>
+						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Pelanggan</li></a>
               			<li><i class="icon_document_alt"></i>Table</li>
 						</ul><!-- /.breadcrumb -->
 
@@ -174,49 +172,46 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Layanan</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah Pelanggan</h3>
 
-					<a href="<?php echo base_url("index.php/tambahlayanan_sales")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a>
 
-					<section class="wrapper">
-						<table class="table table-striped table-advance table-hover">
-					                <tbody>
-					                  <tr>
-					                    <th><i class="icon_profile"></i> Nama Layanan</th>
-					                  	<th><i class="icon_profile"></i> Jenis Layanan</th>
-					                    <th><i class="icon_mail_alt"></i> Kapasitas</th>
-					                    <th><i class="icon_calendar"></i> Harga</th>
-					                  </tr>
-					                  <td>
-					                  	<div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editlayanan_sales")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
-											</button>
-					                  </td>
-					                  <?php
-								include ('koneksi.php');
-								$sql='select * from layanan';
-								$ambil=mysqli_query($konek,$sql);
-								$nomor=1;
-								
-								while($data=mysqli_fetch_array($ambil)){ 
-								echo "<tr>";
-								// echo "<td>".$nomor++."</td>";
-								// echo "<td>".$nomor++."</td>";
-								echo "<td>".$data['Nama_Layanan']."</td>";
-								echo "<td>".$data['Jenis_Layanan']."</td>";
-								echo "<td>".$data['Kapasitas']."</td>";
-								echo "<td>".$data['Harga']."</td>";
-								// echo "<td><img src='images/produk/".$data['foto_produk']."' width='100' height='100'></td>";
-								// echo "<td>".$data['deskripsi_produk']."</td>";
-								// echo "<td><a href='hapus_layanan.php?halaman=hapusproduk&id=".$data['id_produk']."'>Hapus</a></td>";
-								echo "</tr>";
-								} 
-								?>
-					</section>
+<section class="wrapper">
+
+	<table class="table table-striped table-advance table-hover">
+                 <div class="form">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/layanan")?>">
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Nama Layanan <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Username" type="text" required />
+                      </div>
+                    </div>
+                       <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Jenis Layanan <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Username" type="text" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Kapasitas <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Username" type="text" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Harga <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Username" type="text" required />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn-primary"  type="submit">Save</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+</section>
+
+
 
 						</section>
 						<!--<div class="page-header">
