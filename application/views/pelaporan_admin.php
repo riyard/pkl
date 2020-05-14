@@ -190,8 +190,8 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Layanan</li></a>
-              			<li><i class="icon_document_alt"></i>Table Layanan</li>
+						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Pelaporan</li></a>
+              			<li><i class="icon_document_alt"></i>Table Pelaporan</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -201,7 +201,7 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Table Layanan</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Table Pelaporan</h3>
 
 <!-- 					<a href="<?php echo base_url("index.php/tambahlayanan_sales")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a> -->
 
@@ -209,10 +209,17 @@ include ('koneksi.php');
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                  <tr>
-					                    <th><i class="icon_profile"></i> Nama Layanan</th>
-					                  	<th><i class="icon_profile"></i> Jenis Layanan</th>
-					                    <th><i class="icon_mail_alt"></i> Kapasitas</th>
-					                    <th><i class="icon_calendar"></i> Harga</th>
+					                    <th><i class="icon_profile"></i> No Faktur</th>
+					                  	<th><i class="icon_profile"></i> Id Customer</th>
+					                    <th><i class="icon_mail_alt"></i> Id Karyawan</th>
+					                    <th><i class="icon_calendar"></i> Id Detail Invoice</th>
+					                    <th><i class="icon_profile"></i> Tanggal</th>
+					                  	<th><i class="icon_profile"></i> Tanggal Jatuh Tempo</th>
+					                    <th><i class="icon_mail_alt"></i> Sub Total</th>
+					                    <th><i class="icon_calendar"></i> Status PPN</th>
+					                    <th><i class="icon_calendar"></i> PPN</th>
+					                    <th><i class="icon_mail_alt"></i> Total</th>
+					                    <th><i class="icon_calendar"></i> Status Lunas</th>
 					                  </tr>
 					                  <!-- <td>
 					                  	<div class="btn-group">
