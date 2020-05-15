@@ -174,7 +174,7 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Layanan</h3>
+							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Invoice</h3>
 
 <!-- 					<a href="<?php echo base_url("index.php/tambahlayanan_sales")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a> -->
 
@@ -182,10 +182,14 @@ include ('koneksi.php');
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                  <tr>
-					                    <th><i class="icon_profile"></i> Nama Layanan</th>
-					                  	<th><i class="icon_profile"></i> Jenis Layanan</th>
-					                    <th><i class="icon_mail_alt"></i> Kapasitas</th>
-					                    <th><i class="icon_calendar"></i> Harga</th>
+					                    <th><i class="icon_profile"></i>Nomer faktur</th>
+					                  	<th><i class="icon_profile"></i>Tanggal</th>
+					                    <th><i class="icon_mail_alt"></i>Jatuh tempo</th>
+					                    <th><i class="icon_calendar"></i>Sub Total</th>
+					                    <th><i class="icon_profile"></i>Status Ppn</th>
+					                  	<th><i class="icon_profile"></i>Ppn</th>
+					                    <th><i class="icon_mail_alt"></i>Total</th>
+					                    <th><i class="icon_calendar"></i>Status</th>
 					                  </tr>
 					                  <!-- <td>
 					                  	<div class="btn-group">
@@ -198,7 +202,7 @@ include ('koneksi.php');
 					                  </td> -->
 					                  <?php
 								include ('koneksi.php');
-								$sql='select * from layanan';
+								$sql='select * from invoice';
 								$ambil=mysqli_query($konek,$sql);
 								$nomor=1;
 								
@@ -206,10 +210,14 @@ include ('koneksi.php');
 								echo "<tr>";
 								// echo "<td>".$nomor++."</td>";
 								// echo "<td>".$nomor++."</td>";
-								echo "<td>".$data['Nama_Layanan']."</td>";
-								echo "<td>".$data['Jenis_Layanan']."</td>";
-								echo "<td>".$data['Kapasitas']."</td>";
-								echo "<td>".$data['Harga']."</td>";
+								echo "<td>".$data['No_Faktur']."</td>";
+								echo "<td>".$data['Tanggal']."</td>";
+								echo "<td>".$data['Tgl_JatuhTempo']."</td>";
+								echo "<td>".$data['Sub_Total']."</td>";
+								echo "<td>".$data['Status_Ppn']."</td>";
+								echo "<td>".$data['Ppn']."</td>";
+								echo "<td>".$data['Total']."</td>";
+								echo "<td>".$data['Status_Lunas']."</td>";
 								// echo "<td><img src='images/produk/".$data['foto_produk']."' width='100' height='100'></td>";
 								// echo "<td>".$data['deskripsi_produk']."</td>";
 								// echo "<td><a href='hapus_layanan.php?halaman=hapusproduk&id=".$data['id_produk']."'>Hapus</a></td>";
