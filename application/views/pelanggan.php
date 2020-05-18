@@ -176,29 +176,47 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tabel Pelanggan</h3>
 
-					 <a href="<?php echo base_url("index.php/tambahpelanggan")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Pelanggan</button> </a>
+					 <a href="<?php echo base_url()."index.php/pelanggan/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Pelanggan</button> </a>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                  <tr>
+					                  	<th><i class="icon_profile"></i> No</th>
 					                    <th><i class="icon_profile"></i> Nama</th>
 					                    <th><i class="icon_mail_alt"></i> NIK</th>
 					                    <th><i class="icon_calendar"></i> Alamat</th>
-					                    <th><i class="icon_mail_alt"></i> No Telepon</th>
-					                    <th><i class="icon_mail_alt"></i> NPWP</th>
+					                    <th><i class="icon_mail_alt"></i> NoHp</th>
 					                    <th><i class="icon_mail_alt"></i> Email</th>
-					                    <th><i class="icon_mail_alt"></i> Password</th>
+					                    <th><i class="icon_mail_alt"></i> Passwordx</th>
 					                  </tr>
+					                  <tbody>
+					                  <?php $nomor=1;foreach ($pelanggan as $value) {?>
+					                    <tr>
+					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $value->nama?></td>
+					                    <td><?php echo $value->NIK?></td>
+					                    <td><?php echo $value->Alamat?></td>
+					                    <td><?php echo $value->NoHp?></td>
+					                    <td><?php echo $value->Email?></td>
+					                    <td><?php echo $value->Password?></td>
 					                  <td>
 					                  	<div class="btn-group">
 					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editpelanggan")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											<a href="<?php echo base_url()."index.php/pelanggan/edit/".$value->id_Customer?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
 											</button>
 					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+											<a href="<?php echo base_url()."index.php/pelanggan/delete/".$value->id_Customer?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
 											</button>
 					                  </td>
+					              </div>
+					          </tbody>
+					      </tr>
+					                 <?php
+
+                    }
+                    ?>
+
 					</section>
 						</section>
 						<!--<div class="page-header">

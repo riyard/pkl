@@ -123,7 +123,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/pelanggan_sales")?>">
+						<a href="<?php echo base_url("index.php/Pelanggan")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
 								Pelanggan
@@ -179,27 +179,27 @@ include ('koneksi.php');
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/pelanggan")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/pelanggan/insert")?>">
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Nama <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="nama" type="text" required />
                       </div>
                     </div>
                        <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Alamat <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Alamat" type="text" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">No Telepon <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">NoHp <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="NoHp" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Email" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
