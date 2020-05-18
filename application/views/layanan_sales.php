@@ -176,48 +176,42 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Layanan</h3>
 
-					<a href="<?php echo base_url("index.php/tambahlayanan_sales")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a>
+					<a href="<?php echo base_url("index.php/layanan_sales/input")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                  <tr>
+					                  	<th><i class="icon_profile"></i> No</th>
 					                    <th><i class="icon_profile"></i> Nama Layanan</th>
-					                  	<th><i class="icon_profile"></i> Jenis Layanan</th>
 					                    <th><i class="icon_mail_alt"></i> Kapasitas</th>
 					                    <th><i class="icon_calendar"></i> Harga</th>
 					                  </tr>
-					                  <td>
+					                  <tbody>
+					                  <?php $nomor=1;foreach ($layanan as $value) {?>
+					                    <tr>
+					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $value->Nama_Layanan?></td>
+					                    <td><?php echo $value->Kapasitas?></td>
+					                    <td><?php echo $value->Harga?></td>
+					                    <td>
 					                  	<div class="btn-group">
 					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editlayanan_sales")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											<a href="<?php echo base_url()."index.php/layanan_sales/edit/".$value->id_Layanan?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
 											</button>
 					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+											<a href="<?php echo base_url()."index.php/layanan_sales/delete/".$value->id_Layanan?>"><i class="ace-icon fa fa-trash-o bigger-120"></i>
 											</button>
 					                  </td>
-					                  <?php
-								include ('koneksi.php');
-								$sql='select * from layanan';
-								$ambil=mysqli_query($konek,$sql);
-								$nomor=1;
-								
-								while($data=mysqli_fetch_array($ambil)){ 
-								echo "<tr>";
-								// echo "<td>".$nomor++."</td>";
-								// echo "<td>".$nomor++."</td>";
-								echo "<td>".$data['Nama_Layanan']."</td>";
-								echo "<td>".$data['Jenis_Layanan']."</td>";
-								echo "<td>".$data['Kapasitas']."</td>";
-								echo "<td>".$data['Harga']."</td>";
-								// echo "<td><img src='images/produk/".$data['foto_produk']."' width='100' height='100'></td>";
-								// echo "<td>".$data['deskripsi_produk']."</td>";
-								// echo "<td><a href='hapus_layanan.php?halaman=hapusproduk&id=".$data['id_produk']."'>Hapus</a></td>";
-								echo "</tr>";
-								} 
-								?>
 					</section>
+						</div>
+						</td>
+						</tr>
+						<?php
 
+                    }
+                    ?>
+						</tbody>
 						</section>
 						<!--<div class="page-header">
 							<h1>

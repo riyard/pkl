@@ -172,34 +172,30 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah Pelanggan</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah Layanan</h3>
 
 
 <section class="wrapper">
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/layanan_sales")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/layanan_sales/insert")?>">
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Nama Layanan <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Nama Layanan" type="text" required />
                       </div>
                     </div>
-                       <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Layanan Jenis <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
+                      
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Kapasitas <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Kapasitas" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Harga <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Harga" type="text" required />
                       </div>
                     </div>
                     <div class="form-group">
@@ -208,24 +204,7 @@ include ('koneksi.php');
                       </div>
                     </div>
                   </form>
-                  <?php
-					if (isset($_POST['save']))
-					{
-						// $gambar = $_FILES['foto']['name'];
-						// $tipe = $_FILES['foto']['type'];
-						// $lokasi = $_FILES['foto']['tmp_name'];
-						// $upload = "images/produk/$gambar";
-						// move_uploaded_file($lokasi,$upload);
-
-						$Nama_Layanan = $_POST[Nama_Layanan];
-						$Layanan_Jenis = $_POST[Layanan_Jenis];
-						$Kapasitas = $_POST[Kapasitas];
-						$Harga = $_POST[Harga];
-						mysqli_query($koneksi,"INSERT INTO Layanan VALUES('','$Nama_Layanan','$Layanan_Jenis','$','$Kapasitas','$Harga')");
-						echo "<div class='alert alert-info'>Data tersimpan</div>";
-						echo "<meta http-equiv='refresh' content='1;url=layanan_sales.php?halaman=produk'>";
-					}
-					?>
+                  
                 </div>
 </section>
 

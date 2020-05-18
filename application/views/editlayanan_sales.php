@@ -179,27 +179,23 @@ include ('koneksi.php');
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/editlayanan_sales")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/layanan_sales/update")?>">
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Nama Layanan <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Nama_Layanan" type="text" value="<?php echo $layanan->Nama_Layanan ?>" required />
                       </div>
                     </div>
-                       <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Jenis Layanan <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Kapasitas <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Kapasitas" type="text" value="<?php echo $layanan->Kapasitas ?>" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Harga <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Harga" type="text" value="<?php echo $layanan->Harga ?>" required />
                       </div>
                     </div>
                     <div class="form-group">
@@ -207,6 +203,7 @@ include ('koneksi.php');
                         <button class="btn btn-primary"  type="submit">Save</button>
                       </div>
                     </div>
+                    <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_Layanan">
                   </form>
                 </div>
 </section>
