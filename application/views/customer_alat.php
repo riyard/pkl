@@ -176,13 +176,12 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Customer Alat</h3>
 
-					 <a href="<?php echo base_url("index.php/tambahcustomeralat")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah alat</button> </a>
+					 <a href="<?php echo base_url()."index.php/customer_alat/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah alat</button> </a>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                 <tr>
-					                    <th><i class="icon_profile"></i> No</th>
 					                    <th><i class="icon_profile"></i> id Customer Alat</th>
 					                  	<th><i class="icon_profile"></i> Jarak</th>
 					                    <th><i class="icon_calendar"></i> Ketinggian Pipa</th>
@@ -196,15 +195,38 @@ include ('koneksi.php');
 					                    <th><i class="icon_calendar"></i> SSID</th>
 					                    <th><i class="icon_calendar"></i> Freq</th>
 					                  </tr>
+					                  <tbody>
+					                  <?php $nomor=1;foreach ($customer_alat as $value) {?>
+					                    <tr>
+					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $value->Jarak?></td>
+					                    <td><?php echo $value->Ketinggian_Pipa?></td>
+					                    <td><?php echo $value->Jenis_Transmisi?></td>
+					                    <td><?php echo $value->Jenis_Cpe?></td>
+					                    <td><?php echo $value->Status_Cpe?></td>
+					                    <td><?php echo $value->Ip_Radio?></td>
+					                    <td><?php echo $value->Port?></td>
+					                    <td><?php echo $value->Username?></td>
+					                    <td><?php echo $value->Password?></td>
+					                    <td><?php echo $value->SSID?></td>
+					                    <td><?php echo $value->Freq?></td>
 					                  <td>
-					                  	<div class="btn-group">
+					                  <div class="btn-group">
 					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editcustomeralat")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											<a href="<?php echo base_url()."index.php/customer_alat/edit/".$value->id_Customer_Alat?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
 											</button>
 					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+											<a href="<?php echo base_url()."index.php/customer_alat/delete/".$value->id_Customer_Alat?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
 											</button>
 					                  </td>
+					              </div>
+					          </tbody>
+					      </tr>
+					                 <?php
+
+                    }
+                    ?>
+
 					</section>
 						</section>
 						<!--<div class="page-header">

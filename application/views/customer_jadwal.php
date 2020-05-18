@@ -125,7 +125,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/Customer_alat")?>">
+						<a href="<?php echo base_url("index.php/customer_alat")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
 								Customer Alat
@@ -176,28 +176,44 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Customer Jadwal</h3>
 
-					 <a href="<?php echo base_url("index.php/tambahcustomerjadwal")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Jadwal</button> </a>
+					 <a href="<?php echo base_url()."index.php/customer_jadwal/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Jadwal</button> </a>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                 <tr>
-					                    <th><i class="icon_profile"></i> No</th>
 					                    <th><i class="icon_profile"></i> id Customer Jadwal</th>
+					                    <th><i class="icon_profile"></i> id Karyawan</th>
 					                  	<th><i class="icon_profile"></i> Tanggal</th>
 					                    <th><i class="icon_calendar"></i> Jenis Visit</th>
 					                    <th><i class="icon_mail_alt"></i> Status</th>
 					                    
 					                  </tr>
+					                  <tbody>
+					                  <?php $nomor=1;foreach ($customer_jadwal as $value) {?>
+					                    <tr>
+					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $value->Tanggal?></td>
+					                    <td><?php echo $value->Jenis_Visit?></td>
+					                    <td><?php echo $value->Status?></td>
 					                  <td>
-					                  	<div class="btn-group">
+					                  <div class="btn-group">
 					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editcustomerjadwal")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											<a href="<?php echo base_url()."index.php/customer_jadwal/edit/".$value->id_Customer_Jadwal?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
 											</button>
 					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+											<a href="<?php echo base_url()."index.php/customer_jadwal/delete/".$value->id_Customer_Jadwal?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
 											</button>
 					                  </td>
+					              </div>
+					          </tbody>
+					      </tr>
+					                 <?php
+
+                    }
+                    ?>
+
 					</section>
 						</section>
 						<!--<div class="page-header">

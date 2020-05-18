@@ -125,7 +125,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/Customer_alat")?>">
+						<a href="<?php echo base_url("index.php/customer_alat")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
 								Customer Alat
@@ -181,88 +181,78 @@ include ('koneksi.php');
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/pelanggan")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/customer_alat/update")?>">
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">No <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                    </div>
-                       <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Id Customer <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                         <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Jarak <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Jarak" type="text" value="<?php echo $customer_alat->Jarak ?>" required />
                       </div>
+                    </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Ketinggian Pipa <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Ketinggian_Pipa" type="text" value="<?php echo $customer_alat->Ketinggian_Pipa ?>" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Jenis Transmisi <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Jenis_Transmisi" type="text" value="<?php echo $customer_alat->Jenis_Transmisi ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Jenis Cpe <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Jenis_Cpe" type="text" value="<?php echo $customer_alat->Jenis_Cpe ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status Cpe <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Status_Cpe" type="text" value="<?php echo $customer_alat->Status_Cpe ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Ip Radio <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Ip_Radio" type="text" value="<?php echo $customer_alat->Ip_Radio ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Port <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Port" type="text" value="<?php echo $customer_alat->Port ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Username <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Username" type="text" value="<?php echo $customer_alat->Username ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Password" type="Password" required />
+                        <input class="form-control" id="Username" name="Password" type="text" value="<?php echo $customer_alat->Password ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">SSID <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="SSID" type="text" value="<?php echo $customer_alat->SSID ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Freq <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Freq" type="text" value="<?php echo $customer_alat->Freq ?>" required />
                       </div>
                     </div>
-                    
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
                         <button class="btn btn-primary"  type="submit">Save</button>
                       </div>
                     </div>
+                    <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_Customer_Alat">
                   </form>
                 </div>
 </section>

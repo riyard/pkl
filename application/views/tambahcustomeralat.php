@@ -134,7 +134,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/pelanggan_admin")?>">
+						<a href="<?php echo base_url("index.php/customer_jadwal")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
 								Customer Jadwal
@@ -181,56 +181,45 @@ include ('koneksi.php');
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/pelanggan")?>">
-                    <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">No <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                    </div>
-                       <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Id Customer <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                         <div class="form-group ">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/customer_alat/insert")?>">
+                      <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Jarak <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Jarak" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Ketinggian Pipa <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Ketinggian_Pipa" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Jenis Transmisi <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Jenis_Transmisi" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Jenis Cpe <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Jenis_Cpe" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status Cpe <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Status_Cpe" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Ip Radio <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Ip_Radio" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Port <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Port" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
@@ -248,13 +237,13 @@ include ('koneksi.php');
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">SSID <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="SSID" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Freq <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Freq" type="text" required />
                       </div>
                     </div>
                     
