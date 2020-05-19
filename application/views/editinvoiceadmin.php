@@ -208,7 +208,7 @@ include ('koneksi.php');
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/invover_admin/update")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url()."index.php/invover_admin/update"?>">
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">No Faktur<span class="required"></span></label>
                       <div class="col-lg-10">
@@ -263,7 +263,7 @@ include ('koneksi.php');
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Total <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Total" type="text" value="<?php echo $invoice->Total ?>" required />
+                        <input class="form-control" id="Username" name="Total" type ="text" value="<?php echo $invoice->Total ?>" required />
                       </div>
                     </div>
                      <div class="form-group">

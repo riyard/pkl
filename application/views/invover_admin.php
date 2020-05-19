@@ -196,14 +196,14 @@ include ('koneksi.php');
 
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
-								</span>
+							x	</span>
 							</form>
 						</div><!-- /.nav-search -->
 					</div>
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Table Invoice</h3>
 
-					<a href="<?php echo base_url("index.php/invover_admin/input")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Invoice</button> </a>
+					<a href="<?php echo base_url()."index.php/invover_admin/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Invoice</button> </a>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
@@ -243,7 +243,7 @@ include ('koneksi.php');
 											<a href="<?php echo base_url()."index.php/invover_admin/edit/".$value->No_Faktur?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
 											</button>
 					                        <button class="btn btn-xs btn-danger">
-											<a href="<?php echo base_url()."index.php/invover_admin/delete/".$value->No_Faktur?>"><i class="ace-icon fa fa-trash-o bigger-120"></i>
+											<a href="<?php echo base_url()."index.php/invover_admin/delete/".$value->No_Faktur?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
 											</button>
 					                  </td>
 					</section>

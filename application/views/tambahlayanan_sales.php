@@ -186,7 +186,6 @@ include ('koneksi.php');
                         <input class="form-control" id="Username" name="Nama Layanan" type="text" required />
                       </div>
                     </div>
-                      
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Kapasitas <span class="required"></span></label>
                       <div class="col-lg-10">
