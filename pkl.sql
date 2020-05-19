@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 14, 2020 at 04:36 PM
+-- Generation Time: May 19, 2020 at 08:42 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -56,6 +56,13 @@ CREATE TABLE `customer` (
   `Jenis_Pelanggan` varchar(45) DEFAULT NULL,
   `Status` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id_Customer`, `id_Karyawan`, `nama`, `Email`, `NoHp`, `Password`, `NIK`, `Nama_JenisFile`, `Alamat`, `Jenis_Pelanggan`, `Status`) VALUES
+(1, 1, 'Supono', 'Supono@gmail.com', '0089097898698', 'suponoganteng', 0, NULL, 'Jember', 'Bulanan', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -132,17 +139,24 @@ CREATE TABLE `customer_layanan` (
 
 CREATE TABLE `invoice` (
   `No_Faktur` int(11) NOT NULL,
-  `id_Customer` int(11) NOT NULL,
+  `id_Customer` int(11) DEFAULT NULL,
   `id_Karyawan` int(11) DEFAULT NULL,
-  `id_Detail_Invoice` int(11) NOT NULL,
-  `Tanggal` date NOT NULL,
-  `Tgl_JatuhTempo` datetime NOT NULL,
-  `Sub_Total` varchar(45) NOT NULL,
-  `Status_Ppn` varchar(45) NOT NULL,
-  `Ppn` varchar(45) NOT NULL,
-  `Total` varchar(45) NOT NULL,
-  `Status_Lunas` varchar(45) NOT NULL
+  `id_Detail_Invoice` int(11) DEFAULT NULL,
+  `Tanggal` date DEFAULT NULL,
+  `Tgl_JatuhTempo` datetime DEFAULT NULL,
+  `Sub_Total` varchar(45) DEFAULT NULL,
+  `Status_Ppn` varchar(45) DEFAULT NULL,
+  `Ppn` varchar(45) DEFAULT NULL,
+  `Total` varchar(45) DEFAULT NULL,
+  `Status_Lunas` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `invoice`
+--
+
+INSERT INTO `invoice` (`No_Faktur`, `id_Customer`, `id_Karyawan`, `id_Detail_Invoice`, `Tanggal`, `Tgl_JatuhTempo`, `Sub_Total`, `Status_Ppn`, `Ppn`, `Total`, `Status_Lunas`) VALUES
+(1, 1, 1, 1, '2020-06-21', '0000-00-00 00:00:00', '59.000', 'Aktif', '21.000', '80.000', 'Belum');
 
 -- --------------------------------------------------------
 
@@ -185,6 +199,13 @@ CREATE TABLE `karyawan` (
   `Alamat` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `karyawan`
+--
+
+INSERT INTO `karyawan` (`id_Karyawan`, `Nama`, `NIP`, `Email`, `NoHp`, `Alamat`) VALUES
+(1, 'Supono', '1234456', 'Supono@gmail.com', '085677909877', 'Jember');
+
 -- --------------------------------------------------------
 
 --
@@ -215,6 +236,17 @@ CREATE TABLE `layanan` (
   `Kapasitas` varchar(45) DEFAULT NULL,
   `Harga` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `layanan`
+--
+
+INSERT INTO `layanan` (`id_Layanan`, `id_Layanan_Jenis`, `Nama_Layanan`, `Kapasitas`, `Harga`) VALUES
+(1, 1, 'LITE', '10 Mbps', '200.000'),
+(2, 2, 'FAMILY', '20 Mbps', '385.000'),
+(3, 3, 'UMKM', '20 Mbps', '585.000'),
+(4, 4, 'STARTUP', '50 Mbps', '725.000'),
+(5, NULL, 'Office', '20 Mbps', '100.000');
 
 -- --------------------------------------------------------
 
@@ -323,7 +355,7 @@ ALTER TABLE `bts`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_Customer` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `customer_alat`
@@ -353,7 +385,7 @@ ALTER TABLE `customer_layanan`
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
-  MODIFY `No_Faktur` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `No_Faktur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `invoice_detail`
@@ -371,7 +403,7 @@ ALTER TABLE `jenis_file`
 -- AUTO_INCREMENT for table `karyawan`
 --
 ALTER TABLE `karyawan`
-  MODIFY `id_Karyawan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `karyawan_master`
@@ -383,7 +415,7 @@ ALTER TABLE `karyawan_master`
 -- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
-  MODIFY `id_Layanan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_Layanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `layanan_jenis`

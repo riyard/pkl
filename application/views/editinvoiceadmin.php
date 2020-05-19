@@ -208,68 +208,68 @@ include ('koneksi.php');
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/pelanggan")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/invover_admin/update")?>">
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">No Faktur<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="No_Faktur" type="text" value="<?php echo $invoice->No_Faktur ?>" required />
                       </div>
                     </div>
                        <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Id Customer <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="id_Customer" type="text" value="<?php echo $invoice->id_Customer ?>" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Id Karyawan <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="id_Karyawan" type="text" value="<?php echo $invoice->id_Karyawan ?>" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Id Detail Invoice <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="id_Detail_Invoice" type="text" value="<?php echo $invoice->id_Detail_Invoice ?>" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Tanggal <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Tanggal" type="text" value="<?php echo $invoice->Tanggal ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Tanggal Jatuh Tempo<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Tgl_JatuhTempo" type="text" value="<?php echo $invoice->Tgl_JatuhTempo ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Sub Total <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Sub_Total" type="text" value="<?php echo $invoice->Sub_Total ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status PPN <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Status_Ppn" type="text" value="<?php echo $invoice->Status_Ppn ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">PPN <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Ppn" type="text" value="<?php echo $invoice->Ppn ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Total <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Total" type="text" value="<?php echo $invoice->Total ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status Lunas <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Password" type="Password" required />
+                        <input class="form-control" id="Username" name="Status_Lunas" type="text" value="<?php echo $invoice->Status_Lunas ?>" required />
                       </div>
                     
                     <div class="form-group">
@@ -277,6 +277,7 @@ include ('koneksi.php');
                         <button class="btn btn-primary"  type="submit">Save</button>
                       </div>
                     </div>
+                    <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="No_Faktur">
                   </form>
                 </div>
 </section>

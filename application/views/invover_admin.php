@@ -113,7 +113,7 @@ include ('koneksi.php');
 				</div><!-- /.sidebar-shortcuts -->
 
 				
-<ul class="nav nav-list">
+                <ul class="nav nav-list">
 					
 					<li class="">
 						<a href="<?php echo base_url("index.php/profil_admin")?>">
@@ -203,12 +203,13 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Table Invoice</h3>
 
-					<a href="<?php echo base_url("index.php/tambahinvoiceadmin")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Invoice</button> </a>
+					<a href="<?php echo base_url("index.php/invover_admin/input")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Invoice</button> </a>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                  <tr>
+					                  	<th><i class="icon_profile"></i> No</th>
 					                    <th><i class="icon_profile"></i> No Faktur</th>
 					                  	<th><i class="icon_profile"></i> Id Customer</th>
 					                    <th><i class="icon_mail_alt"></i> Id Karyawan</th>
@@ -221,16 +222,39 @@ include ('koneksi.php');
 					                    <th><i class="icon_mail_alt"></i> Total</th>
 					                    <th><i class="icon_calendar"></i> Status Lunas</th>
 					                  </tr>
-					                  <td>
+					                  <tbody>
+					                  <?php $nomor=1;foreach ($invoice as $value) {?>
+					                    <tr>
+					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $value->No_Faktur?></td>
+					                    <td><?php echo $value->id_Customer?></td>
+					                    <td><?php echo $value->id_Karyawan?></td>
+					                    <td><?php echo $value->id_Detail_Invoice?></td>
+					                    <td><?php echo $value->Tanggal?></td>
+					                    <td><?php echo $value->Tgl_JatuhTempo?></td>
+					                    <td><?php echo $value->Sub_Total?></td>
+					                    <td><?php echo $value->Status_Ppn?></td>
+					                    <td><?php echo $value->Ppn?></td>
+					                    <td><?php echo $value->Total?></td>
+					                    <td><?php echo $value->Status_Lunas?></td>
+					                    <td>
 					                  	<div class="btn-group">
 					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editinvoiceadmin")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											<a href="<?php echo base_url()."index.php/invover_admin/edit/".$value->No_Faktur?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
 											</button>
 					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+											<a href="<?php echo base_url()."index.php/invover_admin/delete/".$value->No_Faktur?>"><i class="ace-icon fa fa-trash-o bigger-120"></i>
 											</button>
 					                  </td>
 					</section>
+						</div>
+						</td>
+						</tr>
+						<?php
+
+                    }
+                    ?>
+						</tbody>
 						</section>
 						<!--<div class="page-header">
 							<h1>

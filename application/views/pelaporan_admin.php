@@ -134,7 +134,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/pelanggan")?>">
+						<a href="<?php echo base_url("index.php/pelanggan_admin")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
 								Pelanggan
@@ -209,6 +209,7 @@ include ('koneksi.php');
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                  <tr>
+					                  	<th><i class="icon_profile"></i> No</th>
 					                    <th><i class="icon_profile"></i> No Faktur</th>
 					                  	<th><i class="icon_profile"></i> Id Customer</th>
 					                    <th><i class="icon_mail_alt"></i> Id Karyawan</th>
@@ -232,18 +233,25 @@ include ('koneksi.php');
 					                  </td> -->
 					                  <?php
 								include ('koneksi.php');
-								$sql='select * from layanan';
+								$sql='select * from invoice';
 								$ambil=mysqli_query($konek,$sql);
 								$nomor=1;
 								
 								while($data=mysqli_fetch_array($ambil)){ 
 								echo "<tr>";
 								// echo "<td>".$nomor++."</td>";
-								// echo "<td>".$nomor++."</td>";
-								echo "<td>".$data['Nama_Layanan']."</td>";
-								echo "<td>".$data['Jenis_Layanan']."</td>";
-								echo "<td>".$data['Kapasitas']."</td>";
-								echo "<td>".$data['Harga']."</td>";
+								echo "<td>".$nomor++."</td>";
+								echo "<td>".$data['No_Faktur']."</td>";
+								echo "<td>".$data['id_Customer']."</td>";
+								echo "<td>".$data['id_Karyawan']."</td>";
+								echo "<td>".$data['id_Detail_Invoice']."</td>";
+								echo "<td>".$data['Tanggal']."</td>";
+								echo "<td>".$data['Tgl_JatuhTempo']."</td>";
+								echo "<td>".$data['Sub_Total']."</td>";
+								echo "<td>".$data['Status_Ppn']."</td>";
+								echo "<td>".$data['Ppn']."</td>";
+								echo "<td>".$data['Total']."</td>";
+								echo "<td>".$data['Status_Lunas']."</td>";
 								// echo "<td><img src='images/produk/".$data['foto_produk']."' width='100' height='100'></td>";
 								// echo "<td>".$data['deskripsi_produk']."</td>";
 								// echo "<td><a href='hapus_layanan.php?halaman=hapusproduk&id=".$data['id_produk']."'>Hapus</a></td>";

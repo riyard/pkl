@@ -209,68 +209,68 @@ include ('koneksi.php');
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/pelanggan")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/invover_admin/insert")?>">
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">No Faktur<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="No_Faktur" type="text" required />
                       </div>
                     </div>
                        <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Id Customer <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="id_Customer" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Id Karyawan <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="id_Karyawan" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Id Detail Invoice <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="id_Detail_Invoice" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Tanggal <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Tanggal" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Tanggal Jatuh Tempo<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Tgl_JatuhTempo" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Sub Total <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Sub_Total" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status PPN <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Status_Ppn" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">PPN <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Ppn" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Total <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
+                        <input class="form-control" id="Username" name="Total" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status Lunas <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Password" type="Password" required />
+                        <input class="form-control" id="Username" name="Status_Lunas" type="text" required />
                       </div>
                     
                     <div class="form-group">
