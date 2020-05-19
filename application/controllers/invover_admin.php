@@ -83,6 +83,7 @@ class invover_admin extends CI_Controller {
 	public function update()
 	{
 		$id = $this->input->post("No_Faktur");
+		$No_Faktur = $this->input->post("No_Faktur");
 		$id_Customer = $this->input->post("id_Customer");
 		$id_Karyawan = $this->input->post("id_Karyawan");
 		$id_Detail_Invoice = $this->input->post("id_Detail_Invoice");
