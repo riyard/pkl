@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2020 at 08:42 AM
+-- Generation Time: May 19, 2020 at 01:36 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -259,6 +259,21 @@ CREATE TABLE `layanan_jenis` (
   `Nama_JenisFile` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sales`
+--
+
+CREATE TABLE `sales` (
+  `id_Sales` int(11) NOT NULL,
+  `Nama` varchar(45) DEFAULT NULL,
+  `NIP` varchar(45) DEFAULT NULL,
+  `Email` varchar(45) DEFAULT NULL,
+  `NoHp` varchar(45) DEFAULT NULL,
+  `Alamat` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
@@ -340,6 +355,12 @@ ALTER TABLE `layanan`
 --
 ALTER TABLE `layanan_jenis`
   ADD PRIMARY KEY (`id_Layanan_Jenis`);
+
+--
+-- Indexes for table `sales`
+--
+ALTER TABLE `sales`
+  ADD PRIMARY KEY (`id_Sales`);
 
 --
 -- AUTO_INCREMENT for dumped tables
