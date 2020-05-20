@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2020 at 01:26 PM
+-- Generation Time: May 20, 2020 at 03:59 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -21,21 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `pkl`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id_admin` int(11) NOT NULL,
-  `Nama` varchar(45) DEFAULT NULL,
-  `NIP` varchar(45) DEFAULT NULL,
-  `Email` varchar(45) DEFAULT NULL,
-  `NoHp` varchar(45) DEFAULT NULL,
-  `Alamat` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -113,7 +98,6 @@ CREATE TABLE `customer_alat` (
 CREATE TABLE `customer_file` (
   `id_Customer_File` int(11) NOT NULL,
   `id_Customer` int(11) DEFAULT NULL,
-  `id_Jenis_File` int(11) DEFAULT NULL,
   `id_Karyawan` int(11) DEFAULT NULL,
   `Nama_JenisFile` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -128,7 +112,7 @@ CREATE TABLE `customer_jadwal` (
   `id_Customer_Jadwal` int(11) NOT NULL,
   `id_Customer_Alat` int(11) DEFAULT NULL,
   `id_Karyawan` int(11) DEFAULT NULL,
-  `Tanggal` datetime DEFAULT NULL,
+  `Tgl_Pemasangan` datetime DEFAULT NULL,
   `Jenis_Visit` varchar(45) DEFAULT NULL,
   `Status` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -171,7 +155,7 @@ CREATE TABLE `invoice` (
 --
 
 INSERT INTO `invoice` (`No_Faktur`, `id_Customer`, `id_Karyawan`, `id_Detail_Invoice`, `Tanggal`, `Tgl_JatuhTempo`, `Sub_Total`, `Status_Ppn`, `Ppn`, `Total`, `Status_Lunas`) VALUES
-(1, 1, 1, 1, '2020-06-21', '0000-00-00 00:00:00', '59.000', 'Aktif', '21.000', '80.000', 'Belum');
+(1, 1, 1, 1, '2020-06-21', '2021-07-31 00:00:00', '59.000', 'Aktif', '21.000', '80.000', 'Lunas');
 
 -- --------------------------------------------------------
 
@@ -186,17 +170,6 @@ CREATE TABLE `invoice_detail` (
   `Qty` int(11) DEFAULT NULL,
   `Satuan` int(11) DEFAULT NULL,
   `Jumlah` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `jenis_file`
---
-
-CREATE TABLE `jenis_file` (
-  `id_Jenis_File` int(11) NOT NULL,
-  `Nama_JenisFile` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -248,6 +221,8 @@ CREATE TABLE `layanan` (
   `id_Layanan` int(11) NOT NULL,
   `id_Layanan_Jenis` int(11) DEFAULT NULL,
   `Nama_Layanan` text DEFAULT NULL,
+  `Nama_Layanan_Jenis` varchar(45) DEFAULT NULL,
+  `Tgl_Aktifasi` date DEFAULT NULL,
   `Kapasitas` varchar(45) DEFAULT NULL,
   `Harga` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -256,48 +231,27 @@ CREATE TABLE `layanan` (
 -- Dumping data for table `layanan`
 --
 
-INSERT INTO `layanan` (`id_Layanan`, `id_Layanan_Jenis`, `Nama_Layanan`, `Kapasitas`, `Harga`) VALUES
-(1, 1, 'LITE', '10 Mbps', '200.000'),
-(2, 2, 'FAMILY', '20 Mbps', '385.000'),
-(3, 3, 'UMKM', '20 Mbps', '585.000'),
-(4, 4, 'STARTUP', '50 Mbps', '725.000'),
-(5, NULL, 'Office', '20 Mbps', '100.000');
+INSERT INTO `layanan` (`id_Layanan`, `id_Layanan_Jenis`, `Nama_Layanan`, `Nama_Layanan_Jenis`, `Tgl_Aktifasi`, `Kapasitas`, `Harga`) VALUES
+(1, 1, 'LITE', NULL, NULL, '10 Mbps', '200.000'),
+(2, 2, 'FAMILY', NULL, NULL, '20 Mbps', '385.000'),
+(3, 3, 'UMKM', NULL, NULL, '20 Mbps', '585.000'),
+(4, 4, 'STARTUP', NULL, NULL, '50 Mbps', '725.000');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `layanan_jenis`
+-- Table structure for table `login`
 --
 
-CREATE TABLE `layanan_jenis` (
-  `id_Layanan_Jenis` int(11) NOT NULL,
-  `Nama_JenisFile` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `sales`
---
-
-CREATE TABLE `sales` (
-  `id_Sales` int(11) NOT NULL,
-  `Nama` varchar(45) DEFAULT NULL,
-  `NIP` varchar(45) DEFAULT NULL,
-  `Email` varchar(45) DEFAULT NULL,
-  `NoHp` varchar(45) DEFAULT NULL,
-  `Alamat` varchar(45) DEFAULT NULL
+CREATE TABLE `login` (
+  `id_login` int(11) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `bts`
@@ -348,12 +302,6 @@ ALTER TABLE `invoice_detail`
   ADD PRIMARY KEY (`id_Invoice_Detail`);
 
 --
--- Indexes for table `jenis_file`
---
-ALTER TABLE `jenis_file`
-  ADD PRIMARY KEY (`id_Jenis_File`);
-
---
 -- Indexes for table `karyawan`
 --
 ALTER TABLE `karyawan`
@@ -372,16 +320,10 @@ ALTER TABLE `layanan`
   ADD PRIMARY KEY (`id_Layanan`);
 
 --
--- Indexes for table `layanan_jenis`
+-- Indexes for table `login`
 --
-ALTER TABLE `layanan_jenis`
-  ADD PRIMARY KEY (`id_Layanan_Jenis`);
-
---
--- Indexes for table `sales`
---
-ALTER TABLE `sales`
-  ADD PRIMARY KEY (`id_Sales`);
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id_login`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -436,12 +378,6 @@ ALTER TABLE `invoice_detail`
   MODIFY `id_Invoice_Detail` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `jenis_file`
---
-ALTER TABLE `jenis_file`
-  MODIFY `id_Jenis_File` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `karyawan`
 --
 ALTER TABLE `karyawan`
@@ -460,10 +396,10 @@ ALTER TABLE `layanan`
   MODIFY `id_Layanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `layanan_jenis`
+-- AUTO_INCREMENT for table `login`
 --
-ALTER TABLE `layanan_jenis`
-  MODIFY `id_Layanan_Jenis` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `login`
+  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

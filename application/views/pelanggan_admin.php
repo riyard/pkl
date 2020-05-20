@@ -143,15 +143,6 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/pelaporan_admin")?>">
-							<i class="menu-icon fa fa-list-alt"></i>
-							<span class="menu-text">
-								Pelaporan
-							</span>
-						</a>
-
-					</li>
-					<li class="">
 						<a href="<?php echo base_url("index.php/invover_admin")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
