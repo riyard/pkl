@@ -60,15 +60,13 @@ include ('koneksi.php');
 				</button>
 
 				<div class="navbar-header pull-left">
-					<a href="profil" class="navbar-brand">
+					<a href="home" class="navbar-brand">
 						<small>
 							<i class="fa fa-leaf"></i>
 							ARAYA MEDIA
 						</small>
 					</a>
 				</div>
-
-				<!-- menampilkan siapa yang login -->
 			</div><!-- /.navbar-container -->
 		</div>
 
@@ -160,6 +158,7 @@ include ('koneksi.php');
 						</a>
 
 					</li>
+
 				</ul><!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
@@ -171,8 +170,8 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Data</li></a>
-              			<li><i class="icon_document_alt"></i>Customer Alat</li>
+						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> BTS</li></a>
+              			<li><i class="icon_document_alt"></i>Table</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -182,60 +181,49 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Customer Alat</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Edit BTS</h3>
 
-					 <a href="<?php echo base_url()."index.php/customer_alat/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah alat</button> </a>
 
-					<section class="wrapper">
-						<table class="table table-striped table-advance table-hover">
-					                <tbody>
-					                 <tr>
-					                    <th><i class="icon_profile"></i> id Customer Alat</th>
-					                  	<th><i class="icon_profile"></i> Jarak</th>
-					                    <th><i class="icon_calendar"></i> Ketinggian Pipa</th>
-					                    <th><i class="icon_mail_alt"></i> Jenis Transmisi</th>
-					                    <th><i class="icon_mail_alt"></i> Jenis Cpe</th>
-					                    <th><i class="icon_calendar"></i> Status Cpe</th>
-					                    <th><i class="icon_calendar"></i> Ip Radio</th>
-					                    <th><i class="icon_calendar"></i> Port</th>
-					                    <th><i class="icon_calendar"></i> Username</th>
-					                    <th><i class="icon_calendar"></i> Password</th>
-					                    <th><i class="icon_calendar"></i> SSID</th>
-					                    <th><i class="icon_calendar"></i> Freq</th>
-					                  </tr>
-					                  <tbody>
-					                  <?php $nomor=1;foreach ($customer_alat as $value) {?>
-					                    <tr>
-					                    <td><?php echo $nomor++?></td>
-					                    <td><?php echo $value->Jarak?></td>
-					                    <td><?php echo $value->Ketinggian_Pipa?></td>
-					                    <td><?php echo $value->Jenis_Transmisi?></td>
-					                    <td><?php echo $value->Jenis_Cpe?></td>
-					                    <td><?php echo $value->Status_Cpe?></td>
-					                    <td><?php echo $value->Ip_Radio?></td>
-					                    <td><?php echo $value->Port?></td>
-					                    <td><?php echo $value->Username?></td>
-					                    <td><?php echo $value->Password?></td>
-					                    <td><?php echo $value->SSID?></td>
-					                    <td><?php echo $value->Freq?></td>
-					                  <td>
-					                  <div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url()."index.php/customer_alat/edit/".$value->id_Customer_Alat?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<a href="<?php echo base_url()."index.php/customer_alat/delete/".$value->id_Customer_Alat?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
-											</button>
-					                  </td>
-					              </div>
-					          </tbody>
-					      </tr>
-					                 <?php
+<section class="wrapper">
 
-                    }
-                    ?>
+	<table class="table table-striped table-advance table-hover">
+                 <div class="form">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/bts_pegawai/update")?>">
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Koordinat <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Koordinat" type="text" value="<?php echo $bts->Koordinat ?>" required />
+                      </div>
+                    </div>
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Kode Pelanggan PLN <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="KodePelanggan_PLN" type="text" value="<?php echo $bts->KodePelanggan_PLN ?>" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Nama PIC <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Nama_PIC" type="text" value="<?php echo $bts->Nama_PIC ?>" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">No Hp PIC <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="NoHp_PIC" type="text" value="<?php echo $bts->NoHp_PIC ?>" required />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn -primary"  type="submit">Save</button>
+                      </div>
+                    </div>
+                    <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_bts">
+                  </form>
+                </div>
+</section>
 
-					</section>
+
+
 						</section>
 						<!--<div class="page-header">
 							<h1>

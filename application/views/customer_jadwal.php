@@ -143,7 +143,16 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/keluar_admin")?>">
+						<a href="<?php echo base_url("index.php/bts_pegawai")?>">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text">
+								BTS
+							</span>
+						</a>
+
+					</li>
+					<li class="">
+						<a href="<?php echo base_url("index.php/keluar_pegawai")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
