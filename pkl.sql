@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2020 at 01:36 PM
+-- Generation Time: May 20, 2020 at 01:26 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -21,6 +21,21 @@ SET time_zone = "+00:00";
 --
 -- Database: `pkl`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(11) NOT NULL,
+  `Nama` varchar(45) DEFAULT NULL,
+  `NIP` varchar(45) DEFAULT NULL,
+  `Email` varchar(45) DEFAULT NULL,
+  `NoHp` varchar(45) DEFAULT NULL,
+  `Alamat` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -277,6 +292,12 @@ CREATE TABLE `sales` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `bts`
