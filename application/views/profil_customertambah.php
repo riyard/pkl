@@ -116,7 +116,7 @@ include ('koneksi.php');
 				<ul class="nav nav-list">
 					
 					<li class="">
-						<a href="<?php echo base_url("index.php/Profil_customer")?>">
+						<a href="<?php echo base_url("index.php/profil_customer")?>">
 							<i class="menu-icon fa fa-user"></i>
 							<span class="menu-text">
 								Profil
@@ -163,7 +163,7 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Layanan</li></a>
+						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Profil</li></a>
               			<li><i class="icon_document_alt"></i>Table</li>
 						</ul><!-- /.breadcrumb -->
 
@@ -174,49 +174,38 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Layanan</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah NIK dan NPWP</h3>
 
-<!-- 					<a href="<?php echo base_url("index.php/tambahlayanan_sales")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a> -->
 
-					<section class="wrapper">
-						<table class="table table-striped table-advance table-hover">
-					                <tbody>
-					                  <tr>
-					                    <th><i class="icon_profile"></i> Nama Layanan</th>
-					                  	<th><i class="icon_profile"></i> ID Jenis Layanan</th>
-					                    <th><i class="icon_mail_alt"></i> Kapasitas</th>
-					                    <th><i class="icon_calendar"></i> Harga</th>
-					                  </tr>
-					                  <!-- <td>
-					                  	<div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editlayanan_sales")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
-											</button>
-					                  </td> -->
-					                  <?php
-								include ('koneksi.php');
-								$sql='select * from layanan';
-								$ambil=mysqli_query($konek,$sql);
-								$nomor=1;
-								
-								while($data=mysqli_fetch_array($ambil)){ 
-								echo "<tr>";
-								// echo "<td>".$nomor++."</td>";
-								// echo "<td>".$nomor++."</td>";
-								echo "<td>".$data['Nama_Layanan']."</td>";
-								echo "<td>".$data['id_Layanan_Jenis']."</td>";
-								echo "<td>".$data['Kapasitas']."</td>";
-								echo "<td>".$data['Harga']."</td>";
-								// echo "<td><img src='images/produk/".$data['foto_produk']."' width='100' height='100'></td>";
-								// echo "<td>".$data['deskripsi_produk']."</td>";
-								// echo "<td><a href='hapus_layanan.php?halaman=hapusproduk&id=".$data['id_produk']."'>Hapus</a></td>";
-								echo "</tr>";
-								} 
-								?>
-					</section>
+<section class="wrapper">
+
+	<table class="table table-striped table-advance table-hover">
+                 <div class="form">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/profil_customer/aksi_upload")?>">
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">NIK<span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="NIK" name="NIK" type="text" required />
+                      </div>
+                    </div>
+ 
+					<div class="form-group">
+      					<label for="userfile" class="control-label col-lg-2">Gambar<span class="required"></span></label>
+      					<div class="col-lg-10">
+        				<input class="form-control" id="Nama_JenisFile" type="file" name="Nama_JenisFile" class="file">
+      					</div>
+    					</div>
+                    <br>
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn-primary"  type="submit">Save</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+</section>
+
+
 
 						</section>
 						<!--<div class="page-header">

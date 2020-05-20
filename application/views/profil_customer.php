@@ -116,7 +116,7 @@ include ('koneksi.php');
 				<ul class="nav nav-list">
 					
 					<li class="">
-						<a href="<?php echo base_url("index.php/Profil_customer")?>">
+						<a href="<?php echo base_url("index.php/profil_customer")?>">
 							<i class="menu-icon fa fa-user"></i>
 							<span class="menu-text">
 								Profil
@@ -163,7 +163,7 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Layanan</li></a>
+						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Profil</li></a>
               			<li><i class="icon_document_alt"></i>Table</li>
 						</ul><!-- /.breadcrumb -->
 
@@ -176,75 +176,62 @@ include ('koneksi.php');
 
 							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i>Data diri</h3>
 
-
-<section class="wrapper">
-
-	<table class="table table-striped table-advance table-hover">
-                 <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/pelanggan")?>">
-                       <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Nama <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Email<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Nomer HP<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Password<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">NIK<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Alamat<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jenis<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">NPWP<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                    </div>
-                    
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Ubah</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-</section>
+							<a href="<?php echo base_url()."index.php/profil_customer/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah NIK & NPWP</button> </a>
 
 
+	<section class="wrapper">
+						<table class="table table-striped table-advance table-hover">
+					                <tbody>
+					                  <tr>
+					                  	<th><i class="icon_profile"></i> No</th>
+					                  	<th><i class="icon_profile"></i> Id Customer</th>
+					                    <th><i class="icon_mail_alt"></i> Id Karyawan</th>
+					                    <th><i class="icon_calendar"></i> Nama</th>
+					                    <th><i class="icon_profile"></i> Email</th>
+					                  	<th><i class="icon_profile"></i> Nomer HP</th>
+					                    <th><i class="icon_mail_alt"></i> Password</th>
+					                    <th><i class="icon_calendar"></i> NIK</th>
+					                    <th><i class="icon_calendar"></i> Nama Jenis File</th>
+					                    <th><i class="icon_mail_alt"></i> Alamat</th>
+					                    <th><i class="icon_calendar"></i> Jenis Pelanggan</th>
+					                    <th><i class="icon_calendar"></i> Status</th>
+					                    <th><i class="icon_calendar"></i> Edit</th>
+					                  </tr>
+					                  <tbody>
+					                  <?php $nomor=1;foreach ($customer as $value) {?>
+					                    <tr>
+					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $value->id_Customer?></td>
+					                    <td><?php echo $value->id_Karyawan?></td>
+					                    <td><?php echo $value->nama?></td>
+					                    <td><?php echo $value->Email?></td>
+					                    <td><?php echo $value->NoHp?></td>
+					                    <td><?php echo $value->Password?></td>
+					                    <td><?php echo $value->NIK?></td>
+					                    <td><?php echo $value->Nama_JenisFile?></td>
+					                    <td><?php echo $value->Alamat?></td>
+					                    <td><?php echo $value->Jenis_Pelanggan?></td>
+					                    <td><?php echo $value->Status?></td>
+					                    <td>
+					                  	<div class="btn-group">
+					                        <button class="btn btn-xs btn-info">
+											<a href="<?php echo base_url()."index.php/profil_customer/input"?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											</button>
+					                        
+										</div>
+					                  </td>
 
+					</section>
+						</div>
+						</td>
+						</tr>
+						<?php
+
+                    }
+                    ?>
+						</tbody>
 						</section>
+						
 <!-- 					<a href="<?php echo base_url("index.php/tambahlayanan_sales")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a> -->
 
 					
