@@ -215,7 +215,7 @@ include ('koneksi.php');
 					                    <td>
 					                  	<div class="btn-group">
 					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url()."index.php/profil_customer/input"?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											<a href="<?php echo base_url()."index.php/profil_customer/edit/".$value->id_Customer?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
 											</button>
 					                        
 										</div>

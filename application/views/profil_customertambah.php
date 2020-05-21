@@ -181,11 +181,81 @@ include ('koneksi.php');
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/profil_customer/aksi_upload")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/profil_customer/update")?>">
+<!-- 
+                  	<div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">No Faktur<span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="No_Faktur" type="text" value="<?php echo $invoice->No_Faktur ?>" required />
+                      </div>
+                    </div> -->
+                       <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Id Customer <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="id_Customer" type="text" value="<?php echo $customer->id_Customer ?>" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Id Karyawan <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="id_Karyawan" type="text" value="<?php echo $customer->id_Karyawan ?>" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Nama <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="nama" type="text" value="<?php echo $customer->nama?>" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Email" type="text" value="<?php echo $customer->Email ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Handphone<span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="NoHp" type="text" value="<?php echo $customer->NoHp ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Password" type="text" value="<?php echo $customer->Password ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Alamat <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Alamat" type="text" value="<?php echo $customer->Alamat ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Jenis <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Jenis_Pelanggan" type="text" value="<?php echo $customer->Jenis_Pelanggan ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Status <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Status" type ="text" value="<?php echo $customer->Status ?>" required />
+                      </div>
+                    </div>
+                     <!-- <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Status Lunas <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Status_Lunas" type="text" value="<?php echo $invoice->Status_Lunas ?>" required />
+                      </div>
+
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">ID<span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="id_Customer" name="id_Customer" type="text" value="<?php echo $customer->id_Customer ?>" required />
+                      </div> -->
+                    </div>
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">NIK<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="NIK" name="NIK" type="text" required />
+                        <input class="form-control" id="NIK" name="NIK" type="text" value="<?php echo $customer->NIK ?>" required />
                       </div>
                     </div>
  
@@ -201,6 +271,7 @@ include ('koneksi.php');
                         <button class="btn btn-primary"  type="submit">Save</button>
                       </div>
                     </div>
+                    <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_Customer">
                   </form>
                 </div>
 </section>

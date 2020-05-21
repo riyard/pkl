@@ -52,6 +52,56 @@ class profil_customer extends CI_Controller {
 		);
 		$this->load->view('profil_customertambah',$data);
 	}
+	public function edit()
+	{
+		$id=$this->uri->segment(3);
+		$datacustomer=$this->db->get_where("customer",array("id_Customer"=>$id))->row();
+		$data = array(
+			'form' => 'profil_customertambah',
+			'customer' => $datacustomer
+		);
+		$this->load->view('profil_customertambah',$data);
+	}
+	public function update()
+	{
+		$id_Customer = $this->input->post("id_Customer");
+		$id_Karyawan = $this->input->post("id_Karyawan");
+		$nama = $this->input->post("nama");
+		$Email = $this->input->post("Email");
+		$NoHp = $this->input->post("NoHp");
+		$Password = $this->input->post("Password");
+		$NIK = $this->input->post("NIK");
+		$Nama_JenisFile = $this->input->post("Nama_JenisFile");
+		$Alamat = $this->input->post("Alamat");
+		$Jenis_Pelanggan = $this->input->post("Jenis_Pelanggan");
+		$Status = $this->input->post("Status");
+		
+		echo $id_Customer;
+		echo $id_Karyawan;
+		echo $nama;
+		echo $Email;
+		echo $NoHp;
+		echo $Password;
+		echo $NIK;
+		echo $Nama_JenisFile;
+		echo $Alamat;
+		echo $Jenis_Pelanggan;
+		echo $Status;
+		$data = array(
+		"id_Customer"=>$id_Customer,
+		"id_Karyawan"=>$id_Karyawan,
+		"nama"=>$nama,
+		"Email"=>$Email,
+		"NoHp"=>$NoHp,
+		"Password"=>$Password,
+		"NIK"=>$NIK,
+		"Nama_JenisFile"=>$Nama_JenisFile,
+		"Alamat"=>$Alamat,
+		"Jenis_Pelanggan"=>$Jenis_Pelanggan,
+		"Status"=>$Status,);
+		$this->db->where("id_Customer",$id_Customer)->update("customer",$data);
+		redirect(base_url()."index.php/profil_customer");
+	}
 	/*public function insert()
 	{
 		$NIK = $this->input->post("NIK");
