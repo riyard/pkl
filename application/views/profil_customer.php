@@ -176,7 +176,7 @@ include ('koneksi.php');
 
 							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i>Data diri</h3>
 
-							<a href="<?php echo base_url()."index.php/profil_customer/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah NIK & NPWP</button> </a>
+							<!-- <a href="<?php echo base_url()."index.php/profil_customer/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah NIK & NPWP</button> </a> -->
 
 
 	<section class="wrapper">
