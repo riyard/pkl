@@ -174,7 +174,7 @@ include ('koneksi.php');
 							
 							<div class="page-header">
 							<h1>
-								Profil Karyawan
+								Profil Sales
 								
 							</h1>
 						</div><!-- /.page-header -->

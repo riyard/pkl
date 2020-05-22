@@ -176,7 +176,6 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tabel Pelanggan</h3>
 
-					 <a href="<?php echo base_url()."index.php/pelanggan/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Pelanggan</button> </a>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
@@ -188,32 +187,28 @@ include ('koneksi.php');
 					                    <th><i class="icon_calendar"></i> Alamat</th>
 					                    <th><i class="icon_mail_alt"></i> NoHp</th>
 					                    <th><i class="icon_mail_alt"></i> Email</th>
-					                    <th><i class="icon_mail_alt"></i> Passwordx</th>
 					                  </tr>
-					                  <tbody>
-					                  <?php $nomor=1;foreach ($pelanggan as $value) {?>
-					                    <tr>
-					                    <td><?php echo $nomor++?></td>
-					                    <td><?php echo $value->nama?></td>
-					                    <td><?php echo $value->NIK?></td>
-					                    <td><?php echo $value->Alamat?></td>
-					                    <td><?php echo $value->NoHp?></td>
-					                    <td><?php echo $value->Email?></td>
-					                    <td><?php echo $value->Password?></td>
-					                  <td>
-					                  	<div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url()."index.php/pelanggan/edit/".$value->id_Customer?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<a href="<?php echo base_url()."index.php/pelanggan/delete/".$value->id_Customer?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
-											</button>
-					                  </td>
+					                  
 					              </div>
 					          </tbody>
 					      </tr>
-					                 <?php
+					      <?php
 
+
+								include ('koneksi.php');
+								$sql='select * from customer';
+								$ambil=mysqli_query($konek,$sql);
+								$nomor=1;
+								
+								while($data=mysqli_fetch_array($ambil)){ 
+								echo "<tr>";
+								// echo "<td>".$nomor++."</td>";
+								echo "<td>".$nomor++."</td>";
+								echo "<td>".$data['nama']."</td>";
+								echo "<td>".$data['NIK']."</td>";
+								echo "<td>".$data['Alamat']."</td>";
+								echo "<td>".$data['NoHp']."</td>";
+								echo "<td>".$data['Email']."</td>";
                     }
                     ?>
 
