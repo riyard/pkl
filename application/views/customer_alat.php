@@ -190,7 +190,7 @@ include ('koneksi.php');
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                 <tr>
-					                    <th><i class="icon_profile"></i> id Customer Alat</th>
+					                    <th><i class="icon_profile"></i> No</th>
 					                  	<th><i class="icon_profile"></i> Jarak</th>
 					                    <th><i class="icon_calendar"></i> Ketinggian Pipa</th>
 					                    <th><i class="icon_mail_alt"></i> Jenis Transmisi</th>
