@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <?php
 include ('koneksi.php');
 ?>
 <html lang="en">
 	<head>
+		<script language="javascript" type="text/javascript"> window.history.forward(); </script>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<meta charset="utf-8" />
 		<title>ISP ARAYA MEDIA IT MALANG</title>
@@ -83,11 +85,7 @@ include ('koneksi.php');
 
 													<div class="space"></div>
 
-													<div class="clearfix">
-														<label class="inline">
-															<input type="checkbox" class="ace" />
-															<span class="lbl"> Remember Me</span>
-														</label>
+													
 
 														<button type="submit" name="login" value="login" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="ace-icon fa fa-key"></i>
@@ -100,16 +98,6 @@ include ('koneksi.php');
 											</form>
 
 										</div><!-- /.widget-main -->
-
-										<div class="toolbar clearfix">
-											
-											<div>
-												<a href="#" data-target="#signup-box" class="user-signup-link">
-													I want to register
-													<i class="ace-icon fa fa-arrow-right"></i>
-												</a>
-											</div>
-										</div>
 									</div><!-- /.widget-body -->
 								</div><!-- /.login-box -->
 
