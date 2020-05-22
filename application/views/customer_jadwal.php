@@ -152,7 +152,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/login")?>">
+						<a href="<?php echo base_url("index.php/keluar_pegawai")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
@@ -193,17 +193,17 @@ include ('koneksi.php');
 					                 <tr>
 					                    <th><i class="icon_profile"></i> id Customer Jadwal</th>
 					                    <th><i class="icon_profile"></i> id Karyawan</th>
-					                  	<th><i class="icon_profile"></i> Tanggal</th>
+					                  	<th><i class="icon_profile"></i> Tgl_Pemasangan</th>
 					                    <th><i class="icon_calendar"></i> Jenis Visit</th>
 					                    <th><i class="icon_mail_alt"></i> Status</th>
 					                    
 					                  </tr>
 					                  <tbody>
-					                  <?php $nomor=1;foreach ($customer_jadwal as $value) {?>
+					                  <?php $nomor=1; $nomor2=1; foreach ($customer_jadwal as $value) {?>
 					                    <tr>
 					                    <td><?php echo $nomor++?></td>
-					                    <td><?php echo $nomor++?></td>
-					                    <td><?php echo $value->Tanggal?></td>
+					                    <td><?php echo $nomor2++?></td>
+					                    <td><?php echo $value->Tgl_Pemasangan?></td>
 					                    <td><?php echo $value->Jenis_Visit?></td>
 					                    <td><?php echo $value->Status?></td>
 					                  <td>
@@ -1625,7 +1625,7 @@ include ('koneksi.php');
 					}
 				);
 				$('#tasks').disableSelection();
-				$('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+				$('#tasks input:checkbox').removeAttr('checked')('click', function(){
 					if(this.checked) $(this).closest('li').addClass('selected');
 					else $(this).closest('li').removeClass('selected');
 				});

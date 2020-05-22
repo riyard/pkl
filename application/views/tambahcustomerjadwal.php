@@ -143,7 +143,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/login")?>">
+						<a href="<?php echo base_url("index.php/keluar_admin")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
@@ -184,9 +184,9 @@ include ('koneksi.php');
                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/customer_jadwal/insert")?>">
                  
                       <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Tanggal <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Tgl_Pemasangan <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Tanggal" type="text" required />
+                        <input class="form-control" id="Username" name="Tgl_Pemasangan" type="text" required />
                       </div>
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Jenis Visit <span class="required"></span></label>
@@ -196,9 +196,11 @@ include ('koneksi.php');
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Status <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Status" type="text" required />
+                        <input id="Username" name="Status" type="radio" required /> Progress
                       </div>
-                    </div>
+                      <div class="col-lg-10">
+                        <input id="Username" name="Status" type="radio" required /> Selesai
+                      </div>
                     
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
@@ -1612,7 +1614,7 @@ include ('koneksi.php');
 					}
 				);
 				$('#tasks').disableSelection();
-				$('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+				$('#tasks input:checkbox').removeAttr('checked').Selesai('click', function(){
 					if(this.checked) $(this).closest('li').addClass('selected');
 					else $(this).closest('li').removeClass('selected');
 				});

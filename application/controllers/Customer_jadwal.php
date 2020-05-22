@@ -30,14 +30,14 @@ class Customer_jadwal extends CI_Controller {
 
 		public function insert()
 	{
-		$Tanggal = $this->input->post("Tanggal");
+		$Tgl_Pemasangan = $this->input->post("Tgl_Pemasangan");
 		$Jenis_Visit = $this->input->post("Jenis_Visit");
 		$Status = $this->input->post("Status");
-		echo $Tanggal;
+		echo $Tgl_Pemasangan;
 		echo $Jenis_Visit;
 		echo $Status;
 		$data = array(
-		"Tanggal"=>$Tanggal,
+		"Tgl_Pemasangan"=>$Tgl_Pemasangan,
 		"Jenis_Visit"=>$Jenis_Visit,
 		"Status"=>$Status,);
 		$this->db->insert("customer_jadwal",$data);
@@ -60,16 +60,16 @@ class Customer_jadwal extends CI_Controller {
 	{
 		$id_Customer_Jadwal = $this->input->post("id_Customer_Jadwal");
 		$id_Karyawan = $this->input->post("id_Karyawan");
-		$Tanggal = $this->input->post("Tanggal");
+		$Tgl_Pemasangan = $this->input->post("Tgl_Pemasangan");
 		$Jenis_Visit = $this->input->post("Jenis_Visit");
 		$Status = $this->input->post("Status");
 		echo $id_Customer_Jadwal;
 		echo $id_Karyawan;
-		echo $Tanggal;
+		echo $Tgl_Pemasangan;
 		echo $Jenis_Visit;
 		echo $Status;
 		$data = array(
-		"Tanggal"=>$Tanggal,
+		"Tgl_Pemasangan"=>$Tgl_Pemasangan,
 		"Jenis_Visit"=>$Jenis_Visit,
 		"Status"=>$Status,);
 		$this->db->where("id_Customer_Jadwal",$id_Customer_Jadwal)->update("customer_jadwal",$data);
