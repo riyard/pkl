@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2020 at 03:59 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- Generation Time: 22 Mei 2020 pada 13.25
+-- Versi Server: 10.1.10-MariaDB
+-- PHP Version: 7.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bts`
+-- Struktur dari tabel `bts`
 --
 
 CREATE TABLE `bts` (
@@ -40,34 +38,35 @@ CREATE TABLE `bts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer`
+-- Struktur dari tabel `customer`
 --
 
 CREATE TABLE `customer` (
   `id_Customer` int(11) NOT NULL,
   `id_Karyawan` int(11) DEFAULT NULL,
+  `id_user` int(11) NOT NULL,
   `nama` varchar(45) DEFAULT NULL,
   `Email` varchar(45) DEFAULT NULL,
   `NoHp` varchar(45) DEFAULT NULL,
   `Password` varchar(45) DEFAULT NULL,
   `NIK` int(20) DEFAULT NULL,
-  `Nama_JenisFile` text DEFAULT NULL,
+  `Nama_JenisFile` text,
   `Alamat` varchar(45) DEFAULT NULL,
   `Jenis_Pelanggan` varchar(45) DEFAULT NULL,
   `Status` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `customer`
+-- Dumping data untuk tabel `customer`
 --
 
-INSERT INTO `customer` (`id_Customer`, `id_Karyawan`, `nama`, `Email`, `NoHp`, `Password`, `NIK`, `Nama_JenisFile`, `Alamat`, `Jenis_Pelanggan`, `Status`) VALUES
-(1, 1, 'Supono', 'Supono@gmail.com', '0089097898698', 'suponoganteng', 0, NULL, 'Jember', 'Bulanan', 'Aktif');
+INSERT INTO `customer` (`id_Customer`, `id_Karyawan`, `id_user`, `nama`, `Email`, `NoHp`, `Password`, `NIK`, `Nama_JenisFile`, `Alamat`, `Jenis_Pelanggan`, `Status`) VALUES
+(1, 1, 0, 'Supono', 'Supono@gmail.com', '0089097898698', 'suponoganteng', 1233, 'download (1).jpg', 'Jember', 'Bulanan', 'Aktif');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer_alat`
+-- Struktur dari tabel `customer_alat`
 --
 
 CREATE TABLE `customer_alat` (
@@ -92,7 +91,7 @@ CREATE TABLE `customer_alat` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer_file`
+-- Struktur dari tabel `customer_file`
 --
 
 CREATE TABLE `customer_file` (
@@ -105,7 +104,7 @@ CREATE TABLE `customer_file` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer_jadwal`
+-- Struktur dari tabel `customer_jadwal`
 --
 
 CREATE TABLE `customer_jadwal` (
@@ -120,7 +119,7 @@ CREATE TABLE `customer_jadwal` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customer_layanan`
+-- Struktur dari tabel `customer_layanan`
 --
 
 CREATE TABLE `customer_layanan` (
@@ -133,7 +132,7 @@ CREATE TABLE `customer_layanan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invoice`
+-- Struktur dari tabel `invoice`
 --
 
 CREATE TABLE `invoice` (
@@ -151,16 +150,16 @@ CREATE TABLE `invoice` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `invoice`
+-- Dumping data untuk tabel `invoice`
 --
 
 INSERT INTO `invoice` (`No_Faktur`, `id_Customer`, `id_Karyawan`, `id_Detail_Invoice`, `Tanggal`, `Tgl_JatuhTempo`, `Sub_Total`, `Status_Ppn`, `Ppn`, `Total`, `Status_Lunas`) VALUES
-(1, 1, 1, 1, '2020-06-21', '2021-07-31 00:00:00', '59.000', 'Aktif', '21.000', '80.000', 'Lunas');
+(1, 1, 1, 1, '2020-06-21', '2021-07-31 00:00:00', '59.000', 'Aktif', '21.000', '90.000', 'Lunas');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invoice_detail`
+-- Struktur dari tabel `invoice_detail`
 --
 
 CREATE TABLE `invoice_detail` (
@@ -175,11 +174,12 @@ CREATE TABLE `invoice_detail` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `karyawan`
+-- Struktur dari tabel `karyawan`
 --
 
 CREATE TABLE `karyawan` (
   `id_Karyawan` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `Nama` varchar(45) DEFAULT NULL,
   `NIP` varchar(45) DEFAULT NULL,
   `Email` varchar(45) DEFAULT NULL,
@@ -188,16 +188,16 @@ CREATE TABLE `karyawan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `karyawan`
+-- Dumping data untuk tabel `karyawan`
 --
 
-INSERT INTO `karyawan` (`id_Karyawan`, `Nama`, `NIP`, `Email`, `NoHp`, `Alamat`) VALUES
-(1, 'Supono', '1234456', 'Supono@gmail.com', '085677909877', 'Jember');
+INSERT INTO `karyawan` (`id_Karyawan`, `id_user`, `Nama`, `NIP`, `Email`, `NoHp`, `Alamat`) VALUES
+(1, 0, 'Supono', '1234456', 'Supono@gmail.com', '085677909877', 'Jember');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `karyawan_master`
+-- Struktur dari tabel `karyawan_master`
 --
 
 CREATE TABLE `karyawan_master` (
@@ -214,13 +214,13 @@ CREATE TABLE `karyawan_master` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `layanan`
+-- Struktur dari tabel `layanan`
 --
 
 CREATE TABLE `layanan` (
   `id_Layanan` int(11) NOT NULL,
   `id_Layanan_Jenis` int(11) DEFAULT NULL,
-  `Nama_Layanan` text DEFAULT NULL,
+  `Nama_Layanan` text,
   `Nama_Layanan_Jenis` varchar(45) DEFAULT NULL,
   `Tgl_Aktifasi` date DEFAULT NULL,
   `Kapasitas` varchar(45) DEFAULT NULL,
@@ -228,7 +228,7 @@ CREATE TABLE `layanan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `layanan`
+-- Dumping data untuk tabel `layanan`
 --
 
 INSERT INTO `layanan` (`id_Layanan`, `id_Layanan_Jenis`, `Nama_Layanan`, `Nama_Layanan_Jenis`, `Tgl_Aktifasi`, `Kapasitas`, `Harga`) VALUES
@@ -240,14 +240,25 @@ INSERT INTO `layanan` (`id_Layanan`, `id_Layanan_Jenis`, `Nama_Layanan`, `Nama_L
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Struktur dari tabel `user`
 --
 
-CREATE TABLE `login` (
-  `id_login` int(11) NOT NULL,
+CREATE TABLE `user` (
+  `id_user` int(11) NOT NULL,
   `email` varchar(50) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL
+  `password` varchar(50) DEFAULT NULL,
+  `level` enum('sales','admin','pegawai','customer') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`id_user`, `email`, `password`, `level`) VALUES
+(1, 'alrizal@gmail.com', '123', 'sales'),
+(2, 'riyad@gmail.com', '1234', 'admin'),
+(3, 'makbar@gmail.com', '12345', 'pegawai'),
+(4, 'wildan@gmail.com', '123456', 'customer');
 
 --
 -- Indexes for dumped tables
@@ -320,10 +331,10 @@ ALTER TABLE `layanan`
   ADD PRIMARY KEY (`id_Layanan`);
 
 --
--- Indexes for table `login`
+-- Indexes for table `user`
 --
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`id_login`);
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -334,74 +345,61 @@ ALTER TABLE `login`
 --
 ALTER TABLE `bts`
   MODIFY `id_bts` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
   MODIFY `id_Customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `customer_alat`
 --
 ALTER TABLE `customer_alat`
   MODIFY `id_Customer_Alat` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `customer_file`
 --
 ALTER TABLE `customer_file`
   MODIFY `id_Customer_File` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `customer_jadwal`
 --
 ALTER TABLE `customer_jadwal`
   MODIFY `id_Customer_Jadwal` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `customer_layanan`
 --
 ALTER TABLE `customer_layanan`
   MODIFY `id_Customer_Layanan` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
   MODIFY `No_Faktur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `invoice_detail`
 --
 ALTER TABLE `invoice_detail`
   MODIFY `id_Invoice_Detail` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `karyawan`
 --
 ALTER TABLE `karyawan`
   MODIFY `id_Karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `karyawan_master`
 --
 ALTER TABLE `karyawan_master`
   MODIFY `id_Karyawan` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
   MODIFY `id_Layanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
--- AUTO_INCREMENT for table `login`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `login`
-  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT;
-COMMIT;
-
+ALTER TABLE `user`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
