@@ -196,10 +196,8 @@ include ('koneksi.php');
                          <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Status <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input id="Username" name="Status" type="radio" required /> Progress
-                      </div>
-                      <div class="col-lg-10">
-                        <input id="Username" name="Status" type="radio" required /> Selesai
+                       <input type="radio" name="Status" id="Username" value="Progress" <?php echo set_radio('Status', 'Progress'); ?>> Progress<br/>
+    					<input type="radio" name="Status" id="Username" value="Done" <?php echo set_radio('Status', 'Done'); ?>> Done
                       </div>
                     
                     <div class="form-group">
@@ -1614,7 +1612,7 @@ include ('koneksi.php');
 					}
 				);
 				$('#tasks').disableSelection();
-				$('#tasks input:checkbox').removeAttr('checked').Selesai('click', function(){
+				$('#tasks input:checkbox').removeAttr('checked').on('click', function(){
 					if(this.checked) $(this).closest('li').addClass('selected');
 					else $(this).closest('li').removeClass('selected');
 				});

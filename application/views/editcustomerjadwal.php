@@ -197,10 +197,8 @@ include ('koneksi.php');
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input id="Username" name="Status" type="radio" value="<?php echo $customer_jadwal->Status ?>" required /> b
-                      </div>
-                      <div class="col-lg-10">
-                        <input id="Username" name="Status" type="radio"  required /> Selesai
+                       <input type="radio" name="Status" id="Username" value="Progress" <?php echo set_radio('Status', 'Progress'); ?>> Progress<br/>
+    					<input type="radio" name="Status" id="Username" value="Done" <?php echo set_radio('Status', 'Done'); ?>> Done
                       </div>
                       
                     </div>
