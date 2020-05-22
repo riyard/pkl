@@ -113,9 +113,9 @@ include ('koneksi.php');
 				</div><!-- /.sidebar-shortcuts -->
 
 				
-                <ul class="nav nav-list">
+				<ul class="nav nav-list">
 					
-					<li class="">
+						<li class="">
 						<a href="<?php echo base_url("index.php/profil_admin")?>">
 							<i class="menu-icon fa fa-user"></i>
 							<span class="menu-text">
@@ -179,6 +179,7 @@ include ('koneksi.php');
 
 					</li>
 
+
 				</ul><!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
@@ -190,65 +191,70 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Invoice</li></a>
-              			<li><i class="icon_document_alt"></i>Table Invoice</li>
+						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Sales</li></a>
+              			<li><i class="icon_document_alt"></i>Table Sales</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
-							x	</span>
+								</span>
 							</form>
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Table Invoice</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah Sales</h3>
 
-					<a href="<?php echo base_url()."index.php/invover_admin/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Invoice</button> </a>
 
-					<section class="wrapper">
-						<table class="table table-striped table-advance table-hover">
-					                <tbody>
-					                  <tr>
-					                  	<th><i class="icon_profile"></i> No</th>
-					                    <th><i class="icon_profile"></i> No Faktur</th>
-					                    <th><i class="icon_profile"></i> Tanggal</th>
-					                  	<th><i class="icon_profile"></i> Tanggal Jatuh Tempo</th>
-					                    <th><i class="icon_mail_alt"></i> Sub Total</th>
-					                    <th><i class="icon_calendar"></i> Status PPN</th>
-					                    <th><i class="icon_calendar"></i> PPN</th>
-					                    <th><i class="icon_mail_alt"></i> Total</th>
-					                    <th><i class="icon_calendar"></i> Status Lunas</th>
-					                  </tr>
-					                  <tbody>
-					                  <?php $nomor=1;foreach ($invoice as $value) {?>
-					                    <tr>
-					                    <td><?php echo $nomor++?></td>
-					                    <td><?php echo $value->No_Faktur?></td>
-					                    <td><?php echo $value->Tanggal?></td>
-					                    <td><?php echo $value->Tgl_JatuhTempo?></td>
-					                    <td><?php echo $value->Sub_Total?></td>
-					                    <td><?php echo $value->Status_Ppn?></td>
-					                    <td><?php echo $value->Ppn?></td>
-					                    <td><?php echo $value->Total?></td>
-					                    <td><?php echo $value->Status_Lunas?></td>
-					                    <td>
-					                  	<div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url()."index.php/invover_admin/edit/".$value->No_Faktur?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<a href="<?php echo base_url()."index.php/invover_admin/delete/".$value->No_Faktur?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
-											</button>
-					                  </td>
-					</section>
-						</div>
-						</td>
-						</tr>
-						<?php
+<section class="wrapper">
 
-                    }
-                    ?>
-						</tbody>
+	<table class="table table-striped table-advance table-hover">
+                 <div class="form">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/sales_admin/insert")?>">
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">NIP <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="NIP" type="text" required />
+                      </div>
+                    </div>
+                       <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Nama Sales <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Nama" type="text" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Email" type="text" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Password" type="text" required />
+                      </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">No Handphone <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="NoHp" type="text" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Alamat<span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Alamat" type="text" required />
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn-primary"  type="submit">Save</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+</section>
+
+
+
 						</section>
 						<!--<div class="page-header">
 							<h1>

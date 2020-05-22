@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class karyawan_admin extends CI_Controller {
+class sales_admin extends CI_Controller {
 	public function __construct()
 		{
 			parent::__construct();
@@ -9,28 +9,28 @@ class karyawan_admin extends CI_Controller {
 	
 	public function index()
 	{
-		$datakaryawan = $this->db->get("karyawan_master")->result();
+		$datasales = $this->db->get("sales")->result();
 		$data = array(
-			'form' => 'karyawan_admin',
-			'karyawan_master' => $datakaryawan
+			'form' => 'sales_admin',
+			'sales' => $datasales
 
 		);
-		var_dump($datakaryawan);
-		$this->load->view('karyawan_admin',$data);
+		var_dump($datasales);
+		$this->load->view('sales_admin',$data);
 	}
 
 		public function input()
 	{
 		$data = array(
-			'form' => 'tambahkaryawan_admin'
+			'form' => 'tambahsales_admin'
 			
 		);
-		$this->load->view('tambahkaryawan_admin',$data);
+		$this->load->view('tambahsales_admin',$data);
 	}
 
 		public function insert()
 	{
-		$id_Karyawan = $this->input->post("id_Karyawan");
+		$id_Sales = $this->input->post("id_Sales");
 		$NIP = $this->input->post("NIP");
 		$Nama = $this->input->post("Nama");
 		$Email = $this->input->post("Email");
@@ -38,7 +38,7 @@ class karyawan_admin extends CI_Controller {
 		$NoHp = $this->input->post("NoHp");
 		$Alamat = $this->input->post("Alamat");
 		$Level = $this->input->post("Level");
-		echo $id_Karyawan;
+		echo $id_Sales;
 		echo $NIP;
 		echo $Nama;
 		echo $Email;
@@ -47,7 +47,7 @@ class karyawan_admin extends CI_Controller {
 		echo $Alamat;
 		echo $Level;
 		$data = array(
-		"id_Karyawan"=>$id_Karyawan,
+		"id_Sales"=>$id_Sales,
 		"NIP"=>$NIP,
 		"Nama"=>$Nama,
 		"Email"=>$Email,
@@ -55,26 +55,26 @@ class karyawan_admin extends CI_Controller {
 		"NoHp"=>$NoHp,
 		"Alamat"=>$Alamat,
 		"Level"=>$Level,);
-		$this->db->insert("karyawan_master",$data);
-		redirect(base_url()."index.php/karyawan_admin");
+		$this->db->insert("sales",$data);
+		redirect(base_url()."index.php/sales_admin");
 
 	}
 
 		public function edit()
 	{
 		$id=$this->uri->segment(3);
-		$datakaryawan=$this->db->get_where("karyawan_master",array("id_Karyawan"=>$id))->row();
+		$datasales=$this->db->get_where("sales",array("id_Sales"=>$id))->row();
 		$data = array(
-			'form' => 'editkaryawan_admin',
-			'karyawan_master' => $datakaryawan
+			'form' => 'editsales_admin',
+			'sales' => $datasales
 		);
-		$this->load->view('editkaryawan_admin',$data);
+		$this->load->view('editsales_admin',$data);
 	}
 
 	public function update()
 	{
-		$id = $this->input->post("id_Karyawan");
-		$id_Karyawan = $this->input->post("id_Karyawan");
+		$id = $this->input->post("id_Sales");
+		$id_Sales = $this->input->post("id_Sales");
 		$NIP = $this->input->post("NIP");
 		$Nama = $this->input->post("Nama");
 		$Email = $this->input->post("Email");
@@ -82,7 +82,7 @@ class karyawan_admin extends CI_Controller {
 		$NoHp = $this->input->post("NoHp");
 		$Alamat = $this->input->post("Alamat");
 		$Level = $this->input->post("Level");
-		echo $id_Karyawan;
+		echo $id_Sales;
 		echo $NIP;
 		echo $Nama;
 		echo $Email;
@@ -91,7 +91,7 @@ class karyawan_admin extends CI_Controller {
 		echo $Alamat;
 		echo $Level;
 		$data = array(
-		"id_Karyawan"=>$id_Karyawan,
+		"id_Sales"=>$id_Sales,
 		"NIP"=>$NIP,
 		"Nama"=>$Nama,
 		"Email"=>$Email,
@@ -99,15 +99,15 @@ class karyawan_admin extends CI_Controller {
 		"NoHp"=>$NoHp,
 		"Alamat"=>$Alamat,
 		"Level"=>$Level,);
-		$this->db->where("id_Karyawan",$id)->update("karyawan_master",$data);
-		redirect(base_url()."index.php/karyawan_admin");
+		$this->db->where("id_Sales",$id)->update("sales",$data);
+		redirect(base_url()."index.php/sales_admin");
 	}
 
 	public function delete()
 	{
 		$id=$this->uri->segment(3);
 
-		$this->db->where("id_Karyawan",$id)->delete('karyawan_master');
-		redirect(base_url()."index.php/karyawan_admin");
+		$this->db->where("id_Sales",$id)->delete('sales');
+		redirect(base_url()."index.php/sales_admin");
 	}
 }

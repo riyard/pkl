@@ -134,6 +134,15 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
+						<a href="<?php echo base_url("index.php/sales_admin")?>">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text">
+								Sales
+							</span>
+						</a>
+
+					</li>
+					<li class="">
 						<a href="<?php echo base_url("index.php/pelanggan_admin")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
@@ -192,53 +201,50 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Table Data Karyawan</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Table Karyawan</h3>
 
-<!-- 					<a href="<?php echo base_url("index.php/tambahlayanan_sales")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a> -->
+					<a href="<?php echo base_url()."index.php/karyawan_admin/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Karyawan</button> </a>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                  <tr>
-					                    <th><i class="icon_profile"></i> No</th>
-					                  	<th><i class="icon_profile"></i> Nama Karyawan</th>
-					                    <th><i class="icon_mail_alt"></i> NIP</th>
-					                    <th><i class="icon_calendar"></i> Email</th>
+					                  	<th><i class="icon_profile"></i> No</th>
+					                  	<th><i class="icon_profile"></i> NIP</th>
+					                    <th><i class="icon_profile"></i> Nama Karyawan</th>
+					                  	<th><i class="icon_profile"></i> Email</th>
+					                  	<th><i class="icon_profile"></i> Password</th>
 					                    <th><i class="icon_mail_alt"></i> No Handphone</th>
 					                    <th><i class="icon_calendar"></i> Alamat</th>
 					                  </tr>
-					                  <!-- <td>
+					                  <tbody>
+					                  <?php $nomor=1;foreach ($karyawan_master as $value) {?>
+					                    <tr>
+					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $value->NIP?></td>
+					                    <td><?php echo $value->Nama?></td>
+					                    <td><?php echo $value->Email?></td>
+					                    <td><?php echo $value->Password?></td>
+					                    <td><?php echo $value->NoHp?></td>
+					                    <td><?php echo $value->Alamat?></td>
+					                    <td>
 					                  	<div class="btn-group">
 					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editlayanan_sales")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+											<a href="<?php echo base_url()."index.php/karyawan_admin/edit/".$value->id_Karyawan?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
 											</button>
 					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
+											<a href="<?php echo base_url()."index.php/karyawan_admin/delete/".$value->id_Karyawan?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
 											</button>
-					                  </td> -->
-					                  <?php
-								include ('koneksi.php');
-								$sql='select * from karyawan';
-								$ambil=mysqli_query($konek,$sql);
-								$nomor=1;
-								
-								while($data=mysqli_fetch_array($ambil)){ 
-								echo "<tr>";
-								// echo "<td>".$nomor++."</td>";
-								echo "<td>".$nomor++."</td>";
-								echo "<td>".$data['Nama']."</td>";
-								echo "<td>".$data['NIP']."</td>";
-								echo "<td>".$data['Email']."</td>";
-								echo "<td>".$data['NoHp']."</td>";
-								echo "<td>".$data['Alamat']."</td>";
-								// echo "<td><img src='images/produk/".$data['foto_produk']."' width='100' height='100'></td>";
-								// echo "<td>".$data['deskripsi_produk']."</td>";
-								// echo "<td><a href='hapus_layanan.php?halaman=hapusproduk&id=".$data['id_produk']."'>Hapus</a></td>";
-								echo "</tr>";
-								} 
-								?>
+					                  </td>
 					</section>
+						</div>
+						</td>
+						</tr>
+						<?php
 
+                    }
+                    ?>
+						</tbody>
 						</section>
 						<!--<div class="page-header">
 							<h1>
