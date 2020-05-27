@@ -176,7 +176,7 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Layanan</h3>
 
-					<a href="<?php echo base_url("index.php/layanan_sales/input")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a>
+					<a href="<?php echo base_url("index.php/layanan_sales/input")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px"><i class="fa fa-user-plus"></i>Tambah Layanan</button> </a>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
@@ -186,6 +186,7 @@ include ('koneksi.php');
 					                    <th><i class="icon_profile"></i> Nama Layanan</th>
 					                    <th><i class="icon_mail_alt"></i> Kapasitas</th>
 					                    <th><i class="icon_calendar"></i> Harga</th>
+										<th><i class="icon_calendar"></i> Action</th>
 					                  </tr>
 					                  <tbody>
 					                  <?php $nomor=1;foreach ($layanan as $value) {?>
@@ -196,12 +197,12 @@ include ('koneksi.php');
 					                    <td><?php echo $value->Harga?></td>
 					                    <td>
 					                  	<div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url()."index.php/layanan_sales/edit/".$value->id_Layanan?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<a href="<?php echo base_url()."index.php/layanan_sales/delete/".$value->id_Layanan?>"><i class="ace-icon fa fa-trash-o bigger-120"></i>
-											</button>
+											<a href="<?php echo base_url()."index.php/layanan_sales/edit/".$value->id_Layanan?>" class="btn btn-primary btn-xs">
+												<i class="fa fa-pencil"></i> Edit
+											</a>
+											
+											<a href="<?php echo base_url()."index.php/layanan_sales/delete/".$value->id_Layanan?>" class="btn btn-danger btn-xs">
+												<i class="fa fa-trash-o"></i> Hapus
 					                  </td>
 					</section>
 						</div>
