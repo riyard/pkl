@@ -170,6 +170,15 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
+						<a href="<?php echo base_url("index.php/user_admin")?>">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text">
+								User
+							</span>
+						</a>
+
+					</li>
+					<li class="">
 						<a href="<?php echo base_url("index.php/login")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">

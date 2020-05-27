@@ -170,6 +170,15 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
+						<a href="<?php echo base_url("index.php/user_admin")?>">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text">
+								User
+							</span>
+						</a>
+
+					</li>
+					<li class="">
 						<a href="<?php echo base_url("index.php/login")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
@@ -211,34 +220,34 @@ include ('koneksi.php');
                  <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/karyawan_admin/insert")?>">
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">NIP<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">NIP *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="NIP" type="text" required />
                       </div>
                     </div>
                        <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Nama <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Nama *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Nama" type="text" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Email *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Email" type="text" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Password *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Password" type="text" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">No Handphone <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">No Handphone *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="NoHp" type="text" required />
                       </div>
                     </div>
                      <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Alamat<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Alamat *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Alamat" type="text" required />
                       </div>
@@ -246,7 +255,10 @@ include ('koneksi.php');
                     
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Save</button>
+                        <button type="submit" class="btn btn-success btn-flat">
+                        	<i class="fa fa-paper-plane"></i> Save
+                        </button>
+                        <button type="Reset" class="btn btn-flat">Reset</button>
                       </div>
                     </div>
                   </form>

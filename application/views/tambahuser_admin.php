@@ -200,8 +200,8 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Invoice</li></a>
-              			<li><i class="icon_document_alt"></i>Table Invoice</li>
+						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> User</li></a>
+              			<li><i class="icon_document_alt"></i>Table User</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -211,64 +211,39 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah Invoice</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah User</h3>
 
 
 <section class="wrapper">
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/invover_admin/insert")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/user_admin/insert")?>">
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Tanggal *<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Email *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Tanggal" type="text" required />
+                        <input class="form-control" id="Username" name="email" type="text" required />
                       </div>
                     </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Tanggal Jatuh Tempo *<span class="required"></span></label>
+                    <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Password *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Tgl_JatuhTempo" type="text" required />
+                        <input class="form-control" id="Username" name="password" type="text" required />
                       </div>
                     </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Sub Total *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Sub_Total" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status PPN *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                       <select name="Status_Ppn" class="form-control" required >  
+                    <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Level *<span class="required"></span></label>
+ 		                <div class="col-lg-10">
+ 		                <select name="level" class="form-control" required >  
  						  <option value="">--Pilih--</option>  
-						  <option value="Aktif">Aktif</option>  
-						  <option value="Tidak Aktif">Tidak Aktif</option>  
+						  <option value="admin">Admin</option>  
+						  <option value="sales">Sales</option>  
+						  <option value="pegawai">Karyawan</option>  
+						  <option value="customer">Pelanggan</option>  
                         </select>
-                      </div>
+                        </div>
                     </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">PPN *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Ppn" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Total *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Total" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status Lunas *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <select name="Status_Lunas" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Lunas">Lunas</option>  
-						  <option value="Belum Lunas">Belum Lunas</option>  
-                        </select>
-                      </div>
-                    
+                                             
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
                         <button type="submit" class="btn btn-success btn-flat">
@@ -277,7 +252,7 @@ include ('koneksi.php');
                         <button type="Reset" class="btn btn-flat">Reset</button>
                       </div>
                     </div>
-                  </form>
+                 </form>
                 </div>
 </section>
 

@@ -150,7 +150,7 @@ include ('koneksi.php');
 							</span>
 						</a>
 
-                    </li>
+					</li>
 					<li class="">
 						<a href="<?php echo base_url("index.php/invover_admin")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
@@ -165,6 +165,15 @@ include ('koneksi.php');
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text">
 								Layanan
+							</span>
+						</a>
+
+					</li>
+					<li class="">
+						<a href="<?php echo base_url("index.php/user_admin")?>">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text">
+								User
 							</span>
 						</a>
 
@@ -210,60 +219,71 @@ include ('koneksi.php');
                  <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url()."index.php/pelanggan_admin/update"?>">
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">NIK<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">NIK *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="NIK" type="text" value="<?php echo $customer->NIK ?>" required />
                       </div>
                     </div>
                        <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Nama Pelanggan <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Nama Pelanggan *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="nama" type="text" value="<?php echo $customer->nama ?>" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Email *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Email" type="text" value="<?php echo $customer->Email ?>" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Password *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Password" type="text" value="<?php echo $customer->Password ?>" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">No Handphone <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">No Handphone *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="NoHp" type="text" value="<?php echo $customer->NoHp ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Alamat<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Alamat *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Alamat" type="text" value="<?php echo $customer->Alamat ?>" required />
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Nama Jenis File<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Nama Jenis File *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Nama_JenisFile" type="text" value="<?php echo $customer->Nama_JenisFile ?>" required />
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jenis Pelanggan<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Jenis Pelanggan *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Jenis_Pelanggan" type="text" value="<?php echo $customer->Jenis_Pelanggan ?>" required />
+                        <select name="Jenis_Pelanggan" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Perorangan" <?php echo $customer->Jenis_Pelanggan ?>>Perorangan</option>  
+						  <option value="Perusahaan" <?php echo $customer->Jenis_Pelanggan ?>>Perusahaan</option>  
+                        </select>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Status *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Status" type="text" value="<?php echo $customer->Status ?>" required />
+                        <select name="Status" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Calon" <?php echo $customer->Status ?>>Calon</option>  
+						  <option value="Aktif" <?php echo $customer->Status ?>>Aktif</option>  
+                        </select>
                       </div>
                     </div>
                     
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Save</button>
+                        <button type="submit" class="btn btn-success btn-flat">
+                        	<i class="fa fa-paper-plane"></i> Save
+                        </button>
+                        <button type="Reset" class="btn btn-flat">Reset</button>
                       </div>
                     </div>
                     <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_Customer">

@@ -150,7 +150,7 @@ include ('koneksi.php');
 							</span>
 						</a>
 
-                    </li>
+					</li>
 					<li class="">
 						<a href="<?php echo base_url("index.php/invover_admin")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
@@ -165,6 +165,15 @@ include ('koneksi.php');
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text">
 								Layanan
+							</span>
+						</a>
+
+					</li>
+					<li class="">
+						<a href="<?php echo base_url("index.php/user_admin")?>">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text">
+								User
 							</span>
 						</a>
 
@@ -210,34 +219,34 @@ include ('koneksi.php');
                  <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url()."index.php/sales_admin/update"?>">
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">NIP <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">NIP *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="NIP" type="text" value="<?php echo $sales->NIP ?>" required />
                       </div>
                     </div>
                        <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Nama Sales <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Nama Sales *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Nama" type="text" value="<?php echo $sales->Nama ?>" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Email *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Email" type="text" value="<?php echo $sales->Email ?>" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Password *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Password" type="text" value="<?php echo $sales->Password ?>" required />
                       </div>
                          <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">No Handphone <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">No Handphone *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="NoHp" type="text" value="<?php echo $sales->NoHp ?>" required />
                       </div>
                     </div>
                      <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Alamat<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Alamat *<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Alamat" type="text" value="<?php echo $sales->Alamat ?>" required />
                       </div>
@@ -245,7 +254,10 @@ include ('koneksi.php');
                     
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Save</button>
+                        <button type="submit" class="btn btn-success btn-flat">
+                        	<i class="fa fa-paper-plane"></i> Save
+                        </button>
+                        <button type="Reset" class="btn btn-flat">Reset</button>
                       </div>
                     </div>
                     <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_Sales">

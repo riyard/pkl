@@ -188,7 +188,6 @@ include ('koneksi.php');
 
 					</li>
 
-
 				</ul><!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
@@ -200,8 +199,8 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Invoice</li></a>
-              			<li><i class="icon_document_alt"></i>Table Invoice</li>
+						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> User</li></a>
+              			<li><i class="icon_document_alt"></i>Table User</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -211,61 +210,34 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah Invoice</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Edit User</h3>
 
 
 <section class="wrapper">
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/invover_admin/insert")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url()."index.php/user_admin/update"?>">
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Tanggal *<span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Email *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Tanggal" type="text" required />
+                        <input class="form-control" id="Username" name="email" type="text" value="<?php echo $user->email ?>" required />
                       </div>
                     </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Tanggal Jatuh Tempo *<span class="required"></span></label>
+                       <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Password *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Tgl_JatuhTempo" type="text" required />
+                        <input class="form-control" id="Username" name="password" type="text" value="<?php echo $user->password ?>" required />
                       </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Sub Total *<span class="required"></span></label>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Level *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Sub_Total" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status PPN *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                       <select name="Status_Ppn" class="form-control" required >  
+                      	<select name="level" class="form-control" required >  
  						  <option value="">--Pilih--</option>  
-						  <option value="Aktif">Aktif</option>  
-						  <option value="Tidak Aktif">Tidak Aktif</option>  
-                        </select>
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">PPN *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Ppn" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Total *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Total" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status Lunas *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <select name="Status_Lunas" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Lunas">Lunas</option>  
-						  <option value="Belum Lunas">Belum Lunas</option>  
+						  <option value="admin" <?php echo $user->level ?>>Admin</option>  
+						  <option value="sales" <?php echo $user->level ?>>Sales</option>  
+						  <option value="pegawai" <?php echo $user->level ?>>Karyawan</option>  
+						  <option value="customer" <?php echo $user->level ?>>Pelanggan</option>  
                         </select>
                       </div>
                     
@@ -277,6 +249,7 @@ include ('koneksi.php');
                         <button type="Reset" class="btn btn-flat">Reset</button>
                       </div>
                     </div>
+                    <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_user">
                   </form>
                 </div>
 </section>
