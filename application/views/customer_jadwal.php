@@ -192,11 +192,11 @@ include ('koneksi.php');
 					                <tbody>
 					                 <tr>
 					                    <th><i class="icon_profile"></i> No</th>
-					                  	<th><i class="icon_profile"></i> Tgl_Pemasangan</th>
-					                    <th><i class="icon_profile"></i> id_Customer</th>
+					                  	<th><i class="icon_profile"></i> Tgl Pemasangan</th>
+					                    <th><i class="icon_profile"></i> id Customer</th>
 					                    <th><i class="icon_calendar"></i> Jenis Visit</th>
 					                    <th><i class="icon_mail_alt"></i> Status</th>
-					                  	<th><i class="icon_profile"></i> id_Karyawan</th>
+					                  	<th><i class="icon_profile"></i> id Karyawan</th>
 					                    <th><i class="icon_calendar"></i> Action</th>
 					                    
 					                  </tr>
