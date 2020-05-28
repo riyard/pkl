@@ -212,7 +212,11 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Edit User</h3>
 
+						<div class="pull-right">
+							<a href="<?php echo base_url()."index.php/user_admin/"?>" class="btn btn-warning btn-flat" type="button" style="margin-top: -10px;margin-right: 10px"><i class="fa fa-undo"></i>Back</a>
+						</div>
 
+<div class="main-content-inner">
 <section class="wrapper">
 
 	<table class="table table-striped table-advance table-hover">
@@ -252,11 +256,10 @@ include ('koneksi.php');
                     <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_user">
                   </form>
                 </div>
-</section>
+            </table>
+	</section>
+</div>
 
-
-
-						</section>
 						<!--<div class="page-header">
 							<h1>
 								Dashboard

@@ -213,10 +213,15 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah User</h3>
 
+						<div class="pull-right">
+							<a href="<?php echo base_url()."index.php/user_admin/"?>" class="btn btn-warning btn-flat" type="button" style="margin-top: -10px;margin-right: 10px"><i class="fa fa-undo"></i>Back</a>
+						</div>
 
-<section class="wrapper">
 
-	<table class="table table-striped table-advance table-hover">
+<div class="main-content-inner">
+	<section class="wrapper">
+
+		<table class="table table-striped table-advance table-hover">
                  <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/user_admin/insert")?>">
                     <div class="form-group">
@@ -254,11 +259,10 @@ include ('koneksi.php');
                     </div>
                  </form>
                 </div>
-</section>
+            </table>
+	</section>
+</div>
 
-
-
-						</section>
 						<!--<div class="page-header">
 							<h1>
 								Dashboard
