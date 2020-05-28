@@ -231,7 +231,7 @@ include ('koneksi.php');
 					                  <tbody>
 					                  <?php $nomor=1;foreach ($invoice as $value) {?>
 					                    <tr>
-					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $nomor++?>.</td>
 					                    <td><?php echo $value->Tanggal?></td>
 					                    <td><?php echo $value->Tgl_JatuhTempo?></td>
 					                    <td><?php echo $value->Sub_Total?></td>
