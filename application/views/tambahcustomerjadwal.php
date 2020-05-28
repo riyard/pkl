@@ -188,21 +188,33 @@ include ('koneksi.php');
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Tgl_Pemasangan" type="text" required />
                       </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Jenis Visit <span class="required"></span></label>
+                      <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Jenis Visit *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Jenis_Visit" type="text" required />
-                      </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Status <span class="required"></span></label>
+ 		                <select name="Jenis_Visit" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Survei">Survei</option>  
+						  <option value="Instalasi">Instalasi</option>
+						  <option value="Aktifasi">Aktifasi</option>  
+                        </select>
+                        </div>
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Status *<span class="required"></span></label>
                       <div class="col-lg-10">
-                       <input type="radio" name="Status" id="Username" value="Progress" <?php echo set_radio('Status', 'Progress'); ?>> Progress<br/>
-    					<input type="radio" name="Status" id="Username" value="Done" <?php echo set_radio('Status', 'Done'); ?>> Done
+                        <select name="Status" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Belum Selesai">Belum Selesai</option>  
+						  <option value="Sudah Selesai">Sudah Selesai</option>  
+                        </select>
                       </div>
+                    </div>
                     
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Save</button>
+                        <button type="submit" class="btn btn-success btn-flat">
+                        	<i class="fa fa-paper-plane"></i> Save
+                        </button>
+                        <button type="Reset" class="btn btn-flat">Reset</button>
                       </div>
                     </div>
                   </form>

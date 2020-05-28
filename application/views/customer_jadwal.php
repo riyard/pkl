@@ -191,33 +191,37 @@ include ('koneksi.php');
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                 <tr>
-					                    <th><i class="icon_profile"></i> id Customer Jadwal</th>
-					                    <th><i class="icon_profile"></i> id Karyawan</th>
+					                    <th><i class="icon_profile"></i> No</th>
 					                  	<th><i class="icon_profile"></i> Tgl_Pemasangan</th>
+					                    <th><i class="icon_profile"></i> id_Customer</th>
 					                    <th><i class="icon_calendar"></i> Jenis Visit</th>
 					                    <th><i class="icon_mail_alt"></i> Status</th>
+					                  	<th><i class="icon_profile"></i> id_Karyawan</th>
+					                    <th><i class="icon_calendar"></i> Action</th>
 					                    
 					                  </tr>
 					                  <tbody>
-					                  <?php $nomor=1; $nomor2=1; foreach ($customer_jadwal as $value) {?>
+					                  <?php $nomor=1; $nomor2=1; $nomor3=1; foreach ($customer_jadwal as $value) {?>
 					                    <tr>
-					                    <td><?php echo $nomor++?></td>
-					                    <td><?php echo $nomor2++?></td>
+					                    <td><?php echo $nomor++?>.</td>
 					                    <td><?php echo $value->Tgl_Pemasangan?></td>
+					                    <td><?php echo $nomor2++?>.</td>
 					                    <td><?php echo $value->Jenis_Visit?></td>
 					                    <td><?php echo $value->Status?></td>
+					                    <td><?php echo $nomor3++?>.</td>
 					                  <td>
 					                  <div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url()."index.php/customer_jadwal/edit/".$value->id_Customer_Jadwal?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<a href="<?php echo base_url()."index.php/customer_jadwal/delete/".$value->id_Customer_Jadwal?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
-											</button>
+											<a href="<?php echo base_url()."index.php/customer_jadwal/edit/".$value->id_Customer_Jadwal?>" class="btn btn-primary btn-xs">
+												<i class="fa fa-pencil"></i> Edit
+											</a>
+										
+											<a href="<?php echo base_url()."index.php/customer_jadwal/delete/".$value->id_Customer_Jadwal?>" class="btn btn-danger btn-xs">
+												<i class="fa fa-trash-o"></i> Hapus
+											</a>
+										</div>
 					                  </td>
-					              </div>
+					              </tr>
 					          </tbody>
-					      </tr>
 					                 <?php
 
                     }

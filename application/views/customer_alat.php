@@ -202,11 +202,12 @@ include ('koneksi.php');
 					                    <th><i class="icon_calendar"></i> Password</th>
 					                    <th><i class="icon_calendar"></i> SSID</th>
 					                    <th><i class="icon_calendar"></i> Freq</th>
+					                    <th><i class="icon_calendar"></i> Action</th>
 					                  </tr>
 					                  <tbody>
 					                  <?php $nomor=1;foreach ($customer_alat as $value) {?>
 					                    <tr>
-					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $nomor++?>.</td>
 					                    <td><?php echo $value->Jarak?></td>
 					                    <td><?php echo $value->Ketinggian_Pipa?></td>
 					                    <td><?php echo $value->Jenis_Transmisi?></td>
@@ -220,16 +221,17 @@ include ('koneksi.php');
 					                    <td><?php echo $value->Freq?></td>
 					                  <td>
 					                  <div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url()."index.php/customer_alat/edit/".$value->id_Customer_Alat?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<a href="<?php echo base_url()."index.php/customer_alat/delete/".$value->id_Customer_Alat?>"><i class="ace-icon fa fa-trash-o bigger-120"></i></a>
-											</button>
+											<a href="<?php echo base_url()."index.php/customer_alat/edit/".$value->id_Customer_Alat?>" class="btn btn-primary btn-xs">
+												<i class="fa fa-pencil"></i> Edit
+											</a>
+										
+											<a href="<?php echo base_url()."index.php/customer_alat/delete/".$value->id_Customer_Alat?>" class="btn btn-danger btn-xs">
+												<i class="fa fa-trash-o"></i> Hapus
+											</a>
+										</div>
 					                  </td>
-					              </div>
+					              </tr>
 					          </tbody>
-					      </tr>
 					                 <?php
 
                     }

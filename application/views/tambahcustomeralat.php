@@ -192,12 +192,16 @@ include ('koneksi.php');
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Ketinggian_Pipa" type="text" required />
                       </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Jenis Transmisi <span class="required"></span></label>
+                      <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Jenis Transmisi *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Jenis_Transmisi" type="text" required />
-                      </div>
-                    </div>
+ 		                <select name="Jenis_Transmisi" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Wireless">Wireless</option>  
+						  <option value="Fiber">Fiber</option>
+						  <option value="Lainnya">Lainnya</option>  
+                        </select>
+                        </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Jenis Cpe <span class="required"></span></label>
                       <div class="col-lg-10">
@@ -205,9 +209,13 @@ include ('koneksi.php');
                       </div>
                     </div>
                      <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status Cpe <span class="required"></span></label>
+                      <label for="cname" class="control-label col-lg-2">Status Cpe*<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Status_Cpe" type="text" required />
+                        <select name="Status_Cpe" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Hak Milik">Hak Milik</option>  
+						  <option value="Sewa">Sewa</option>  
+                        </select>
                       </div>
                     </div>
                      <div class="form-group">

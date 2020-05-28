@@ -188,19 +188,26 @@ include ('koneksi.php');
                         <input class="form-control" id="Username" name="Tgl_Pemasangan" type="text" value="<?php echo $customer_jadwal->Tgl_Pemasangan ?>" required />
                       </div>
                     </div>
-					<div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jenis_Visit <span class="required"></span></label>
+
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Jenis Visit *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Jenis_Visit" type="text" value="<?php echo $customer_jadwal->Jenis_Visit ?>" required />
+                        <select name="Jenis_Visit" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Survey" <?php echo $customer_jadwal->Jenis_Visit ?>>Survey</option>  
+						  <option value="Instalasi" <?php echo $customer_jadwal->Jenis_Visit ?>>Instalasi</option>  
+						  <option value="Aktifasi" <?php echo $customer_jadwal->Jenis_Visit ?>>Aktifasi</option>  
+                        </select>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status <span class="required"></span></label>
                       <div class="col-lg-10">
-                       <input type="radio" name="Status" id="Username" value="Progress" <?php echo set_radio('Status', 'Progress'); ?>> Progress<br/>
-    					<input type="radio" name="Status" id="Username" value="Done" <?php echo set_radio('Status', 'Done'); ?>> Done
-                      </div>
-                      
+                      	<select name="Status" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Belum Selesai" <?php echo $customer_jadwal->Status ?>>Belum Selesai</option>  
+						  <option value="Sudah Selesai" <?php echo $customer_jadwal->Status ?>>Sudah Selesai</option>  
+                        </select>
                     </div>
                     <div class="form-group">
                       <div class="col-lg-offset-2 col-lg-10">

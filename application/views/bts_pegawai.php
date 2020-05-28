@@ -196,34 +196,35 @@ include ('koneksi.php');
 					                    <th><i class="icon_mail_alt"></i> Kode Pelanggan PLN</th>
 					                    <th><i class="icon_calendar"></i> Nama PIC</th>
 					                    <th><i class="icon_calendar"></i> No Hp PIC</th>
+					                    <th><i class="icon_calendar"></i> Action</th>
 					                  </tr>
 					                  <tbody>
 					                  <?php $nomor=1;foreach ($bts as $value) {?>
 					                    <tr>
-					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $nomor++?>.</td>
 					                    <td><?php echo $value->Koordinat?></td>
 					                    <td><?php echo $value->KodePelanggan_PLN?></td>
 					                    <td><?php echo $value->Nama_PIC?></td>
 					                    <td><?php echo $value->NoHp_PIC?></td>
 					                    <td>
 					                  	<div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url()."index.php/bts_pegawai/edit/".$value->id_bts?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<a href="<?php echo base_url()."index.php/bts_pegawai/delete/".$value->id_bts?>"><i class="ace-icon fa fa-trash-o bigger-120"></i>
-											</button>
+											<a href="<?php echo base_url()."index.php/bts_pegawai/edit/".$value->id_bts?>" class="btn btn-primary btn-xs">
+												<i class="fa fa-pencil"></i> Edit
+											</a>
+										
+											<a href="<?php echo base_url()."index.php/bts_pegawai/delete/".$value->id_bts?>" class="btn btn-danger btn-xs">
+												<i class="fa fa-trash-o"></i> Hapus
+											</a>
+										</div>
 					                  </td>
-					</section>
-						</div>
-						</td>
-						</tr>
+					              </tr>
+					          </tbody>
 						<?php
 
                     }
                     ?>
-						</tbody>
 						</section>
+					</section>
 						<!--<div class="page-header">
 							<h1>
 								Dashboard

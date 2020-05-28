@@ -193,10 +193,15 @@ include ('koneksi.php');
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Ketinggian_Pipa" type="text" value="<?php echo $customer_alat->Ketinggian_Pipa ?>" required />
                       </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Jenis Transmisi <span class="required"></span></label>
+                        <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Jenis Transmisi *<span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Jenis_Transmisi" type="text" value="<?php echo $customer_alat->Jenis_Transmisi ?>" required />
+                        <select name="Jenis_Transmisi" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Wireless" <?php echo $customer_alat->Jenis_Transmisi ?>>Wireless</option>  
+						  <option value="Fiber" <?php echo $customer_alat->Jenis_Transmisi ?>>Fiber</option>  
+						  <option value="Lainnya" <?php echo $customer_alat->Jenis_Transmisi ?>>Lainnya</option>  
+                        </select>
                       </div>
                     </div>
                      <div class="form-group">
@@ -208,8 +213,11 @@ include ('koneksi.php');
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status Cpe <span class="required"></span></label>
                       <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Status_Cpe" type="text" value="<?php echo $customer_alat->Status_Cpe ?>" required />
-                      </div>
+                      	<select name="Status_Cpe" class="form-control" required >  
+ 						  <option value="">--Pilih--</option>  
+						  <option value="Hak Milik" <?php echo $customer_alat->Status_Cpe ?>>Hak Milik</option>  
+						  <option value="Sewa" <?php echo $customer_alat->Status_Cpe ?>>Sewa</option>  
+                        </select>
                     </div>
                      <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Ip Radio <span class="required"></span></label>
