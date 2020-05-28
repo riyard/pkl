@@ -205,10 +205,10 @@ include ('koneksi.php');
 					                    <tr>
 					                    <td><?php echo $nomor++?>.</td>
 					                    <td><?php echo $value->Tgl_Pemasangan?></td>
-					                    <td><?php echo $nomor2++?>.</td>
+					                    <td><?php echo $nomor2++?></td>
 					                    <td><?php echo $value->Jenis_Visit?></td>
 					                    <td><?php echo $value->Status?></td>
-					                    <td><?php echo $nomor3++?>.</td>
+					                    <td><?php echo $nomor3++?></td>
 					                  <td>
 					                  <div class="btn-group">
 											<a href="<?php echo base_url()."index.php/customer_jadwal/edit/".$value->id_Customer_Jadwal?>" class="btn btn-primary btn-xs">
