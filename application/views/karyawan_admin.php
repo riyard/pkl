@@ -222,7 +222,6 @@ include ('koneksi.php');
 					                  	<th><i class="icon_profile"></i> NIP</th>
 					                    <th><i class="icon_profile"></i> Nama Karyawan</th>
 					                  	<th><i class="icon_profile"></i> Email</th>
-					                  	<th><i class="icon_profile"></i> Password</th>
 					                    <th><i class="icon_mail_alt"></i> No Handphone</th>
 					                    <th><i class="icon_calendar"></i> Alamat</th>
 					                    <th><i class="icon_calendar"></i> Action</th>
@@ -230,11 +229,10 @@ include ('koneksi.php');
 					                  <tbody>
 					                  <?php $nomor=1;foreach ($karyawan_master as $value) {?>
 					                    <tr>
-					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $nomor++?>.</td>
 					                    <td><?php echo $value->NIP?></td>
 					                    <td><?php echo $value->Nama?></td>
 					                    <td><?php echo $value->Email?></td>
-					                    <td><?php echo $value->Password?></td>
 					                    <td><?php echo $value->NoHp?></td>
 					                    <td><?php echo $value->Alamat?></td>
 					                    <td>

@@ -220,7 +220,6 @@ include ('koneksi.php');
 					                  <tr>
 					                  	<th><i class="icon_profile"></i> No</th>
 					                    <th><i class="icon_profile"></i> Email</th>
-					                    <th><i class="icon_profile"></i> Password</th>
 					                  	<th><i class="icon_profile"></i> Level</th>
 					                  	<th><i class="icon_profile"></i> Action</th>
 					                  </tr>
@@ -229,7 +228,6 @@ include ('koneksi.php');
 					                  <tr>
 					                    <td><?php echo $nomor++?>.</td>
 					                    <td><?php echo $value->email?></td>
-					                    <td><?php echo $value->password?></td>
 					                    <td><?php echo $value->level?></td>
 					                  <td>
 					                  	<div class="btn-group">

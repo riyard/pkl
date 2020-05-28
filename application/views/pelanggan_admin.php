@@ -222,7 +222,6 @@ include ('koneksi.php');
 					                    <th><i class="icon_mail_alt"></i> NIK</th>
 					                  	<th><i class="icon_profile"></i> Nama Pelanggan</th>
 					                    <th><i class="icon_calendar"></i> Email</th>
-					                    <th><i class="icon_mail_alt"></i> Password</th>
 					                    <th><i class="icon_mail_alt"></i> No Handphone</th>
 					                    <th><i class="icon_calendar"></i> Alamat</th>
 					                    <th><i class="icon_calendar"></i> Nama Jenis File</th>
@@ -233,11 +232,10 @@ include ('koneksi.php');
 					                  <tbody>
 					                  <?php $nomor=1;foreach ($customer as $value) {?>
 					                    <tr>
-					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $nomor++?>.</td>
 					                    <td><?php echo $value->NIK?></td>
 					                    <td><?php echo $value->nama?></td>
 					                    <td><?php echo $value->Email?></td>
-					                    <td><?php echo $value->Password?></td>
 					                    <td><?php echo $value->NoHp?></td>
 					                    <td><?php echo $value->Alamat?></td>
 					                    <td><?php echo $value->Nama_JenisFile?></td>
