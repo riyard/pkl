@@ -134,6 +134,15 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
+						<a href="<?php echo base_url("index.php/upload")?>">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text">
+								Upload
+							</span>
+						</a>
+
+					</li>
+					<li class="">
 						<a href="<?php echo base_url("index.php/layanan_customer")?>">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text">
