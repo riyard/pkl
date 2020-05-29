@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class invover_admin extends CI_Controller {
+class Invover_admin extends CI_Controller {
 	public function __construct()
 		{
 			parent::__construct();
@@ -15,7 +15,7 @@ class invover_admin extends CI_Controller {
 			'invoice' => $datainvoice
 
 		);
-		var_dump($datainvoice);
+		//var_dump($datainvoice);
 		$this->load->view('invover_admin',$data);
 	}
 

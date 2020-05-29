@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class sales_admin extends CI_Controller {
+class Sales_admin extends CI_Controller {
 	public function __construct()
 		{
 			parent::__construct();
@@ -15,7 +15,7 @@ class sales_admin extends CI_Controller {
 			'sales' => $datasales
 
 		);
-		var_dump($datasales);
+		//var_dump($datasales);
 		$this->load->view('sales_admin',$data);
 	}
 

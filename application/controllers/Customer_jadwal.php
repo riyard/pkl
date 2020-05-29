@@ -15,7 +15,7 @@ class Customer_jadwal extends CI_Controller {
 			'customer_jadwal' => $datacustomerjadwal
 
 		);
-		var_dump($datacustomerjadwal);
+		//var_dump($datacustomerjadwal);
 		$this->load->view('customer_jadwal',$data);
 	}
 

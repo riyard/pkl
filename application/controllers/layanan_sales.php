@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class layanan_sales extends CI_Controller {
+class Layanan_sales extends CI_Controller {
 	public function __construct()
 		{
 			parent::__construct();
@@ -15,7 +15,7 @@ class layanan_sales extends CI_Controller {
 			'layanan' => $datalayanan
 
 		);
-		var_dump($datalayanan);
+		//var_dump($datalayanan);
 		$this->load->view('layanan_sales',$data);
 	}
 

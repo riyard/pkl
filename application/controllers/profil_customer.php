@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class profil_customer extends CI_Controller {
+class Profil_customer extends CI_Controller {
 	public function index()
 	{
 		$datacustomer = $this->db->get("customer")->result();
@@ -10,7 +10,7 @@ class profil_customer extends CI_Controller {
 			'customer' => $datacustomer
 
 		);
-		var_dump($datacustomer);
+		//var_dump($datacustomer);
 		$this->load->view('profil_customer',$data);
 	}
 	public function aksi_upload(){

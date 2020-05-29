@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pelanggan_admin extends CI_Controller {
+class Pelanggan_admin extends CI_Controller {
 	public function __construct()
 		{
 			parent::__construct();
@@ -15,7 +15,7 @@ class pelanggan_admin extends CI_Controller {
 			'customer' => $datapelanggan
 
 		);
-		var_dump($datapelanggan);
+		//var_dump($datapelanggan);
 		$this->load->view('pelanggan_admin',$data);
 	}
 

@@ -15,7 +15,7 @@ class Pelanggan extends CI_Controller {
 			'customer' => $datapelanggan
 
 		);
-		var_dump($datapelanggan);
+		//var_dump($datapelanggan);
 		$this->load->view('pelanggan',$data);
 	}
 

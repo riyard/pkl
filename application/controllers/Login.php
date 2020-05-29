@@ -15,7 +15,7 @@ class Login extends CI_Controller {
 			'login' => $datalogin
 
 		);
-		var_dump($datalogin);
+		//var_dump($datalogin);
 		$this->load->view('login',$data);
 	}
 

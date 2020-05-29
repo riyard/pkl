@@ -15,7 +15,7 @@ class Customer_alat extends CI_Controller {
 			'customer_alat' => $datacustomeralat
 
 		);
-		var_dump($datacustomeralat);
+		//var_dump($datacustomeralat);
 		$this->load->view('customer_alat',$data);
 	}
 

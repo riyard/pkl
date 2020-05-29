@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class bts_pegawai extends CI_Controller {
+class Bts_pegawai extends CI_Controller {
 	public function __construct()
 		{
 			parent::__construct();
@@ -15,7 +15,7 @@ class bts_pegawai extends CI_Controller {
 			'bts' => $databts
 
 		);
-		var_dump($databts);
+		//var_dump($databts);
 		$this->load->view('bts_pegawai',$data);
 	}
 

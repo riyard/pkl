@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class layanan_admin extends CI_Controller {
+class Layanan_admin extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('layanan_admin');
