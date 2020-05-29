@@ -134,6 +134,15 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
+						<a href="<?php echo base_url("index.php/upload")?>">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text">
+								Upload
+							</span>
+						</a>
+
+					</li>
+					<li class="">
 						<a href="<?php echo base_url("index.php/layanan_customer")?>">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text">
@@ -175,6 +184,7 @@ include ('koneksi.php');
 					</div>
 
 							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i>Data diri</h3>
+
 
 							<!-- <a href="<?php echo base_url()."index.php/profil_customer/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah NIK & NPWP</button> </a> -->
 

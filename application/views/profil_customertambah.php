@@ -176,12 +176,54 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah NIK dan NPWP</h3>
 
+<!-- <?php echo form_open_multipart('profil_customer/update')?>
+<section class="wrapper"> -->
 
-<section class="wrapper">
+	 <?php 
+        if(isset($error))
+        {
+            echo "ERROR UPLOAD : <br/>";
+            print_r($error);
+            echo "<hr/>";
+        }
+        ?>
+        <form method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>index.php/upload/proses">
+            <div>Berkas   KTP: </div>
+        	<div><input type="file" name="berkas[]"></div>
+            <div>Keterangan : </div>
+            <div><textarea name="keterangan_berkas[]"></textarea></div>
+            <hr/>
+            <div>Berkas   NPWP: </div>
+        	<div><input type="file" name="berkas[]"></div>
+            <div>Keterangan : </div>
+            <div><textarea name="keterangan_berkas[]"></textarea></div>
+            <hr/>
+            <div>Berkas   MOU: </div>
+        	<div><input type="file" name="berkas[]"></div>
+            <div>Keterangan : </div>
+            <div><textarea name="keterangan_berkas[]"></textarea></div>
+            <hr/>
+            <!-- <div>Berkas   4: </div>
+        	<div><input type="file" name="berkas[]"></div>
+            <div>Keterangan 4 : </div>
+            <div><textarea name="keterangan_berkas[]"></textarea></div> -->
+            <br/>
+            <div><input type="submit" value="Simpan"/></div>
+        </form>
+	<!-- <div class="container">
+    <h2>Multiple Upload</h2>
+    <form action="<?php echo base_url().'index.php/profil_customer/upload_image'?>" method="post" enctype="multipart/form-data">
+        <?php for ($i=1; $i <=3 ; $i++) :?>
+            <input type="file" name="Nama_JenisFile<?php echo $i;?>"><br/>
+        <?php endfor;?>
+        <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+    <script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
+</div>
 
 	<table class="table table-striped table-advance table-hover">
                  <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/profil_customer/update")?>">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/profil_customer/update")?>"> -->
 <!-- 
                   	<div class="form-group">
                       <label for="cname" class="control-label col-lg-2">No Faktur<span class="required"></span></label>
@@ -189,12 +231,12 @@ include ('koneksi.php');
                         <input class="form-control" id="Username" name="No_Faktur" type="text" value="<?php echo $invoice->No_Faktur ?>" required />
                       </div>
                     </div> -->
-                       <div class="form-group ">
+                       <!-- <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Id Customer <span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="id_Customer" type="text" value="<?php echo $customer->id_Customer ?>" required />
-                      </div>
-                         <div class="form-group ">
+                      </div> -->
+                        <!--  <div class="form-group ">
                       <label for="cname" class="control-label col-lg-2">Id Karyawan <span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="id_Karyawan" type="text" value="<?php echo $customer->id_Karyawan ?>" required />
@@ -239,7 +281,7 @@ include ('koneksi.php');
                       <div class="col-lg-10">
                         <input class="form-control" id="Username" name="Status" type ="text" value="<?php echo $customer->Status ?>" required />
                       </div>
-                    </div>
+                    </div> -->
                      <!-- <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">Status Lunas <span class="required"></span></label>
                       <div class="col-lg-10">
@@ -251,15 +293,15 @@ include ('koneksi.php');
                       <div class="col-lg-10">
                         <input class="form-control" id="id_Customer" name="id_Customer" type="text" value="<?php echo $customer->id_Customer ?>" required />
                       </div> -->
-                    </div>
+                    <!-- </div>
                     <div class="form-group">
                       <label for="cname" class="control-label col-lg-2">NIK<span class="required"></span></label>
                       <div class="col-lg-10">
                         <input class="form-control" id="NIK" name="NIK" type="text" value="<?php echo $customer->NIK ?>" required />
                       </div>
-                    </div>
+                    </div> -->
  
-					<div class="form-group">
+					<!-- <div class="form-group">
       					<label for="userfile" class="control-label col-lg-2">Gambar<span class="required"></span></label>
       					<div class="col-lg-10">
         				<input class="form-control" id="Nama_JenisFile" type="file" name="Nama_JenisFile" class="file">
@@ -273,8 +315,8 @@ include ('koneksi.php');
                     </div>
                     <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_Customer">
                   </form>
-                </div>
-</section>
+                </div> -->
+						</section>
 
 
 
