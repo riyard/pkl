@@ -205,7 +205,7 @@ include ('koneksi.php');
 
 						<div class="nav-search" id="nav-search">
 							<form class="form-search">
-							x	</span>
+								</span>
 							</form>
 						</div><!-- /.nav-search -->
 					</div>
