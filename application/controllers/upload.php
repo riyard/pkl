@@ -6,7 +6,8 @@ class Upload extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->library('form_validation','session');
-		$this->load->helper('url','form','html');		
+		$this->load->helper('url','form','html');
+		$this->load->model('M_gambar');		
 		if($this->session->userdata('status')!="login"){
 			redirect(base_url("login_customer"));
 		}
@@ -14,7 +15,16 @@ class Upload extends CI_Controller {
 	}
 	public function index()
 	{
+		$data['berkas'] = $this->db->get('customer_file');
+		
 		$this->load->view('profil_customertambah');
+		
+	}
+
+	function tampil(){
+		/*$id_Customer = $this->session->userdata('id_Customer');*/
+		$fo = $this->M_gambar->tampil();
+		$this->load->view('profil_customertambah',$fo);
 	}
 
 	function proses()

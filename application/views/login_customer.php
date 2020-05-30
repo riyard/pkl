@@ -180,6 +180,9 @@ include ('koneksi.php');
 							</div><!-- /.position-relative -->
 
 							<div class="navbar-fixed-top align-right">
+								<a href="<?php echo base_url("index.php/login")?>" class="btn btn-primary btn-xs">
+												<i class="fa fa-pencil"></i> ADMIN
+											</a>
 								<br />
 								&nbsp;
 								<a id="btn-login-dark" href="#">Dark</a>

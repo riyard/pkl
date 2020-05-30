@@ -188,6 +188,11 @@ include ('koneksi.php');
 <!-- <?php echo form_open_multipart('profil_customer/update')?>
 <section class="wrapper"> -->
 <section class="wrapper">
+	<!-- <a href="<?php echo base_url('index.php/Lihat_gambar') ?>" role="button" class="btn btn-sm btn-primary"><i class="fa fa-square"></i>  Lihat Gambar</a>
+	<br>
+	<br>
+	<br>
+	<br> -->
 	 <?php 
         if(isset($error))
         {
@@ -200,21 +205,21 @@ include ('koneksi.php');
             <label for="cname" class="control-label col-lg-2">Berkas KTP <span class="required"></span></label>
         	<div><input type="file" name="berkas[]"></div><br>
             <label for="cname" class="control-label col-lg-2">Keterangan : <span class="required"></span></label>
-            <div><textarea name="keterangan_berkas[]"></textarea></div><br>
+            <div><input name="keterangan_berkas[]" value="KTP" readonly></input></div><br>
             <label for="cname" class="control-label col-lg-2">Diupload oleh id : <span class="required"></span></label>
             <div><input name="id_Customer[]" value="<?php echo $this->session->userdata('id_Customer') ?>" readonly></textarea></div>
             <hr/>
             <label for="cname" class="control-label col-lg-2">Berkas NPWP <span class="required"></span></label>
         	<div><input type="file" name="berkas[]"></div><br>
             <label for="cname" class="control-label col-lg-2">Keterangan : <span class="required"></span></label>
-            <div><textarea name="keterangan_berkas[]"></textarea></div><br>
+            <div><input name="keterangan_berkas[]" value="NPWP" readonly></input></div><br>
             <label for="cname" class="control-label col-lg-2">Diupload oleh id : <span class="required"></span></label>
             <div><input name="id_Customer[]" value="<?php echo $this->session->userdata('id_Customer') ?>" readonly></textarea></div>
             <hr/>
             <label for="cname" class="control-label col-lg-2">Berkas MOU <span class="required"></span></label>
         	<div><input type="file" name="berkas[]"></div><br>
             <label for="cname" class="control-label col-lg-2">Keterangan : <span class="required"></span></label>
-            <div><textarea name="keterangan_berkas[]"></textarea></div><br>
+            <div><input name="keterangan_berkas[]" value="MOU" readonly></input></div><br>
             <label for="cname" class="control-label col-lg-2">Diupload oleh id : <span class="required"></span></label>
             <div><input name="id_Customer[]" value="<?php echo $this->session->userdata('id_Customer') ?>" readonly></textarea></div>
             
@@ -231,6 +236,9 @@ include ('koneksi.php');
             <br/>
             <div><input type="submit" value="Simpan"/></div>
         </form>
+
+        
+       
 	<!-- <div class="container">
     <h2>Multiple Upload</h2>
     <form action="<?php echo base_url().'index.php/profil_customer/upload_image'?>" method="post" enctype="multipart/form-data">
