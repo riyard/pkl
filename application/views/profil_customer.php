@@ -152,7 +152,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/login")?>">
+						<a href="<?php echo base_url("index.php/login_customer/logout")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
@@ -191,55 +191,87 @@ include ('koneksi.php');
 
 	<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
-					                <tbody>
-					                  <tr>
-					                  	<th><i class="icon_profile"></i> No</th>
-					                  	<th><i class="icon_profile"></i> Id Customer</th>
-					                    <th><i class="icon_mail_alt"></i> Id Karyawan</th>
-					                    <th><i class="icon_calendar"></i> Nama</th>
-					                    <th><i class="icon_profile"></i> Email</th>
-					                  	<th><i class="icon_profile"></i> Nomer HP</th>
-					                    <th><i class="icon_mail_alt"></i> Password</th>
-					                    <th><i class="icon_calendar"></i> NIK</th>
-					                    <th><i class="icon_calendar"></i> Nama Jenis File</th>
-					                    <th><i class="icon_mail_alt"></i> Alamat</th>
-					                    <th><i class="icon_calendar"></i> Jenis Pelanggan</th>
-					                    <th><i class="icon_calendar"></i> Status</th>
-					                    <th><i class="icon_calendar"></i> Edit</th>
-					                  </tr>
-					                  <tbody>
-					                  <?php $nomor=1;foreach ($customer as $value) {?>
-					                    <tr>
-					                    <td><?php echo $nomor++?></td>
-					                    <td><?php echo $value->id_Customer?></td>
-					                    <td><?php echo $value->id_Karyawan?></td>
-					                    <td><?php echo $value->nama?></td>
-					                    <td><?php echo $value->Email?></td>
-					                    <td><?php echo $value->NoHp?></td>
-					                    <td><?php echo $value->Password?></td>
-					                    <td><?php echo $value->NIK?></td>
-					                    <td><?php echo $value->Nama_JenisFile?></td>
-					                    <td><?php echo $value->Alamat?></td>
-					                    <td><?php echo $value->Jenis_Pelanggan?></td>
-					                    <td><?php echo $value->Status?></td>
-					                    <td>
-					                  	<div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url()."index.php/profil_customer/edit/".$value->id_Customer?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        
-										</div>
-					                  </td>
-
-					</section>
-						</div>
-						</td>
-						</tr>
-						<?php
-
-                    }
-                    ?>
-						</tbody>
+							<!-- id_Customer : <?php echo $this->session->userdata('id_Customer') ?><br>
+							id_Karyawan : <?php echo $this->session->userdata('id_Karyawan') ?><br>
+							nama : <?php echo $this->session->userdata('nama') ?><br>
+							Email : <?php echo $this->session->userdata('Email') ?><br>
+							Password : <?php echo $this->session->userdata('Password') ?><br>
+							Nomer HP : <?php echo $this->session->userdata('NoHp') ?><br>
+							NIK : <?php echo $this->session->userdata('NIK') ?><br>
+							Alamat : <?php echo $this->session->userdata('Alamat') ?><br>
+							Jenis : <?php echo $this->session->userdata('Jenis_Pelanggan') ?><br>
+							Status : <?php echo $this->session->userdata('Status') ?><br> -->
+					          <table class="table table-striped table-advance table-hover">
+                 <div class="form">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url()."index.php/edit_profilcustomer/"?>">
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">id_Customer <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Jarak" type="text" value="<?php echo $this->session->userdata('id_Customer') ?>" readonly />
+                      </div>
+                    </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">id_Karyawan <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Ketinggian_Pipa" type="text" value="<?php echo $this->session->userdata('id_Karyawan') ?>" readonly />
+                      </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Nama <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Jenis_Cpe" type="text" value="<?php echo $this->session->userdata('nama') ?>" readonly />
+                      </div>
+                    </div>
+                    
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Ip_Radio" type="text" value="<?php echo $this->session->userdata('Email') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Port" type="text" value="<?php echo $this->session->userdata('Password') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Nomer HP<span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Username" type="text" value="<?php echo $this->session->userdata('NoHp') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Alamat <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Password" type="text" value="<?php echo $this->session->userdata('Alamat') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">NIK <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="SSID" type="text" value="<?php echo $this->session->userdata('NIK') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Jenis / Tipe <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Freq" type="text" value="<?php echo $this->session->userdata('Jenis_Pelanggan') ?>" readonly />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Status <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Freq" type="text" value="<?php echo $this->session->userdata('Status') ?>" readonly />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn-primary"  type="submit">Edit</button>
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
 						</section>
 						
 <!-- 					<a href="<?php echo base_url("index.php/tambahlayanan_sales")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a> -->

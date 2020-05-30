@@ -2,6 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Upload extends CI_Controller {
+	
+	function __construct(){
+		parent::__construct();
+		$this->load->library('form_validation','session');
+		$this->load->helper('url','form','html');		
+		if($this->session->userdata('status')!="login"){
+			redirect(base_url("login_customer"));
+		}
+ 
+	}
 	public function index()
 	{
 		$this->load->view('profil_customertambah');
@@ -17,6 +27,7 @@ class Upload extends CI_Controller {
 		$config['encrypt_name'] 		= true;
 		$this->load->library('upload',$config);
 		$keterangan_berkas = $this->input->post('keterangan_berkas');
+		$id_Customer = $this->input->post('id_Customer');
 		$jumlah_berkas = count($_FILES['berkas']['name']);
 		for($i = 0; $i < $jumlah_berkas;$i++)
 		{
@@ -35,11 +46,12 @@ class Upload extends CI_Controller {
 					$data['keterangan'] = $keterangan_berkas[$i];
 					$data['tipe'] = $uploadData['file_ext'];
 					$data['ukuran'] = $uploadData['file_size'];
-					$this->db->insert('jenis_file',$data);
+					$data['id_Customer'] = $id_Customer[$i];
+					$this->db->insert('customer_file',$data);
 				}
 			}
 		}
  
-		redirect('upload');
+		redirect('profil_customer');
 	}
 }

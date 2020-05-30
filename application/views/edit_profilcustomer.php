@@ -116,7 +116,7 @@ include ('koneksi.php');
 				<ul class="nav nav-list">
 					
 					<li class="">
-						<a href="<?php echo base_url("index.php/Profil_customer")?>">
+						<a href="<?php echo base_url("index.php/profil_customer")?>">
 							<i class="menu-icon fa fa-user"></i>
 							<span class="menu-text">
 								Profil
@@ -172,7 +172,7 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Layanan</li></a>
+						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Profil</li></a>
               			<li><i class="icon_document_alt"></i>Table</li>
 						</ul><!-- /.breadcrumb -->
 
@@ -183,51 +183,100 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Layanan</h3>
+							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i>Data diri</h3>
 
+
+							<!-- <a href="<?php echo base_url()."index.php/profil_customer/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah NIK & NPWP</button> </a> -->
+
+
+	<section class="wrapper">
+						<table class="table table-striped table-advance table-hover">
+							<!-- id_Customer : <?php echo $this->session->userdata('id_Customer') ?><br>
+							id_Karyawan : <?php echo $this->session->userdata('id_Karyawan') ?><br>
+							nama : <?php echo $this->session->userdata('nama') ?><br>
+							Email : <?php echo $this->session->userdata('Email') ?><br>
+							Password : <?php echo $this->session->userdata('Password') ?><br>
+							Nomer HP : <?php echo $this->session->userdata('NoHp') ?><br>
+							NIK : <?php echo $this->session->userdata('NIK') ?><br>
+							Alamat : <?php echo $this->session->userdata('Alamat') ?><br>
+							Jenis : <?php echo $this->session->userdata('Jenis_Pelanggan') ?><br>
+							Status : <?php echo $this->session->userdata('Status') ?><br> -->
+					          <table class="table table-striped table-advance table-hover">
+                 <div class="form">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url()."index.php/edit_profilcustomer/edit"?>">
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">id_Customer <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="id_Customer" name="id_Customer" type="text" value="<?php echo $this->session->userdata('id_Customer') ?>" readonly />
+                      </div>
+                    </div>
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">id_Karyawan <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="id_Karyawan" name="id_Karyawan" type="text" value="<?php echo $this->session->userdata('id_Karyawan') ?>" readonly />
+                      </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Nama <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="nama" name="nama" type="text" value="<?php echo $this->session->userdata('nama') ?>" required />
+                      </div>
+                    </div>
+                    
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Email" name="Email" type="text" value="<?php echo $this->session->userdata('Email') ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Password" name="Password" type="text" value="<?php echo $this->session->userdata('Password') ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Nomer HP<span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="NoHp" name="NoHp" type="text" value="<?php echo $this->session->userdata('NoHp') ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Alamat <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Alamat" name="Alamat" type="text" value="<?php echo $this->session->userdata('Alamat') ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">NIK <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="NIK" name="NIK" type="text" value="<?php echo $this->session->userdata('NIK') ?>" required />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Jenis / Tipe <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Jenis_Pelanggan" name="Jenis_Pelanggan" type="text" value="<?php echo $this->session->userdata('Jenis_Pelanggan') ?>" readonly />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Status <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Status" name="Status" type="text" value="<?php echo $this->session->userdata('Status') ?>" readonly />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn-primary"  type="submit">Simpan</button>
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
+						</section>
+						
 <!-- 					<a href="<?php echo base_url("index.php/tambahlayanan_sales")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a> -->
 
-					<section class="wrapper">
-						<table class="table table-striped table-advance table-hover">
-					                <tbody>
-					                  <tr>
-					                    <th><i class="icon_profile"></i> Nama Layanan</th>
-					                  	<th><i class="icon_profile"></i> ID Jenis Layanan</th>
-					                    <th><i class="icon_mail_alt"></i> Kapasitas</th>
-					                    <th><i class="icon_calendar"></i> Harga</th>
-					                  </tr>
-					                  <!-- <td>
-					                  	<div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editlayanan_sales")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
-											</button>
-					                  </td> -->
-					                  <?php
-								include ('koneksi.php');
-								$sql='select * from layanan';
-								$ambil=mysqli_query($konek,$sql);
-								$nomor=1;
-								
-								while($data=mysqli_fetch_array($ambil)){ 
-								echo "<tr>";
-								// echo "<td>".$nomor++."</td>";
-								// echo "<td>".$nomor++."</td>";
-								echo "<td>".$data['Nama_Layanan']."</td>";
-								echo "<td>".$data['id_Layanan_Jenis']."</td>";
-								echo "<td>".$data['Kapasitas']."</td>";
-								echo "<td>".$data['Harga']."</td>";
-								// echo "<td><img src='images/produk/".$data['foto_produk']."' width='100' height='100'></td>";
-								// echo "<td>".$data['deskripsi_produk']."</td>";
-								// echo "<td><a href='hapus_layanan.php?halaman=hapusproduk&id=".$data['id_produk']."'>Hapus</a></td>";
-								echo "</tr>";
-								} 
-								?>
-					</section>
-
-						</section>
+					
 						<!--<div class="page-header">
 							<h1>
 								Dashboard

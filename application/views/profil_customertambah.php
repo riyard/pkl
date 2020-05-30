@@ -152,7 +152,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/login")?>">
+						<a href="<?php echo base_url("index.php/login_customer/logout")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
@@ -183,11 +183,11 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah NIK dan NPWP</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Upload file</h3>
 
 <!-- <?php echo form_open_multipart('profil_customer/update')?>
 <section class="wrapper"> -->
-
+<section class="wrapper">
 	 <?php 
         if(isset($error))
         {
@@ -197,21 +197,33 @@ include ('koneksi.php');
         }
         ?>
         <form method="post" enctype="multipart/form-data" action="<?php echo base_url(); ?>index.php/upload/proses">
-            <div>Berkas   KTP: </div>
-        	<div><input type="file" name="berkas[]"></div>
-            <div>Keterangan : </div>
-            <div><textarea name="keterangan_berkas[]"></textarea></div>
+            <label for="cname" class="control-label col-lg-2">Berkas KTP <span class="required"></span></label>
+        	<div><input type="file" name="berkas[]"></div><br>
+            <label for="cname" class="control-label col-lg-2">Keterangan : <span class="required"></span></label>
+            <div><textarea name="keterangan_berkas[]"></textarea></div><br>
+            <label for="cname" class="control-label col-lg-2">Diupload oleh id : <span class="required"></span></label>
+            <div><input name="id_Customer[]" value="<?php echo $this->session->userdata('id_Customer') ?>" readonly></textarea></div>
             <hr/>
-            <div>Berkas   NPWP: </div>
-        	<div><input type="file" name="berkas[]"></div>
-            <div>Keterangan : </div>
-            <div><textarea name="keterangan_berkas[]"></textarea></div>
+            <label for="cname" class="control-label col-lg-2">Berkas NPWP <span class="required"></span></label>
+        	<div><input type="file" name="berkas[]"></div><br>
+            <label for="cname" class="control-label col-lg-2">Keterangan : <span class="required"></span></label>
+            <div><textarea name="keterangan_berkas[]"></textarea></div><br>
+            <label for="cname" class="control-label col-lg-2">Diupload oleh id : <span class="required"></span></label>
+            <div><input name="id_Customer[]" value="<?php echo $this->session->userdata('id_Customer') ?>" readonly></textarea></div>
             <hr/>
-            <div>Berkas   MOU: </div>
-        	<div><input type="file" name="berkas[]"></div>
-            <div>Keterangan : </div>
-            <div><textarea name="keterangan_berkas[]"></textarea></div>
-            <hr/>
+            <label for="cname" class="control-label col-lg-2">Berkas MOU <span class="required"></span></label>
+        	<div><input type="file" name="berkas[]"></div><br>
+            <label for="cname" class="control-label col-lg-2">Keterangan : <span class="required"></span></label>
+            <div><textarea name="keterangan_berkas[]"></textarea></div><br>
+            <label for="cname" class="control-label col-lg-2">Diupload oleh id : <span class="required"></span></label>
+            <div><input name="id_Customer[]" value="<?php echo $this->session->userdata('id_Customer') ?>" readonly></textarea></div>
+            
+                      <!-- <label for="cname" class="control-label col-lg-2">Id_Customer <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="id_Customer" name="id_Customer" type="text" value="<?php echo $this->session->userdata('id_Customer') ?>" required />
+                      </div>
+                    </div>
+ -->            <hr/>
             <!-- <div>Berkas   4: </div>
         	<div><input type="file" name="berkas[]"></div>
             <div>Keterangan 4 : </div>
