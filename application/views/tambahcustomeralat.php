@@ -115,7 +115,7 @@ include ('koneksi.php');
 				
 				<ul class="nav nav-list">
 					
-						<li class="">
+					<li class="">
 						<a href="<?php echo base_url("index.php/profil_pegawai")?>">
 							<i class="menu-icon fa fa-user"></i>
 							<span class="menu-text">
@@ -125,7 +125,7 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/Customer_alat")?>">
+						<a href="<?php echo base_url("index.php/customer_alat")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
 								Customer Alat
@@ -143,6 +143,15 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
+						<a href="<?php echo base_url("index.php/bts_pegawai")?>">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text">
+								BTS
+							</span>
+						</a>
+
+					</li>
+					<li class="">
 						<a href="<?php echo base_url("index.php/login")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
@@ -151,7 +160,6 @@ include ('koneksi.php');
 						</a>
 
 					</li>
-
 				</ul><!-- /.nav-list -->
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
@@ -174,90 +182,125 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah Customer Alat</h3>
+						<h3 class="page-header">
+							<i class="menu-icon fa fa-list-alt" style="margin-left: 15px;margin-top: 10px"></i> Tambah Customer Alat
+						</h3>
 
+						<div class="pull-right">
+							<a href="<?php echo base_url()."index.php/customer_alat/"?>" class="btn btn-warning btn-flat" type="button" style="margin-top: -10px;margin-right: 10px"><i class="fa fa-undo"></i>Back</a>
+						</div>
 
+<div class="main-content-inner">
 <section class="wrapper">
 
-	<table class="table table-striped table-advance table-hover">
                  <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/customer_alat/insert")?>">
-                      <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Jarak <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Jarak" type="text" required />
-                      </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Ketinggian Pipa <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Ketinggian_Pipa" type="text" required />
-                      </div>
-                      <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jenis Transmisi *<span class="required"></span></label>
-                      <div class="col-lg-10">
- 		                <select name="Jenis_Transmisi" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Wireless">Wireless</option>  
-						  <option value="Fiber">Fiber</option>
-						  <option value="Lainnya">Lainnya</option>  
-                        </select>
-                        </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jenis Cpe <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Jenis_Cpe" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status Cpe*<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <select name="Status_Cpe" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Hak Milik">Hak Milik</option>  
-						  <option value="Sewa">Sewa</option>  
-                        </select>
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Ip Radio <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Ip_Radio" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Port <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Port" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Username <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Password" type="Password" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">SSID <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="SSID" type="text" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Freq <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Freq" type="text" required />
-                      </div>
-                    </div>
+
+                  	<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Jarak* <span class="required"></span></label>
+										<div class="col-sm-9">
+											<input type="text" id="Username" name="Jarak" class="col-xs-10 col-sm-5" required />
+										</div>
+									</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ketinggian Pipa* <span class="required"></span></label>
+										<div class="col-sm-9">
+											<input type="text" id="Username" name="Ketinggian_Pipa" class="col-xs-10 col-sm-5" required />
+										</div>
+									</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Jenis Transmisi* <span class="required"></span></label>
+										<div class="col-sm-9">
+										<select name="Jenis_Transmisi" class="col-xs-10 col-sm-5" required >  
+				 						  	<option value="">--Pilih--</option>  
+										  	<option value="Wireless">Wireless</option>  
+										  	<option value="Fiber">Fiber</option>
+										  	<option value="Lainnya">Lainnya</option>  
+				                       </select>
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Jenis Cpe* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Jenis_Cpe" class="col-xs-10 col-sm-5" required />
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Status Cpe* <span class="required"></span></label>
+										<div class="col-sm-9">
+										<select name="Status_Cpe" class="col-xs-10 col-sm-5" required >  
+				 						  	 <option value="">--Pilih--</option>  
+											 <option value="Hak Milik">Hak Milik</option>  
+											 <option value="Sewa">Sewa</option>  
+				                       </select>
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ip Radio* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Ip_Radio" class="col-xs-10 col-sm-5" required />
+									</div>
+								</div>
+                     		
+                     		<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Port* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Port" class="col-xs-10 col-sm-5" required />
+									</div>
+								</div> 
+                     
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Username* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Username" class="col-xs-10 col-sm-5" required />
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Password* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Password" class="col-xs-10 col-sm-5" required />
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> SSID* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="SSID" class="col-xs-10 col-sm-5" required />
+									</div>
+								</div>
+                     		<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Freq* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Freq" class="col-xs-10 col-sm-5" required />
+									</div>
+								</div>
                     
                     <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Save</button>
+                      <div class="col-lg-offset-3 col-lg-10">
+                        <button type="submit" class="btn btn-success btn-flat">
+                        	<i class="fa fa-paper-plane"></i> Save
+                        </button>
+                        <button type="Reset" class="btn btn-flat">Reset</button>
                       </div>
                     </div>
                   </form>

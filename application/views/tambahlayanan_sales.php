@@ -181,39 +181,45 @@ include ('koneksi.php');
 <div class="main-content-inner">
 <section class="wrapper">
 
-	<table class="table table-striped table-advance table-hover">
-                 <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/layanan_sales/insert")?>">
-                    <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Nama Layanan <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Nama Layanan" type="text" required />
-                      </div>
-                    </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Kapasitas <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Kapasitas" type="text" required />
-                      </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Harga <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Harga" type="text" required />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary" name="save">Simpan</button>
-                      </div>
-                    </div>
-                  </form>
-                  
-                </div>
-</section>
+				<div class="form">
+                <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/layanan_sales/insert")?>">
 
+				<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Nama Layanan* <span class="required"></span></label>
+										<div class="col-sm-9">
+											<input type="text" id="Username" name="Nama Layanan" class="col-xs-10 col-sm-5" required />
+										</div>
+									</div>
 
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Kapasitas* <span class="required"></span></label>
+										<div class="col-sm-9">
+											<input type="text" id="Username" name="Kapasitas" class="col-xs-10 col-sm-5" required />
+										</div>
+									</div>
 
-						</section>
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Harga* <span class="required"></span></label>
+										<div class="col-sm-9">
+											<input type="text" id="Username" name="Harga" class="col-xs-10 col-sm-5" required />
+										</div>
+									</div>
+
+					<div class="form-group">
+                      <div class="col-lg-offset-3 col-lg-10">
+                        <button type="submit" class="btn btn-success btn-flat">
+                        	<i class="fa fa-paper-plane"></i> Save
+                        </button>
+                        <button type="Reset" class="btn btn-flat">Reset</button>
+                      </div>
+                      	</form>               
+					</section>
 						<!--<div class="page-header">
 							<h1>
 								Dashboard

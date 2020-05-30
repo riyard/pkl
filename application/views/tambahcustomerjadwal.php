@@ -115,7 +115,7 @@ include ('koneksi.php');
 				
 				<ul class="nav nav-list">
 					
-						<li class="">
+					<li class="">
 						<a href="<?php echo base_url("index.php/profil_pegawai")?>">
 							<i class="menu-icon fa fa-user"></i>
 							<span class="menu-text">
@@ -143,7 +143,16 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/keluar_admin")?>">
+						<a href="<?php echo base_url("index.php/bts_pegawai")?>">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text">
+								BTS
+							</span>
+						</a>
+
+					</li>
+					<li class="">
+						<a href="<?php echo base_url("index.php/keluar_pegawai")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar
@@ -152,7 +161,7 @@ include ('koneksi.php');
 
 					</li>
 
-				</ul><!-- /.nav-list -->
+				</ul>
 
 				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
 					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
@@ -176,41 +185,55 @@ include ('koneksi.php');
 
 						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tambah Customer Jadwal</h3>
 
+						<div class="pull-right">
+							<a href="<?php echo base_url()."index.php/customer_jadwal/"?>" class="btn btn-warning btn-flat" type="button" style="margin-top: -10px;margin-right: 10px"><i class="fa fa-undo"></i>Back</a>
+						</div>
 
+
+<div class="main-content-inner">
 <section class="wrapper">
 
-	<table class="table table-striped table-advance table-hover">
                  <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/customer_jadwal/insert")?>">
-                 
-                      <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Tgl_Pemasangan <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Tgl_Pemasangan" type="text" required />
-                      </div>
-                      <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jenis Visit *<span class="required"></span></label>
-                      <div class="col-lg-10">
- 		                <select name="Jenis_Visit" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Survei">Survei</option>  
-						  <option value="Instalasi">Instalasi</option>
-						  <option value="Aktifasi">Aktifasi</option>  
-                        </select>
-                        </div>
+
+                  	<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Tgl_Pemasangan* <span class="required"></span></label>
+										<div class="col-sm-9">
+											<input type="text" id="Username" name="Tgl_Pemasangan" class="col-xs-10 col-sm-5" required />
+										</div>
+									</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Jenis Visit* <span class="required"></span></label>
+										<div class="col-sm-9">
+										<select name="Jenis_Visit" class="col-xs-10 col-sm-5" required >  
+				 						  	<option value="">--Pilih--</option>  
+										  	<option value="Survei">Survei</option>  
+										  	<option value="Instalasi">Instalasi</option>
+										  	<option value="Aktifasi">Aktifasi</option> 
+				                       </select>
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Status* <span class="required"></span></label>
+										<div class="col-sm-9">
+										<select name="Status" class="col-xs-10 col-sm-5" required >  
+				 						  	<option value="">--Pilih--</option>  
+										  	<option value="Belum Selesai">Belum Selesai</option>  
+										  	<option value="Sudah Selesai">Sudah Selesai</option>
+				                       </select>
+									</div>
+								</div>
+      
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <select name="Status" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Belum Selesai">Belum Selesai</option>  
-						  <option value="Sudah Selesai">Sudah Selesai</option>  
-                        </select>
-                      </div>
-                    </div>
-                    
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
+                      <div class="col-lg-offset-3 col-lg-10">
                         <button type="submit" class="btn btn-success btn-flat">
                         	<i class="fa fa-paper-plane"></i> Save
                         </button>

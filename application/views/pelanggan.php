@@ -174,9 +174,13 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Tabel Pelanggan</h3>
+						<h3 class="page-header">
+							<i class="menu-icon fa fa-list-alt" style="margin-left: 15px;margin-top: 10px"></i> Tabel Pelanggan
+						</h3>
 
-						<a href="<?php echo base_url()."index.php/pelanggan/input"?>" class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px"><i class="fa fa-user-plus"></i>Tambah Pelanggan</button> </a>
+					<div class="pull-left" style="margin-right: 15px;margin-left: 15px">
+						<a href="<?php echo base_url()."index.php/pelanggan/input"?>" class="btn btn-primary btn-sm" type="button"><i class="fa fa-user-plus"></i>Tambah Pelanggan</button> </a>
+					</div>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
