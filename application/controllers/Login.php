@@ -2,10 +2,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
-	public function __construct()
-		{
-			parent::__construct();
-		}
+	function __construct(){
+		parent::__construct();
+		$this->load->library('form_validation','session');
+		$this->load->helper('url','form','html');		
+		$this->load->model('M_user');
+ 
+	}
 
 	public function index()
 	{
@@ -22,25 +25,62 @@ class Login extends CI_Controller {
 	public function cek_login()
 	{
 		if(isset($_POST['login'])){
-			$email = $this->input->post('email',true);
-			$password = $this->input->post('password',true);
-			$this->load->model("M_user");
-			$cek = $this->M_user->cek_login($email,$password);
-			$hasil = count($cek);
-			if($hasil > 0){
-				$datalogin = $this->db->get_where('user',array("email" => $email, "password" => $password))->row();
-				if($datalogin->level == "sales"){
-					redirect("profil");
-				}elseif ($datalogin->level == "admin"){
-					redirect("profil_admin");
-				}elseif ($datalogin->level == "pegawai"){
-					redirect("profil_pegawai");
-				}elseif ($datalogin->level == "customer"){
-					redirect("profil_customer");
-				}
-			}else{
-				redirect("login");
-			}
+			 	$this->form_validation->set_rules('Email', 'Email', 'required');
+                $this->form_validation->set_rules('Password', 'Password', 'required');
+
+                //set message form validation
+                $this->form_validation->set_message('required', '<div class="alert alert-danger" style="margin-top: 3px">
+                    <div class="header"><b><i class="fa fa-exclamation-circle"></i> {field}</b> harus diisi</div></div>');
+
+                //cek validasi
+                if ($this->form_validation->run() == TRUE) {
+
+                //get data dari FORM
+                $Email = $this->input->post("Email", TRUE);
+                $Password = $this->input->post('Password', TRUE);
+
+                //checking data via model
+                $checking = $this->M_user->cek_login('karyawan_master', array('Email' => $Email), array('Password' => $Password));
+
+                //jika ditemukan, maka create session
+                if ($checking != FALSE) {
+                    foreach ($checking as $apps) {
+
+                        $session_data = array(
+                            'id_Karyawan'   => $apps->id_Karyawan,
+                            'Nama' 		=> $apps->Nama,
+                            'Email' 	=> $apps->Email,
+                            'Password' 	=> $apps->Password,
+                            'Alamat'    => $apps->Alamat,
+                            'NoHp' 		=> $apps->NoHp,
+                            'Level' 	=> $apps->Level,
+                            'NIP'    	=> $apps->NIP,
+                            'status' 	=> "login"
+                        );
+                        //set session userdata
+                        $this->session->set_userdata($session_data);
+
+                        //redirect berdasarkan level user
+                        if($this->session->userdata("Level") == "sales"){
+                            redirect('profil');
+                        }else if($this->session->userdata("Level") == "admin"){
+                            redirect('profil_admin');
+                        }else{
+                        	redirect('profil_pegawai');
+                        }
+
+                    }
+                }else{
+
+                    $data['error'] = '<div class="alert alert-danger" style="margin-top: 3px">
+                        <div class="header"><b><i class="fa fa-exclamation-circle"></i> ERROR</b> username atau password salah!</div></div>';
+                    $this->load->view('login', $data);
+                }
+
+            }else{
+
+                $this->load->view('login');
+            }
 
 		}
 	}
@@ -70,4 +110,6 @@ class Login extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect("login");
 	}
+
+
 }

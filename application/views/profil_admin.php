@@ -199,97 +199,84 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-							<li>
-								<i class="menu-icon fa fa-user"></i>
-								<a href="">Profil</a>
-							</li>
-							<li class="active">Data Diri</li>
+						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Profil</li></a>
+              			<li><i class="icon_document_alt"></i>Table</li>
 						</ul><!-- /.breadcrumb -->
 
-						<section class="content">
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								</span>
+							</form>
+						</div><!-- /.nav-search -->
+					</div>
+
+							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i>Data diri</h3>
+
+
+							<!-- <a href="<?php echo base_url()."index.php/profil_customer/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah NIK & NPWP</button> </a> -->
+
+
+	<section class="wrapper">
+						<table class="table table-striped table-advance table-hover">
 							
-							<div class="page-header">
-							<h1>
-								Profil Admin
-								
-							</h1>
-						</div><!-- /.page-header -->
-
-						<div class="row">
-							<div class="col-xs-12">
-								<div>
-									<div id="user-profile-1" class="user-profile row">
-										<div class="col-xs-12 col-sm-3 center">
-											<div>
-												<span class="profile-picture">
-													<img id="avatar" class="editable img-responsive" alt="Alex's Avatar" src="<?php echo base_url()?>assets/images/avatars/profile-pic.jpg" />
-												</span>
-
-												<div class="space-4"></div>
-
-												<div class="width-80 label label-info label-xlg arrowed-in arrowed-in-right">
-													<div class="inline position-relative">
-														<a href="#" class="user-title-label dropdown-toggle" data-toggle="dropdown">
-															<i class="ace-icon fa fa-circle light-green"></i>
-															&nbsp;
-															<span class="white">Alex M. Doe</span>
-														</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Username </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="username">alexdoe</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Location </div>
-
-													<div class="profile-info-value">
-														<i class="fa fa-map-marker light-orange bigger-110"></i>
-														<span class="editable" id="country">Netherlands</span>
-														<span class="editable" id="city">Amsterdam</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Age </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="age">38</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Joined </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="signup">2010/06/20</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> Last Online </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="login">3 hours ago</span>
-													</div>
-												</div>
-
-												<div class="profile-info-row">
-													<div class="profile-info-name"> About Me </div>
-
-													<div class="profile-info-value">
-														<span class="editable" id="about">Editable as WYSIWYG</span>
-													</div>
-												</div>
-											</div>
+					          <table class="table table-striped table-advance table-hover">
+                 <div class="form">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url()."index.php/edit_profiladmin/"?>">
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">id_Karyawan <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Ketinggian_Pipa" type="text" value="<?php echo $this->session->userdata('id_Karyawan') ?>" readonly />
+                      </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Nama <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Jenis_Cpe" type="text" value="<?php echo $this->session->userdata('Nama') ?>" readonly />
+                      </div>
+                    </div>
+                    
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Ip_Radio" type="text" value="<?php echo $this->session->userdata('Email') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Port" type="text" value="<?php echo $this->session->userdata('Password') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Nomer HP<span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Username" type="text" value="<?php echo $this->session->userdata('NoHp') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Alamat <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Password" type="text" value="<?php echo $this->session->userdata('Alamat') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">NIP <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="SSID" type="text" value="<?php echo $this->session->userdata('NIP') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Level <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Freq" type="text" value="<?php echo $this->session->userdata('Level') ?>" readonly />
+                      </div>
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn-primary"  type="submit">Edit</button>
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
 						</section>
 
 						

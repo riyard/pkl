@@ -163,20 +163,85 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-							<li>
-								<i class="menu-icon fa fa-user"></i>
-								<a href="">Profil</a>
-							</li>
-							<li class="active">Data Diri</li>
+						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Profil</li></a>
+              			<li><i class="icon_document_alt"></i>Table</li>
 						</ul><!-- /.breadcrumb -->
 
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								</span>
+							</form>
+						</div><!-- /.nav-search -->
+					</div>
+
+							<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i>Data diri</h3>
 
 
-			<div class="main-content-inner">
-				<section class="wrapper">
-				<span><i style="margin-left: 10px; font-size: 40px"> WELCOME ALRIZAL! </span></i>
-				</section>						
-			</div>		
+							<!-- <a href="<?php echo base_url()."index.php/profil_customer/input"?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah NIK & NPWP</button> </a> -->
+
+
+	<section class="wrapper">
+						<table class="table table-striped table-advance table-hover">
+							
+					          <table class="table table-striped table-advance table-hover">
+                 <div class="form">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url()."index.php/edit_profilsales/"?>">
+                         <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">id_Karyawan <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Ketinggian_Pipa" type="text" value="<?php echo $this->session->userdata('id_Karyawan') ?>" readonly />
+                      </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Nama <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Jenis_Cpe" type="text" value="<?php echo $this->session->userdata('Nama') ?>" readonly />
+                      </div>
+                    </div>
+                    
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Email <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Ip_Radio" type="text" value="<?php echo $this->session->userdata('Email') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Port" type="text" value="<?php echo $this->session->userdata('Password') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Nomer HP<span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Username" type="text" value="<?php echo $this->session->userdata('NoHp') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Alamat <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Password" type="text" value="<?php echo $this->session->userdata('Alamat') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">NIP <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="SSID" type="text" value="<?php echo $this->session->userdata('NIP') ?>" readonly />
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label for="cname" class="control-label col-lg-2">Level <span class="required"></span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="Username" name="Freq" type="text" value="<?php echo $this->session->userdata('Level') ?>" readonly />
+                      </div>
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn-primary"  type="submit">Edit</button>
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
+						</section>
 
 					
 								</div><!-- /.pull-left -->

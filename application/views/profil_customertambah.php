@@ -172,8 +172,8 @@ include ('koneksi.php');
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
-						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Profil</li></a>
-              			<li><i class="icon_document_alt"></i>Table</li>
+						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Upload dokumen</li></a>
+              			<li><i class="icon_document_alt"></i>Customer</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
