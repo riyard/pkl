@@ -31,29 +31,17 @@ class Karyawan_admin extends CI_Controller {
 		public function insert()
 	{
 		$id_Karyawan = $this->input->post("id_Karyawan");
-		$NIP = $this->input->post("NIP");
-		$Nama = $this->input->post("Nama");
 		$Email = $this->input->post("Email");
 		$Password = $this->input->post("Password");
-		$NoHp = $this->input->post("NoHp");
-		$Alamat = $this->input->post("Alamat");
 		$Level = $this->input->post("Level");
 		echo $id_Karyawan;
-		echo $NIP;
-		echo $Nama;
 		echo $Email;
 		echo $Password;
-		echo $NoHp;
-		echo $Alamat;
 		echo $Level;
 		$data = array(
 		"id_Karyawan"=>$id_Karyawan,
-		"NIP"=>$NIP,
-		"Nama"=>$Nama,
 		"Email"=>$Email,
 		"Password"=>$Password,
-		"NoHp"=>$NoHp,
-		"Alamat"=>$Alamat,
 		"Level"=>$Level,);
 		$this->db->insert("karyawan_master",$data);
 		redirect(base_url()."index.php/karyawan_admin");

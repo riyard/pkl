@@ -9,10 +9,10 @@ class Sales_admin extends CI_Controller {
 	
 	public function index()
 	{
-		$datasales = $this->db->get("sales")->result();
+		$datasales = $this->db->get("karyawan_master")->result();
 		$data = array(
 			'form' => 'sales_admin',
-			'sales' => $datasales
+			'karyawan_master' => $datasales
 
 		);
 		//var_dump($datasales);
@@ -30,7 +30,7 @@ class Sales_admin extends CI_Controller {
 
 		public function insert()
 	{
-		$id_Sales = $this->input->post("id_Sales");
+		$id_Karyawan = $this->input->post("id_Karyawan");
 		$NIP = $this->input->post("NIP");
 		$Nama = $this->input->post("Nama");
 		$Email = $this->input->post("Email");
@@ -38,7 +38,7 @@ class Sales_admin extends CI_Controller {
 		$NoHp = $this->input->post("NoHp");
 		$Alamat = $this->input->post("Alamat");
 		$Level = $this->input->post("Level");
-		echo $id_Sales;
+		echo $id_Karyawan;
 		echo $NIP;
 		echo $Nama;
 		echo $Email;
@@ -47,7 +47,7 @@ class Sales_admin extends CI_Controller {
 		echo $Alamat;
 		echo $Level;
 		$data = array(
-		"id_Sales"=>$id_Sales,
+		"id_Karyawan"=>$id_Karyawan,
 		"NIP"=>$NIP,
 		"Nama"=>$Nama,
 		"Email"=>$Email,
@@ -55,7 +55,7 @@ class Sales_admin extends CI_Controller {
 		"NoHp"=>$NoHp,
 		"Alamat"=>$Alamat,
 		"Level"=>$Level,);
-		$this->db->insert("sales",$data);
+		$this->db->insert("karyawan_master",$data);
 		redirect(base_url()."index.php/sales_admin");
 
 	}
@@ -63,18 +63,18 @@ class Sales_admin extends CI_Controller {
 		public function edit()
 	{
 		$id=$this->uri->segment(3);
-		$datasales=$this->db->get_where("sales",array("id_Sales"=>$id))->row();
+		$datasales=$this->db->get_where("karyawan_master",array("id_Karyawan"=>$id))->row();
 		$data = array(
 			'form' => 'editsales_admin',
-			'sales' => $datasales
+			'karyawan_master' => $datasales
 		);
 		$this->load->view('editsales_admin',$data);
 	}
 
 	public function update()
 	{
-		$id = $this->input->post("id_Sales");
-		$id_Sales = $this->input->post("id_Sales");
+		$id = $this->input->post("id_Karyawan");
+		$id_Karyawan = $this->input->post("id_Karyawan");
 		$NIP = $this->input->post("NIP");
 		$Nama = $this->input->post("Nama");
 		$Email = $this->input->post("Email");
@@ -82,7 +82,7 @@ class Sales_admin extends CI_Controller {
 		$NoHp = $this->input->post("NoHp");
 		$Alamat = $this->input->post("Alamat");
 		$Level = $this->input->post("Level");
-		echo $id_Sales;
+		echo $id_Karyawan;
 		echo $NIP;
 		echo $Nama;
 		echo $Email;
@@ -91,7 +91,7 @@ class Sales_admin extends CI_Controller {
 		echo $Alamat;
 		echo $Level;
 		$data = array(
-		"id_Sales"=>$id_Sales,
+		"id_Karyawan"=>$id_Karyawan,
 		"NIP"=>$NIP,
 		"Nama"=>$Nama,
 		"Email"=>$Email,
@@ -99,7 +99,7 @@ class Sales_admin extends CI_Controller {
 		"NoHp"=>$NoHp,
 		"Alamat"=>$Alamat,
 		"Level"=>$Level,);
-		$this->db->where("id_Sales",$id)->update("sales",$data);
+		$this->db->where("id_Karyawan",$id)->update("karyawan_master",$data);
 		redirect(base_url()."index.php/sales_admin");
 	}
 
@@ -107,7 +107,7 @@ class Sales_admin extends CI_Controller {
 	{
 		$id=$this->uri->segment(3);
 
-		$this->db->where("id_Sales",$id)->delete('sales');
+		$this->db->where("id_Karyawan",$id)->delete('karyawan_master');
 		redirect(base_url()."index.php/sales_admin");
 	}
 }

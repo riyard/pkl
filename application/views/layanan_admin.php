@@ -170,15 +170,6 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/user_admin")?>">
-							<i class="menu-icon fa fa-pencil-square-o"></i>
-							<span class="menu-text">
-								User
-							</span>
-						</a>
-
-					</li>
-					<li class="">
 						<a href="<?php echo base_url("index.php/login")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
@@ -200,7 +191,7 @@ include ('koneksi.php');
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Layanan</li></a>
-              			<li><i class="icon_document_alt"></i>Table Layanan</li>
+              			<li><i class="icon_document_alt"></i>Tabel Layanan</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -210,9 +201,9 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Table Layanan</h3>
-
-<!-- 					<a href="<?php echo base_url("index.php/tambahlayanan_admin")?>"><button class="btn btn-primary btn-sm" type="button" style="margin-top: -10px;margin-left: 10px">Tambah Layanan</button> </a> -->
+						<h3 class="page-header">
+							<i class="menu-icon fa fa-list-alt" style="margin-left: 15px;margin-top: 10px"></i> Tabel Layanan
+						</h3>
 
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">

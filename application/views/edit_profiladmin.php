@@ -116,7 +116,7 @@ include ('koneksi.php');
 				<ul class="nav nav-list">
 					
 					<li class="">
-						<a href="<?php echo base_url("index.php/profil_customer")?>">
+						<a href="<?php echo base_url("index.php/profil_admin")?>">
 							<i class="menu-icon fa fa-user"></i>
 							<span class="menu-text">
 								Profil
@@ -125,25 +125,43 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/invoice_customer")?>">
+						<a href="<?php echo base_url("index.php/karyawan_admin")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
-								Invoice
+								Karyawan
 							</span>
 						</a>
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/upload")?>">
+						<a href="<?php echo base_url("index.php/sales_admin")?>">
 							<i class="menu-icon fa fa-list-alt"></i>
 							<span class="menu-text">
-								Upload
+								Sales
 							</span>
 						</a>
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/layanan_customer")?>">
+						<a href="<?php echo base_url("index.php/pelanggan_admin")?>">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text">
+								Pelanggan
+							</span>
+						</a>
+
+					</li>
+					<li class="">
+						<a href="<?php echo base_url("index.php/invover_admin")?>">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text">
+								Invoice/Verifikasi
+							</span>
+						</a>
+
+					</li>
+					<li class="">
+						<a href="<?php echo base_url("index.php/layanan_admin")?>">
 							<i class="menu-icon fa fa-pencil-square-o"></i>
 							<span class="menu-text">
 								Layanan
@@ -152,7 +170,16 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/login_customer/logout")?>">
+						<a href="<?php echo base_url("index.php/user_admin")?>">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text">
+								User
+							</span>
+						</a>
+
+					</li>
+					<li class="">
+						<a href="<?php echo base_url("index.php/login")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
 								Keluar

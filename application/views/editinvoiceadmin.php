@@ -170,15 +170,6 @@ include ('koneksi.php');
 
 					</li>
 					<li class="">
-						<a href="<?php echo base_url("index.php/user_admin")?>">
-							<i class="menu-icon fa fa-pencil-square-o"></i>
-							<span class="menu-text">
-								User
-							</span>
-						</a>
-
-					</li>
-					<li class="">
 						<a href="<?php echo base_url("index.php/login")?>">
 							<i class="menu-icon fa fa-power-off"></i>
 							<span class="menu-text">
@@ -200,7 +191,7 @@ include ('koneksi.php');
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 						<li><a href=""><i class="menu-icon fa fa-list-alt"></i> Invoice</li></a>
-              			<li><i class="icon_document_alt"></i>Table Invoice</li>
+              			<li><i class="icon_document_alt"></i>Form Edit Invoice</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -210,10 +201,16 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Edit Invoice</h3>
+						<h3 class="page-header">
+							<i class="menu-icon fa fa-barcode" style="margin-left: 15px;margin-top: 10px"></i> Edit Invoice
+						</h3>
 
-						<div class="pull-right">
-							<a href="<?php echo base_url()."index.php/invover_admin/"?>" class="btn btn-warning btn-flat" type="button" style="margin-top: -10px;margin-right: 10px"><i class="fa fa-undo"></i>Back</a>
+						<div class="pull-right" style="margin-right: 15px">
+							<a href="<?php echo base_url()."index.php/invover_admin/"?>" class="btn btn-warning btn-flat" type="button" ><i class="fa fa-undo"></i>Back</a>
+						</div>
+
+						<div class="step-pane active" data-step="1" style="margin-left: 15px">
+							<h3 class="lighter block green">Masukkan informasi berikut</h3>
 						</div>
 
 <div class="main-content-inner">
