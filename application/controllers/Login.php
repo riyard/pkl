@@ -12,7 +12,7 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$datalogin = $this->db->get("user")->result();
+		$datalogin = $this->db->get("karyawan_master")->result();
 		$data = array(
 			'form' => 'login',
 			'login' => $datalogin

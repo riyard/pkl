@@ -242,10 +242,7 @@ include ('koneksi.php');
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Level * <span class="required"></span></label>
 											<div class="col-sm-9">
-					 		                	<select name="Level" class="col-xs-10 col-sm-5" required >  
-					 						  		<option value="">--Pilih--</option>
-											  		<option value="karyawan">Karyawan</option> 
-					                        	</select>
+												<input type="text" id="Username" name="Level" class="col-xs-10 col-sm-5" value="karyawan" readonly />
 					                        </div>
 									</div>
 									

@@ -224,22 +224,6 @@ include ('koneksi.php');
 							<div class="col-xs-12">
 								<form class="form-horizontal" role="form">
 									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> NIK * <span class="required"></span></label>
-										<div class="col-sm-9">
-											<input type="text" id="Username" name="NIK" class="col-xs-10 col-sm-5" required />
-										</div>
-									</div>
-
-								<form class="form-horizontal" role="form">
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Nama Pelanggan * <span class="required"></span></label>
-										<div class="col-sm-9">
-											<input type="text" id="Username" name="nama" class="col-xs-10 col-sm-5" required />
-										</div>
-									</div>
-
-								<form class="form-horizontal" role="form">
-									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Email * <span class="required"></span></label>
 										<div class="col-sm-9">
 											<input type="text" id="Username" name="Email" class="col-xs-10 col-sm-5" required />
@@ -251,30 +235,6 @@ include ('koneksi.php');
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Password * <span class="required"></span></label>
 										<div class="col-sm-9">
 											<input type="text" id="Username" name="Password" class="col-xs-10 col-sm-5" required />
-										</div>
-									</div>
-
-								<form class="form-horizontal" role="form">
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> No Handphone * <span class="required"></span></label>
-										<div class="col-sm-9">
-											<input type="text" id="Username" name="NoHp" class="col-xs-10 col-sm-5" required />
-										</div>
-									</div>
-
-								<form class="form-horizontal" role="form">
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Alamat * <span class="required"></span></label>
-										<div class="col-sm-9">
-											<input type="text" id="Username" name="Alamat" class="col-xs-10 col-sm-5" required />
-										</div>
-									</div>
-
-								<form class="form-horizontal" role="form">
-									<div class="form-group">
-										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Nama Jenis File * <span class="required"></span></label>
-										<div class="col-sm-9">
-											<input type="text" id="Username" name="Nama_JenisFile" class="col-xs-10 col-sm-5" required />
 										</div>
 									</div>
 

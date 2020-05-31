@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2020 at 07:05 AM
--- Server version: 10.3.15-MariaDB
--- PHP Version: 7.3.6
+-- Generation Time: May 31, 2020 at 05:20 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,23 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `pkl`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id_Admin` int(11) NOT NULL,
-  `NIP` varchar(45) DEFAULT NULL,
-  `Nama` varchar(45) DEFAULT NULL,
-  `Email` varchar(45) DEFAULT NULL,
-  `Password` varchar(45) DEFAULT NULL,
-  `NoHp` varchar(45) DEFAULT NULL,
-  `Alamat` varchar(45) DEFAULT NULL,
-  `Level` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -63,7 +46,6 @@ CREATE TABLE `bts` (
 CREATE TABLE `customer` (
   `id_Customer` int(11) NOT NULL,
   `id_Karyawan` int(11) DEFAULT NULL,
-  `id_user` int(11) NOT NULL,
   `nama` varchar(45) DEFAULT NULL,
   `Email` varchar(45) DEFAULT NULL,
   `NoHp` varchar(45) DEFAULT NULL,
@@ -71,18 +53,20 @@ CREATE TABLE `customer` (
   `NIK` int(20) DEFAULT NULL,
   `Nama_JenisFile` text DEFAULT NULL,
   `Alamat` varchar(45) DEFAULT NULL,
-  `Jenis_Pelanggan` varchar(45) DEFAULT NULL,
-  `Status` varchar(45) DEFAULT NULL
+  `Jenis_Pelanggan` enum('Perorangan','Perusahaan') DEFAULT NULL,
+  `Status` enum('Calon','Aktif') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `customer`
 --
 
-INSERT INTO `customer` (`id_Customer`, `id_Karyawan`, `id_user`, `nama`, `Email`, `NoHp`, `Password`, `NIK`, `Nama_JenisFile`, `Alamat`, `Jenis_Pelanggan`, `Status`) VALUES
-(1, 1, 0, 'Sukijan', 'Supono@gmail.com', '0089097898698', 'suponoganteng', 1233, '816905_6.jpg', 'Jember', 'Bulanan', 'Non Aktif'),
-(2, 1, 0, 'Sopo Jarwo', 'adit@gmail.com', '98908908977', 'aditcebong', 2147483647, '', 'Lumajang', 'Perorangan', 'No'),
-(3, 2, 0, 'andika', 'andika1@gmail.com', '08883824449', 'aremania', 12312312, 'b.png', 'Jember', 'Perorangan', 'Calon');
+INSERT INTO `customer` (`id_Customer`, `id_Karyawan`, `nama`, `Email`, `NoHp`, `Password`, `NIK`, `Nama_JenisFile`, `Alamat`, `Jenis_Pelanggan`, `Status`) VALUES
+(1, 1, 'Sukijan', 'Supono@gmail.com', '0089097898698', 'suponoganteng', 1233, '816905_6.jpg', 'Jember', '', ''),
+(2, 1, 'Sopo Jarwo', 'adit@gmail.com', '98908908977', 'aditcebong', 2147483647, '', 'Lumajang', 'Perorangan', ''),
+(3, 2, 'andika', 'andika1@gmail.com', '08883824449', 'aremania', 12312312, 'b.png', 'Jember', 'Perorangan', 'Calon'),
+(6, NULL, 'M. Akbar Rahmatullah Sujatmiko', 'makbar826@gmail.com', '089809707077', '24121996', 2147483647, '1232', 'Ngawi', 'Perorangan', 'Calon'),
+(7, NULL, NULL, 'pelanggan@gmail.com', NULL, 'pelanggan', NULL, NULL, NULL, 'Perorangan', 'Calon');
 
 -- --------------------------------------------------------
 
@@ -224,7 +208,7 @@ CREATE TABLE `karyawan_master` (
   `Password` varchar(45) DEFAULT NULL,
   `NoHp` varchar(45) DEFAULT NULL,
   `Alamat` varchar(45) DEFAULT NULL,
-  `Level` enum('admin','pegawai','sales','') DEFAULT NULL
+  `Level` enum('admin','karyawan','sales','') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -232,8 +216,13 @@ CREATE TABLE `karyawan_master` (
 --
 
 INSERT INTO `karyawan_master` (`id_Karyawan`, `NIP`, `Nama`, `Email`, `Password`, `NoHp`, `Alamat`, `Level`) VALUES
-(1, '4574905979079', 'Rojali', 'rojali@gmail.com', 'rojalikumis', '089809707077', 'Cantikan', 'admin'),
-(3, '07767969767676', 'Slamet', 'slamet@gmail.com', 'slametimut', '089809707077', 'Pamekasan', 'pegawai');
+(2, '07767969767676', 'Supono', 'supono@gmail.com', 'supono', '080908', 'Lumajang', 'sales'),
+(3, '4574905979079', 'admin', 'admin@gmail.com', 'admin', '89879879', 'Ngawi', 'admin'),
+(8, '07767969767676', 'Aqi', 'makbar826@gmail.com', '123456', '089809707077', 'Magetan', 'karyawan'),
+(10, '07767969767676', 'Supono', 'suparni@gmail.com', 'suparni', '089809707077', 'Surabaya', 'karyawan'),
+(13, '07767969767676', 'Rojali', 'sales@gmail.com', 'sales', '089809707077', 'Belakang gramedia', 'sales'),
+(14, '07767969767676', 'Akbar', 'karyawan@gmail.com', 'karyawan', '089809707077', 'Magetan', 'karyawan'),
+(15, NULL, NULL, 'alma@gmail.com', 'alma', NULL, NULL, 'sales');
 
 -- --------------------------------------------------------
 
@@ -261,63 +250,9 @@ INSERT INTO `layanan` (`id_Layanan`, `id_Layanan_Jenis`, `Nama_Layanan`, `Nama_L
 (3, 3, 'UMKM', NULL, NULL, '20 Mbps', '585.000'),
 (4, 4, 'STARTUP', NULL, NULL, '50 Mbps', '725.000');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `sales`
---
-
-CREATE TABLE `sales` (
-  `id_Sales` int(11) NOT NULL,
-  `NIP` varchar(45) DEFAULT NULL,
-  `Nama` varchar(45) DEFAULT NULL,
-  `Email` varchar(45) DEFAULT NULL,
-  `Password` varchar(45) DEFAULT NULL,
-  `NoHp` varchar(45) DEFAULT NULL,
-  `Alamat` varchar(45) DEFAULT NULL,
-  `Level` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `sales`
---
-
-INSERT INTO `sales` (`id_Sales`, `NIP`, `Nama`, `Email`, `Password`, `NoHp`, `Alamat`, `Level`) VALUES
-(2, '07767969767676', 'Wildan', 'wildan@gmail.com', 'wildancimoy', '089809707077', 'Lumajang', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `id_user` int(11) NOT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
-  `level` enum('sales','admin','pegawai','customer') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id_user`, `email`, `password`, `level`) VALUES
-(1, 'alrizal@gmail.com', '123', 'sales'),
-(2, 'riyad@gmail.com', '1234', 'pegawai'),
-(3, 'makbar@gmail.com', '12345', 'admin'),
-(4, 'wildan@gmail.com', '123456', 'customer'),
-(5, 'Nord4@gmail.com', 'rizal', 'sales');
-
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id_Admin`);
 
 --
 -- Indexes for table `bts`
@@ -380,26 +315,8 @@ ALTER TABLE `layanan`
   ADD PRIMARY KEY (`id_Layanan`);
 
 --
--- Indexes for table `sales`
---
-ALTER TABLE `sales`
-  ADD PRIMARY KEY (`id_Sales`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id_Admin` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `bts`
@@ -411,7 +328,7 @@ ALTER TABLE `bts`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id_Customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_Customer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `customer_alat`
@@ -453,25 +370,13 @@ ALTER TABLE `invoice_detail`
 -- AUTO_INCREMENT for table `karyawan_master`
 --
 ALTER TABLE `karyawan_master`
-  MODIFY `id_Karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_Karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `layanan`
 --
 ALTER TABLE `layanan`
   MODIFY `id_Layanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `sales`
---
-ALTER TABLE `sales`
-  MODIFY `id_Sales` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
