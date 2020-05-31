@@ -16,7 +16,6 @@ class Upload extends CI_Controller {
 	public function index()
 	{
 		$data['berkas'] = $this->db->get('customer_file');
-		
 		$this->load->view('profil_customertambah');
 		
 	}
