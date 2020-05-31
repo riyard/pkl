@@ -53,7 +53,7 @@ class Login_customer extends CI_Controller{
                 );
                 $this->session->set_userdata($session); 
 
-                    echo "<script>alert('Selamat Datang $data->nama_admin Anda berhasil login');</script>";
+                    echo "<script>alert('Selamat Datang $data->nama Anda berhasil login');</script>";
                     redirect('profil_customer','refresh');
                 
             }
