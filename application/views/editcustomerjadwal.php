@@ -174,46 +174,62 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Edit Customer Jadwal</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 15px;margin-top: 10px"></i> Edit Customer Jadwal</h3>
 
+						<div class="pull-right">
+							<a href="<?php echo base_url()."index.php/customer_jadwal/"?>" class="btn btn-warning btn-flat" type="button" style="margin-top: -10px;margin-right: 10px"><i class="fa fa-undo"></i>Back</a>
+						</div>
 
+<div class="main-content-inner">
 <section class="wrapper">
 
-	<table class="table table-striped table-advance table-hover">
                  <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/customer_jadwal/update")?>">
-                    <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Tgl_Pemasangan <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Tgl_Pemasangan" type="text" value="<?php echo $customer_jadwal->Tgl_Pemasangan ?>" required />
-                      </div>
-                    </div>
+
+                  	       <div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Tgl_Pemasangan* <span class="required"></span></label>
+										<div class="col-sm-9">
+											<input type="text" id="Username" name="Tgl_Pemasangan" class="col-xs-10 col-sm-5" value="<?php echo $customer_jadwal->Tgl_Pemasangan ?>" required />
+										</div>
+									</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Jenis Visit* <span class="required"></span></label>
+										<div class="col-sm-9">
+										<select name="Jenis_Visit" class="col-xs-10 col-sm-5" required >  
+				 						  	<option value="">--Pilih--</option>  
+										  	<option value="Survey" <?php echo $customer_jadwal->Jenis_Visit ?>>Survey</option>  
+										  	<option value="Instalasi" <?php echo $customer_jadwal->Jenis_Visit ?>>Instalasi</option>  
+										  	<option value="Aktifasi" <?php echo $customer_jadwal->Jenis_Visit ?>>Aktifasi</option> 
+				                       </select>
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Status* <span class="required"></span></label>
+										<div class="col-sm-9">
+										<select name="Status" class="col-xs-10 col-sm-5" required >  
+				 						  	<option value="">--Pilih--</option>  
+										  	<option value="Belum Selesai" <?php echo $customer_jadwal->Status ?>>Belum Selesai</option>  
+										  	<option value="Sudah Selesai" <?php echo $customer_jadwal->Status ?>>Sudah Selesai</option>
+				                       </select>
+									</div>
+								</div>
 
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jenis Visit *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <select name="Jenis_Visit" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Survey" <?php echo $customer_jadwal->Jenis_Visit ?>>Survey</option>  
-						  <option value="Instalasi" <?php echo $customer_jadwal->Jenis_Visit ?>>Instalasi</option>  
-						  <option value="Aktifasi" <?php echo $customer_jadwal->Jenis_Visit ?>>Aktifasi</option>  
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status <span class="required"></span></label>
-                      <div class="col-lg-10">
-                      	<select name="Status" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Belum Selesai" <?php echo $customer_jadwal->Status ?>>Belum Selesai</option>  
-						  <option value="Sudah Selesai" <?php echo $customer_jadwal->Status ?>>Sudah Selesai</option>  
-                        </select>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Save</button>
-                      </div>
-                    </div>
+			            <div class="col-lg-offset-3 col-lg-10">
+			               <button type="submit" class="btn btn-success btn-flat">
+			                  <i class="fa fa-paper-plane"></i> Save
+			                </button>
+			                 <button type="Reset" class="btn btn-flat">Reset</button>
+			                   </div>
+			                 </div>
                     <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_Customer_Jadwal">
                   </form>
                 </div>

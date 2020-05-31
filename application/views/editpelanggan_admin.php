@@ -311,8 +311,6 @@ include ('koneksi.php');
                   </form>
             </div>
 	</section>
-</div>
-
 
 
 			<div class="footer">

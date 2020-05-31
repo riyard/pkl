@@ -174,92 +174,124 @@ include ('koneksi.php');
 						</div><!-- /.nav-search -->
 					</div>
 
-						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 10px"></i> Edit Customer Alat</h3>
+						<h3 class="page-header"><i class="menu-icon fa fa-list-alt" style="margin-left: 15px;margin-top: 10px"></i> Edit Customer Alat</h3>\
 
+						<div class="pull-right">
+							<a href="<?php echo base_url()."index.php/customer_alat/"?>" class="btn btn-warning btn-flat" type="button" style="margin-top: -10px;margin-right: 10px"><i class="fa fa-undo"></i>Back</a>
+						</div>
 
+<div class="main-content-inner">
 <section class="wrapper">
-
-	<table class="table table-striped table-advance table-hover">
                  <div class="form">
                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/customer_alat/update")?>">
+
+                  	                  	<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Jarak* <span class="required"></span></label>
+										<div class="col-sm-9">
+											<input type="text" id="Username" name="Jarak" class="col-xs-10 col-sm-5" value="<?php echo $customer_alat->Jarak ?>" required />
+										</div>
+									</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ketinggian Pipa* <span class="required"></span></label>
+										<div class="col-sm-9">
+											<input type="text" id="Username" name="Ketinggian_Pipa" class="col-xs-10 col-sm-5" value="<?php echo $customer_alat->Ketinggian_Pipa ?>" required />
+										</div>
+									</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Jenis Transmisi* <span class="required"></span></label>
+										<div class="col-sm-9">
+										<select name="Jenis_Transmisi" class="col-xs-10 col-sm-5" required >  
+				 						  	<option value="">--Pilih--</option>  
+										  	<option value="Wireless" <?php echo $customer_alat->Jenis_Transmisi ?>>Wireless</option>  
+										  	<option value="Fiber" <?php echo $customer_alat->Jenis_Transmisi ?>>Fiber</option>  
+										  	<option value="Lainnya" <?php echo $customer_alat->Jenis_Transmisi ?>>Lainnya</option>  
+				                       </select>
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Jenis Cpe* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Jenis_Cpe" class="col-xs-10 col-sm-5" value="<?php echo $customer_alat->Jenis_Cpe ?>" required />
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Status Cpe* <span class="required"></span></label>
+										<div class="col-sm-9">
+										<select name="Status_Cpe" class="col-xs-10 col-sm-5" required >  
+				 						  <option value="">--Pilih--</option>  
+										  <option value="Hak Milik" <?php echo $customer_alat->Status_Cpe ?>>Hak Milik</option>  
+										  <option value="Sewa" <?php echo $customer_alat->Status_Cpe ?>>Sewa</option>
+				                       </select>
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ip Radio* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Ip_Radio" class="col-xs-10 col-sm-5" value="<?php echo $customer_alat->Ip_Radio ?>" required />
+									</div>
+								</div>
+                     		
+                     		<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Port* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Port" class="col-xs-10 col-sm-5" value="<?php echo $customer_alat->Port ?>" required />
+									</div>
+								</div> 
+                     
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Username* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Username" class="col-xs-10 col-sm-5" value="<?php echo $customer_alat->Username ?>" required />
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Password* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Password" class="col-xs-10 col-sm-5" value="<?php echo $customer_alat->Password ?>" required />
+									</div>
+								</div>
+
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> SSID* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="SSID" class="col-xs-10 col-sm-5" value="<?php echo $customer_alat->SSID ?>" required />
+									</div>
+								</div>
+                     		<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Freq* <span class="required"></span></label>
+									<div class="col-sm-9">
+										<input type="text" id="Username" name="Freq" class="col-xs-10 col-sm-5" value="<?php echo $customer_alat->Freq ?>" required />
+									</div>
+								</div>
+
                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jarak <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Jarak" type="text" value="<?php echo $customer_alat->Jarak ?>" required />
-                      </div>
-                    </div>
-                         <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Ketinggian Pipa <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Ketinggian_Pipa" type="text" value="<?php echo $customer_alat->Ketinggian_Pipa ?>" required />
-                      </div>
-                        <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jenis Transmisi *<span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <select name="Jenis_Transmisi" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Wireless" <?php echo $customer_alat->Jenis_Transmisi ?>>Wireless</option>  
-						  <option value="Fiber" <?php echo $customer_alat->Jenis_Transmisi ?>>Fiber</option>  
-						  <option value="Lainnya" <?php echo $customer_alat->Jenis_Transmisi ?>>Lainnya</option>  
-                        </select>
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Jenis Cpe <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Jenis_Cpe" type="text" value="<?php echo $customer_alat->Jenis_Cpe ?>" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Status Cpe <span class="required"></span></label>
-                      <div class="col-lg-10">
-                      	<select name="Status_Cpe" class="form-control" required >  
- 						  <option value="">--Pilih--</option>  
-						  <option value="Hak Milik" <?php echo $customer_alat->Status_Cpe ?>>Hak Milik</option>  
-						  <option value="Sewa" <?php echo $customer_alat->Status_Cpe ?>>Sewa</option>  
-                        </select>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Ip Radio <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Ip_Radio" type="text" value="<?php echo $customer_alat->Ip_Radio ?>" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Port <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Port" type="text" value="<?php echo $customer_alat->Port ?>" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Username <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Username" type="text" value="<?php echo $customer_alat->Username ?>" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Password <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Password" type="text" value="<?php echo $customer_alat->Password ?>" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">SSID <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="SSID" type="text" value="<?php echo $customer_alat->SSID ?>" required />
-                      </div>
-                    </div>
-                     <div class="form-group">
-                      <label for="cname" class="control-label col-lg-2">Freq <span class="required"></span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="Username" name="Freq" type="text" value="<?php echo $customer_alat->Freq ?>" required />
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary"  type="submit">Save</button>
-                      </div>
-                    </div>
+			           <div class="col-lg-offset-3 col-lg-10">
+			             <button type="submit" class="btn btn-success btn-flat">
+			               <i class="fa fa-paper-plane"></i> Save
+			                 </button>
+			                  <button type="Reset" class="btn btn-flat">Reset</button>
+			                 </div>
+			             </div>
                     <input type="hidden" value="<?php echo $this->uri->segment(3) ?>" name="id_Customer_Alat">
                   </form>
                 </div>

@@ -292,7 +292,6 @@ include ('koneksi.php');
 			                </div>
             
 	</section>
-</div>
 
 
 

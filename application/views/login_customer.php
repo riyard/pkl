@@ -83,15 +83,23 @@ include ('koneksi.php');
 														</span>
 													</label>
 
+
+
 													<div class="space"></div>
 
-													
+													<a href="<?php echo base_url("index.php/login")?>" class="width-35 btn btn-primary btn-sm">
+														<i class="fa fa-pencil"></i> 
+														<span class="bigger-110">Admin</span>
+													</a>
+
 
 														<button type="submit" name="login" value="login" class="width-35 pull-right btn btn-sm btn-primary">
 															<i class="ace-icon fa fa-key"></i>
 															<span class="bigger-110">Login</span>
 														</button>
 													</div>
+
+
 
 													<div class="space-4"></div>
 												</fieldset>
@@ -180,9 +188,7 @@ include ('koneksi.php');
 							</div><!-- /.position-relative -->
 
 							<div class="navbar-fixed-top align-right">
-								<a href="<?php echo base_url("index.php/login")?>" class="btn btn-primary btn-xs">
-												<i class="fa fa-pencil"></i> ADMIN
-											</a>
+								
 								<br />
 								&nbsp;
 								<a id="btn-login-dark" href="#">Dark</a>
