@@ -106,10 +106,18 @@ class Login extends CI_Controller {
 	}
 
 	public function logout()
-	{
-		$this->session->sess_destroy();
-		redirect("login");
-	}
+    {
+        $this->session->sess_destroy();
+        $this->session->unset_userdata(array('id_Karyawan'));
+        $this->session->unset_userdata(array('Nama'));
+        $this->session->unset_userdata(array('Email'));
+        $this->session->unset_userdata(array('Password'));
+        $this->session->unset_userdata(array('Alamat'));
+        $this->session->unset_userdata(array('NIP'));
+        $this->session->unset_userdata(array('NoHp'));
+        $this->session->unset_userdata(array('Level'));
+        redirect('login');
+    }
 
 
 }

@@ -2,10 +2,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Invover_admin extends CI_Controller {
-	public function __construct()
-		{
-			parent::__construct();
+	function __construct(){
+		parent::__construct();
+		$this->load->library('form_validation','session');
+		$this->load->helper('url','form','html');		
+		if($this->session->userdata('status')!="login"){
+			redirect(base_url("login"));
 		}
+ 
+	}
 	
 	public function index()
 	{
