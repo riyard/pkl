@@ -185,7 +185,7 @@ include ('koneksi.php');
 						</div>
 
 <div class="main-content-inner">
-<section class="wrapper">
+	<section class="wrapper">
 
 				<div class="form">
                 <form class="form-validate form-horizontal" id="feedback_form" method="post" action="<?php echo base_url("index.php/layanan_sales/insert")?>">
@@ -216,16 +216,25 @@ include ('koneksi.php');
 											<input type="text" id="Username" name="Harga" class="col-xs-10 col-sm-5" required />
 										</div>
 									</div>
+				
 
-					<div class="form-group">
-                      <div class="col-lg-offset-3 col-lg-10">
-                        <button type="submit" class="btn btn-success btn-flat">
-                        	<i class="fa fa-paper-plane"></i> Save
-                        </button>
-                        <button type="Reset" class="btn btn-flat">Reset</button>
-                      </div>
-                      	</form>               
-					</section>
+							<div class="form-group">
+		                      <div class="col-lg-offset-3 col-lg-10">
+		                        <button type="submit" class="btn btn-success btn-flat">
+		                        	<i class="fa fa-paper-plane"></i> Save
+		                        </button>
+		                        <button type="Reset" class="btn btn-flat">Reset</button>
+		                      </div>
+		                  	</div>
+                  			</div>
+				</div>
+                </form>
+                </div>               
+	</section>
+</div>
+
+
+
 						<!--<div class="page-header">
 							<h1>
 								Dashboard

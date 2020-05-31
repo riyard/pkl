@@ -205,25 +205,50 @@ include ('koneksi.php');
 							<i class="menu-icon fa fa-list-alt" style="margin-left: 15px;margin-top: 10px"></i> Tabel Layanan
 						</h3>
 
+						<div class="pull-left" style="margin-right: 15px;margin-left: 15px">
+							<a href="<?php echo base_url()."index.php/layanan_admin/input"?>" class="btn btn-primary btn-sm" type="button"><i class="fa fa-list-alt"></i>Tambah Layanan</a>
+						</div>
+
 					<section class="wrapper">
 						<table class="table table-striped table-advance table-hover">
 					                <tbody>
 					                  <tr>
-					                    <th><i class="icon_profile"></i> No</th>
+					                  	<th><i class="icon_profile"></i> No</th>
 					                    <th><i class="icon_profile"></i> Nama Layanan</th>
 					                    <th><i class="icon_mail_alt"></i> Kapasitas</th>
 					                    <th><i class="icon_calendar"></i> Harga</th>
+										<th><i class="icon_calendar"></i> Action</th>
 					                  </tr>
-					                  <!-- <td>
+					                  <tbody>
+					                  <?php $nomor=1;foreach ($layanan as $value) {?>
+					                    <tr>
+					                    <td><?php echo $nomor++?></td>
+					                    <td><?php echo $value->Nama_Layanan?></td>
+					                    <td><?php echo $value->Kapasitas?></td>
+					                    <td><?php echo $value->Harga?></td>
+					                    <td>
 					                  	<div class="btn-group">
-					                        <button class="btn btn-xs btn-info">
-											<a href="<?php echo base_url("index.php/editlayanan_sales")?>"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
-											</button>
-					                        <button class="btn btn-xs btn-danger">
-											<i class="ace-icon fa fa-trash-o bigger-120"></i>
-											</button>
-					                  </td> -->
-					                  <?php
+											<a href="<?php echo base_url()."index.php/layanan_admin/edit/".$value->id_Layanan?>" class="btn btn-primary btn-xs">
+												<i class="fa fa-pencil"></i> Edit
+											</a>
+											
+											<a href="<?php echo base_url()."index.php/layanan_admin/delete/".$value->id_Layanan?>" class="btn btn-danger btn-xs">
+												<i class="fa fa-trash-o"></i> Hapus
+					                  </td>
+					</section>
+						</div>
+						</td>
+						</tr>
+						<?php
+
+                    }
+                    ?>
+						</tbody>
+						</section>
+					                 
+
+
+					   <!--                <?php
 								include ('koneksi.php');
 								$sql='select * from layanan';
 								$ambil=mysqli_query($konek,$sql);
@@ -244,7 +269,7 @@ include ('koneksi.php');
 								?>
 					</section>
 
-						</section>
+						</section> -->
 						<!--<div class="page-header">
 							<h1>
 								Dashboard
