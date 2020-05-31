@@ -62,13 +62,13 @@ class Login extends CI_Controller {
 
                         //redirect berdasarkan level user
                         if($this->session->userdata("Level") == "sales"){
-                            echo "<script>alert('Selamat Datang $apps->Nama Anda berhasil login');</script>";
+                            /*echo "<script>alert('Selamat Datang $apps->Nama Anda berhasil login');</script>";*/
                             redirect('profil','refresh');
                         }else if($this->session->userdata("Level") == "admin"){
-                            echo "<script>alert('Selamat Datang $apps->Nama Anda berhasil login');</script>";
+                            /*echo "<script>alert('Selamat Datang $apps->Nama Anda berhasil login');</script>";*/
                             redirect('profil_admin','refresh');
                         }else{
-                        	echo "<script>alert('Selamat Datang $apps->Nama Anda berhasil login');</script>";
+                        	/*echo "<script>alert('Selamat Datang $apps->Nama Anda berhasil login');</script>";*/
                             redirect('profil_pegawai','refresh');
                         }
 
