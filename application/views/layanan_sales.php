@@ -164,7 +164,7 @@ include ('koneksi.php');
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
 						<li><a href=""><i class="menu-icon fa fa-pencil-square-o"></i> Layanan</li></a>
-              			<li><i class="icon_document_alt"></i>Table</li>
+              			<li><i class="icon_document_alt"></i>Tabel Layanan</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -180,7 +180,7 @@ include ('koneksi.php');
 
 
 					<div class="pull-left" style="margin-right: 15px;margin-left: 15px">
-						<a href="<?php echo base_url("index.php/layanan_sales/input")?>"><button class="btn btn-primary btn-sm" type="button"><i class="fa fa-user-plus"></i>Tambah Layanan</button> </a>
+						<a href="<?php echo base_url("index.php/layanan_sales/input")?>"><button class="btn btn-primary btn-sm" type="button"><i class="fa fa-list-alt"></i>Tambah Layanan</button> </a>
 					</div>
 
 					<section class="wrapper">
