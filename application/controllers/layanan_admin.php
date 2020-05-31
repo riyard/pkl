@@ -38,9 +38,7 @@ class Layanan_admin extends CI_Controller {
 		$Nama_Layanan = $this->input->post("Nama_Layanan");
 		$Kapasitas = $this->input->post("Kapasitas");
 		$Harga = $this->input->post("Harga");
-		echo $Nama_Layanan;
-		echo $Kapasitas;
-		echo $Harga;
+
 		$data = array(
 		"Nama_Layanan"=>$Nama_Layanan,
 		"Kapasitas"=>$Kapasitas,
@@ -67,9 +65,7 @@ class Layanan_admin extends CI_Controller {
 		$Nama_Layanan = $this->input->post("Nama_Layanan");
 		$Kapasitas = $this->input->post("Kapasitas");
 		$Harga = $this->input->post("Harga");
-		echo $Nama_Layanan;
-		echo $Kapasitas;
-		echo $Harga;
+
 		$data = array(
 		"Nama_Layanan"=>$Nama_Layanan,
 		"Kapasitas"=>$Kapasitas,

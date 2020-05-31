@@ -46,17 +46,7 @@ class Invover_admin extends CI_Controller {
 		$Ppn = $this->input->post("Ppn");
 		$Total = $this->input->post("Total");
 		$Status_Lunas = $this->input->post("Status_Lunas");
-		echo $No_Faktur;
-		echo $id_Customer;
-		echo $id_Karyawan;
-		echo $id_Detail_Invoice;
-		echo $Tanggal;
-		echo $Tgl_JatuhTempo;
-		echo $Sub_Total;
-		echo $Status_Ppn;
-		echo $Ppn;
-		echo $Total;
-		echo $Status_Lunas;
+
 		$data = array(
 		"No_Faktur"=>$No_Faktur,
 		"id_Customer"=>$id_Customer,
@@ -99,17 +89,7 @@ class Invover_admin extends CI_Controller {
 		$Ppn = $this->input->post("Ppn");
 		$Total = $this->input->post("Total");
 		$Status_Lunas = $this->input->post("Status_Lunas");
-		echo $No_Faktur;
-		echo $id_Customer;
-		echo $id_Karyawan;
-		echo $id_Detail_Invoice;
-		echo $Tanggal;
-		echo $Tgl_JatuhTempo;
-		echo $Sub_Total;
-		echo $Status_Ppn;
-		echo $Ppn;
-		echo $Total;
-		echo $Status_Lunas;
+
 		$data = array(
 		"No_Faktur"=>$No_Faktur,
 		"id_Customer"=>$id_Customer,

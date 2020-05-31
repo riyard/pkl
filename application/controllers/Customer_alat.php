@@ -46,17 +46,7 @@ class Customer_alat extends CI_Controller {
 		$Freq = $this->input->post("Freq");
 		$Username = $this->input->post("Username");
 		$Password = md5($this->input->post("Password"));
-		echo $Jarak;
-		echo $Ketinggian_Pipa;
-		echo $Jenis_Transmisi;
-		echo $Jenis_Cpe;
-		echo $Status_Cpe;
-		echo $Ip_Radio;
-		echo $Port;
-		echo $SSID;
-		echo $Freq;
-		echo $Username;
-		echo $Password;
+
 		$data = array(
 		"Jarak"=>$Jarak,
 		"Ketinggian_Pipa"=>$Ketinggian_Pipa,
@@ -99,17 +89,7 @@ class Customer_alat extends CI_Controller {
 		$Freq = $this->input->post("Freq");
 		$Username = $this->input->post("Username");
 		$Password = md5($this->input->post("Password"));
-		echo $Jarak;
-		echo $Ketinggian_Pipa;
-		echo $Jenis_Transmisi;
-		echo $Jenis_Cpe;
-		echo $Status_Cpe;
-		echo $Ip_Radio;
-		echo $Port;
-		echo $SSID;
-		echo $Freq;
-		echo $Username;
-		echo $Password;
+		
 		$data = array(
 		"Jarak"=>$Jarak,
 		"Ketinggian_Pipa"=>$Ketinggian_Pipa,

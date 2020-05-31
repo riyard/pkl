@@ -39,10 +39,7 @@ class Karyawan_admin extends CI_Controller {
 		$Email = $this->input->post("Email");
 		$Password = $this->input->post("Password");
 		$Level = $this->input->post("Level");
-		echo $id_Karyawan;
-		echo $Email;
-		echo $Password;
-		echo $Level;
+		
 		$data = array(
 		"id_Karyawan"=>$id_Karyawan,
 		"Email"=>$Email,
@@ -75,14 +72,7 @@ class Karyawan_admin extends CI_Controller {
 		$NoHp = $this->input->post("NoHp");
 		$Alamat = $this->input->post("Alamat");
 		$Level = $this->input->post("Level");
-		echo $id_Karyawan;
-		echo $NIP;
-		echo $Nama;
-		echo $Email;
-		echo $Password;
-		echo $NoHp;
-		echo $Alamat;
-		echo $Level;
+
 		$data = array(
 		"id_Karyawan"=>$id_Karyawan,
 		"NIP"=>$NIP,

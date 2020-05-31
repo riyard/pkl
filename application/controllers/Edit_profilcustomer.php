@@ -29,16 +29,7 @@ class Edit_profilcustomer extends CI_Controller {
 		$NIK = $this->input->post("NIK");
 		$Jenis_Pelanggan = $this->input->post("Jenis_Pelanggan");
 		$Status = $this->input->post("Status");
-		echo $id_Customer;
-		echo $id_Karyawan;
-		echo $nama;
-		echo $Email;
-		echo $Password;
-		echo $Alamat;
-		echo $NoHp;
-		echo $NIK;
-		echo $Jenis_Pelanggan;
-		echo $Status;
+		
 		$data = array(
 		"id_Customer"=>$id_Customer,
 		"id_Karyawan"=>$id_Karyawan,

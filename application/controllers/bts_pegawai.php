@@ -39,10 +39,7 @@ class Bts_pegawai extends CI_Controller {
 		$KodePelanggan_PLN = $this->input->post("KodePelanggan_PLN");
 		$Nama_PIC = $this->input->post("Nama_PIC");
 		$NoHp_PIC = $this->input->post("NoHp_PIC");
-		echo $Koordinat;
-		echo $KodePelanggan_PLN;
-		echo $Nama_PIC;
-		echo $NoHp_PIC;
+
 		$data = array(
 		"Koordinat"=>$Koordinat,
 		"KodePelanggan_PLN"=>$KodePelanggan_PLN,
@@ -71,10 +68,7 @@ class Bts_pegawai extends CI_Controller {
 		$KodePelanggan_PLN = $this->input->post("KodePelanggan_PLN");
 		$Nama_PIC = $this->input->post("Nama_PIC");
 		$NoHp_PIC = $this->input->post("NoHp_PIC");
-		echo $Koordinat;
-		echo $KodePelanggan_PLN;
-		echo $Nama_PIC;
-		echo $NoHp_PIC;
+		
 		$data = array(
 		"Koordinat"=>$Koordinat,
 		"KodePelanggan_PLN"=>$KodePelanggan_PLN,

@@ -38,9 +38,7 @@ class Customer_jadwal extends CI_Controller {
 		$Tgl_Pemasangan = $this->input->post("Tgl_Pemasangan");
 		$Jenis_Visit = $this->input->post("Jenis_Visit");
 		$Status = $this->input->post("Status");
-		echo $Tgl_Pemasangan;
-		echo $Jenis_Visit;
-		echo $Status;
+
 		$data = array(
 		"Tgl_Pemasangan"=>$Tgl_Pemasangan,
 		"Jenis_Visit"=>$Jenis_Visit,
@@ -68,11 +66,7 @@ class Customer_jadwal extends CI_Controller {
 		$Tgl_Pemasangan = $this->input->post("Tgl_Pemasangan");
 		$Jenis_Visit = $this->input->post("Jenis_Visit");
 		$Status = $this->input->post("Status");
-		echo $id_Customer_Jadwal;
-		echo $id_Karyawan;
-		echo $Tgl_Pemasangan;
-		echo $Jenis_Visit;
-		echo $Status;
+		
 		$data = array(
 		"Tgl_Pemasangan"=>$Tgl_Pemasangan,
 		"Jenis_Visit"=>$Jenis_Visit,

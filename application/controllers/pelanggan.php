@@ -45,16 +45,7 @@ class Pelanggan extends CI_Controller {
 		$Nama_JenisFile = $this->input->post("Nama_JenisFile");
 		$Jenis_Pelanggan = $this->input->post("Jenis_Pelanggan");
 		$Status = $this->input->post("Status");
-		echo $id_Customer;
-		echo $NIK;
-		echo $nama;
-		echo $Email;
-		echo $Password;
-		echo $NoHp;
-		echo $Alamat;
-		echo $Nama_JenisFile;
-		echo $Jenis_Pelanggan;
-		echo $Status;
+
 		$data = array(
 		"id_Customer"=>$id_Customer,
 		"NIK"=>$NIK,
@@ -95,16 +86,7 @@ class Pelanggan extends CI_Controller {
 		$Nama_JenisFile = $this->input->post("Nama_JenisFile");
 		$Jenis_Pelanggan = $this->input->post("Jenis_Pelanggan");
 		$Status = $this->input->post("Status");
-		echo $id_Customer;
-		echo $NIK;
-		echo $nama;
-		echo $Email;
-		echo $Password;
-		echo $NoHp;
-		echo $Alamat;
-		echo $Nama_JenisFile;
-		echo $Jenis_Pelanggan;
-		echo $Status;
+
 		$data = array(
 		"id_Customer"=>$id_Customer,
 		"NIK"=>$NIK,

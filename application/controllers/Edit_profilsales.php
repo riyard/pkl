@@ -29,15 +29,6 @@ class Edit_profilsales extends CI_Controller {
 		$NIP = $this->input->post("NIP");
 		$Level = $this->input->post("Level");
 		
-		echo $id_Karyawan;
-		echo $Nama;
-		echo $Email;
-		echo $Password;
-		echo $Alamat;
-		echo $NoHp;
-		echo $NIP;
-		echo $Level;
-		
 		$data = array(
 		"id_Karyawan"=>$id_Karyawan,
 		"Nama"=>$Nama,
